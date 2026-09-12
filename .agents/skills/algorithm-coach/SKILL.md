@@ -8,13 +8,16 @@ Run a repeatable algorithm training session using repository state.
 
 Possible inputs:
 - available time;
-- mode: `train`, `review`, or `interview`;
+- mode: `diagnostic`, `train`, `review`, or `interview`;
 - desired topic;
 - desired difficulty;
 - a specific problem;
 - code already written.
 
-If mode is not specified, infer it. Default to `train` for a new topic and `review` when due repetitions exist.
+If mode is not specified:
+- use `diagnostic` when no meaningful baseline exists;
+- otherwise prefer `review` when important repetitions are due;
+- otherwise use `train`.
 
 ## Session startup
 
@@ -23,14 +26,23 @@ Read:
 2. `docs/weak-points.md`
 3. `docs/problem-history.md`
 4. `docs/roadmap.md`
-5. up to two latest session files
+5. `docs/spaced-repetition.md`
+6. up to two latest session files
+
+If the baseline is empty, also read `docs/diagnostic.md` and follow it.
 
 Then determine:
 - current focus;
-- reviews that are due;
+- reviews that are due or overdue;
 - recently practiced patterns;
 - patterns not to repeat immediately;
 - whether the next task should hide the pattern.
+
+## Diagnostic mode
+
+Follow `docs/diagnostic.md`.
+
+The diagnostic establishes a baseline; it is not a pass/fail exam. At the end, update repository state and pick the first 2–3 priorities.
 
 ## Problem selection
 
@@ -76,7 +88,15 @@ Record:
 - complexity answer;
 - confidence;
 - repeat yes/no;
+- spaced-repetition stage when applicable;
+- review result (`pass`, `partial`, `fail`) when applicable;
 - next review date.
+
+## Review scheduling
+
+Follow `docs/spaced-repetition.md` exactly enough that future sessions can determine what is due without relying on chat history.
+
+Prefer related variants and hidden-pattern transfer over memorized exact repeats.
 
 ## Session end
 
