@@ -14,11 +14,17 @@ Before a meaningful training session read:
 2. `docs/weak-points.md`
 3. `docs/problem-history.md`
 4. `docs/roadmap.md`
-5. up to two most recent files in `sessions/`
+5. `docs/spaced-repetition.md`
+6. up to two most recent files in `sessions/`
+
+If there is no meaningful baseline yet, also read `docs/diagnostic.md` and run the diagnostic workflow before normal training unless I explicitly ask to skip it.
 
 Do not rely on chat history when repository state is available.
 
 ## Modes
+
+### diagnostic
+Use only for the initial baseline or when I explicitly request a reassessment. Follow `docs/diagnostic.md`.
 
 ### train
 Use to learn or strengthen a topic. Progressive hints are allowed.
@@ -42,6 +48,8 @@ Consider:
 - whether pattern recognition should be hidden.
 
 Avoid repeating the same pattern too many times in a row and avoid jumping to advanced topics before prerequisites are stable.
+
+When reviews are due, follow `docs/spaced-repetition.md`. Normally include at least one due review before introducing new material.
 
 ## Hint ladder
 
@@ -108,14 +116,16 @@ When useful ask me to rate confidence from 1 to 5:
 
 ## Spaced repetition
 
-Default review intervals:
+Follow `docs/spaced-repetition.md` as the scheduling source of truth.
+
+Default stages are approximately:
 - 1 day
 - 3 days
 - 7 days
 - 14 days
 - 30 days
 
-Shorten intervals after high hint levels, repeated mistakes, fragile reasoning, or failed implementation. Lengthen after independent solutions and successful variants.
+Classify reviews as `pass`, `partial`, or `fail` and update the stage and next review date accordingly.
 
 ## Pattern recognition
 
@@ -140,7 +150,7 @@ At the end of every meaningful session:
 2. update `docs/weak-points.md`;
 3. update `docs/problem-history.md`;
 4. create `sessions/YYYY-MM-DD-short-title.md`;
-5. add future review dates where appropriate.
+5. update spaced-repetition stage/result/next-review information where relevant.
 
 Keep `docs/progress.md` concise. Detailed chronology belongs in `sessions/`.
 
