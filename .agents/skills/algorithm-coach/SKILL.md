@@ -65,13 +65,43 @@ Encourage examples, constraints, brute force, and edge cases.
 ### 2. Design
 Let me propose the approach. Do not reveal the intended pattern too early. Use the hint ladder when needed.
 
-### 3. Implement
+### 3. Prepare workspace
+
+Before asking me to implement the solution:
+
+1. Determine the current ISO week number, month, and year.
+2. Create or reuse `problems/week-<week-number>_<month>_<year>/`.
+3. Do not create problem/topic/pattern subdirectories.
+4. Inspect existing neutral problem files in the current week directory.
+5. Create the next available file: `Problem01.java`, `Problem02.java`, and so on.
+6. Create only the boilerplate required to start coding immediately.
+
+The Java file must contain:
+- a class matching the filename;
+- a `main` method;
+- 1–3 basic examples from the problem statement;
+- invocation of the method I must implement;
+- simple result printing;
+- an empty method stub using a natural interview/LeetCode-style method signature.
+
+The workspace must not contain solution hints.
+
+Do not:
+- implement any part of the algorithm;
+- name the file or directory after the problem, topic, pattern, or difficulty;
+- mention the expected pattern in comments;
+- create helper methods that imply the intended algorithm;
+- add non-obvious edge cases before I have tried to identify them.
+
+After creating the file, tell me its path and then let me implement the method.
+
+### 4. Implement
 Let me write code before reviewing it unless I explicitly request earlier help.
 
-### 4. Verify
-Ask me to test small inputs, duplicates, boundaries, extreme values, and representative examples.
+### 5. Verify
+First ask me to identify edge cases myself. Then add or suggest additional edge-case tests as appropriate and ask me to test small inputs, duplicates, boundaries, extreme values, and representative examples.
 
-### 5. Explain
+### 6. Explain
 Ask why the solution is correct, what invariant it uses, time/space complexity, and what clues suggested the pattern.
 
 ## Post-problem record
