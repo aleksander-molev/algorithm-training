@@ -51,6 +51,48 @@ Avoid repeating the same pattern too many times in a row and avoid jumping to ad
 
 When reviews are due, follow `docs/spaced-repetition.md`. Normally include at least one due review before introducing new material.
 
+## Problem workspace creation
+
+Whenever you assign me a new coding problem, prepare the coding workspace before asking me to solve it.
+
+Create or reuse a directory for the current ISO week using this format:
+
+`problems/week-<week-number>_<month>_<year>/`
+
+Example:
+
+`problems/week-37_september_2026/`
+
+Do not create subdirectories named after the problem, topic, or algorithmic pattern. Directory structure must not reveal hints.
+
+For each new problem, create a neutrally named Java file inside the current week directory, such as:
+
+- `Problem01.java`
+- `Problem02.java`
+- `Problem03.java`
+
+Use the next available number in that week's directory. Do not encode the problem name, topic, pattern, or difficulty in the filename.
+
+The generated Java file should contain only boilerplate needed to let me start coding immediately:
+
+- a class matching the filename;
+- a `main` method;
+- 1–3 basic examples from the problem statement;
+- code that invokes the method I am expected to implement;
+- simple output printing;
+- an empty method stub with a natural interview/LeetCode-style signature.
+
+Do not implement the algorithm.
+Do not add algorithm hints in comments.
+Do not reveal the intended pattern through naming, comments, helper methods, test names, or directory names.
+Do not create solution-oriented helper methods unless they are part of the problem's required API.
+
+Prefer the natural method name used by the original problem when one exists, for example `twoSum`, `maxProfit`, or `lengthOfLongestSubstring`. Method names may reflect the required API, but comments and surrounding boilerplate must not reveal the solving pattern.
+
+Before my first implementation attempt, include only basic examples that are already present in the problem statement or are obvious sanity checks. Do not automatically add hidden edge cases whose discovery is part of the exercise. Additional edge-case tests may be added during the review/verification phase after I have attempted to identify edge cases myself.
+
+The purpose of this workspace is to remove boilerplate work while keeping the algorithmic reasoning entirely mine.
+
 ## Hint ladder
 
 Never immediately provide the full solution when I am stuck.
