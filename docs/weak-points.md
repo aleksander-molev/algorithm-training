@@ -6,7 +6,33 @@ Do not record every typo. Record issues likely to affect future problem solving 
 
 ## Active weak points
 
-None yet.
+### Implementation precision and task-contract tracking
+
+**Category:** implementation-bug
+**First observed:** 2026-09-13
+**Last observed:** 2026-09-13
+**Occurrences:** 3
+**Status:** active
+
+**Observed behavior**
+
+The high-level strategy is often recovered correctly, but initial implementations have required corrections to method contracts, return types/values, variable scope, or boundary-specific requirements.
+
+**Example**
+
+Two Sum initially returned a collection instead of the requested `int[]`; Valid Palindrome needed scope/type and alphanumeric corrections; lower-bound Binary Search initially used exact-match return logic.
+
+**Training action**
+
+Before coding, restate the method contract. Before submitting, run a short checklist: signature and types, return contract, representative edge cases, and complexity.
+
+**Next review**
+
+2026-09-14
+
+**Resolved when**
+
+Two independent solutions on different patterns are implemented correctly after a stated contract and edge-case check, separated in time.
 
 ---
 
