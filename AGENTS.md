@@ -82,39 +82,61 @@ Create or reuse a directory for the current ISO week using this format:
 
 `problems/week-<week-number>_<month>_<year>/`
 
+Create or reuse the matching test directory:
+
+`tests/week-<week-number>_<month>_<year>/`
+
 Example:
 
-`problems/week-37_september_2026/`
+- `problems/week-37_september_2026/`
+- `tests/week-37_september_2026/`
 
 Do not create subdirectories named after the problem, topic, or algorithmic pattern. Directory structure must not reveal hints.
 
-For each new problem, create a neutrally named Java file inside the current week directory, such as:
+For each new problem, create the next neutrally numbered pair:
 
-- `Problem01.java`
-- `Problem02.java`
-- `Problem03.java`
+- `problems/.../Problem01.java`
+- `tests/.../Problem01Test.java`
 
-Use the next available number in that week's directory. Do not encode the problem name, topic, pattern, or difficulty in the filename.
+Then `Problem02.java` / `Problem02Test.java`, and so on.
 
-The generated Java file should contain only boilerplate needed to let me start coding immediately:
+Do not encode the problem name, topic, pattern, or difficulty in filenames.
 
-- a class matching the filename;
-- a `main` method;
-- 1–3 basic examples from the problem statement;
-- code that invokes the method I am expected to implement;
-- simple output printing;
-- an empty method stub with a natural interview/LeetCode-style signature.
+### Solution file
 
+The generated solution file must contain only:
+- a public class matching the filename;
+- one public, non-static method with a natural interview/LeetCode-style signature for the method I must implement;
+- minimal imports/types required by the method signature.
+
+Do not create a `main` method.
 Do not implement the algorithm.
 Do not add algorithm hints in comments.
 Do not reveal the intended pattern through naming, comments, helper methods, test names, or directory names.
 Do not create solution-oriented helper methods unless they are part of the problem's required API.
 
-Prefer the natural method name used by the original problem when one exists, for example `twoSum`, `maxProfit`, or `lengthOfLongestSubstring`. Method names may reflect the required API, but comments and surrounding boilerplate must not reveal the solving pattern.
+Prefer the natural method name used by the original problem when one exists, for example `twoSum`, `maxProfit`, or `lengthOfLongestSubstring`.
 
-Before my first implementation attempt, include only basic examples that are already present in the problem statement or are obvious sanity checks. Do not automatically add hidden edge cases whose discovery is part of the exercise. Additional edge-case tests may be added during the review/verification phase after I have attempted to identify edge cases myself.
+### Test file
 
-The purpose of this workspace is to remove boilerplate work while keeping the algorithmic reasoning entirely mine.
+At the same time, create a JUnit 5 test class matching the solution number, for example `Problem01Test`.
+
+The test must:
+- instantiate the solution class, e.g. `new Problem01()`;
+- call the public instance method;
+- contain 1–3 basic test cases from the problem statement or obvious sanity checks;
+- use normal JUnit assertions;
+- compile without requiring me to add test boilerplate.
+
+Before my first implementation attempt, keep the test intentionally basic. Do not add hidden or non-obvious edge cases whose discovery is part of the exercise. Additional targeted tests may be added during verification after I have attempted the problem.
+
+After creating the solution and test files, tell me both paths and give me the exact Windows Gradle command for running only that test:
+
+`gradlew.bat test --tests ProblemNNTest`
+
+If the actual class/package layout requires a fully qualified test name, give the exact command that works for that generated test.
+
+The purpose of the workspace is to remove all setup/boilerplate work so I spend my time implementing and debugging the algorithm.
 
 ## Hint ladder
 
