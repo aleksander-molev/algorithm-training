@@ -1,6 +1,6 @@
 # Current Progress
 
-Last updated: 2026-09-13
+Last updated: 2026-09-14
 
 ## Current status
 
@@ -8,7 +8,7 @@ Initial diagnostic completed on 2026-09-13.
 
 ## Current focus
 
-Foundation consolidation: Java implementation precision, HashMap, Two Pointers, and Binary Search boundaries.
+Foundation consolidation: implementation precision, in-place array updates, and binary-search boundary invariants.
 
 ## Topic status
 
@@ -16,11 +16,11 @@ Foundation consolidation: Java implementation precision, HashMap, Two Pointers, 
 |---|---|---:|---:|---|---|
 | Complexity | Comfortable | - | 0 | 2026-09-13 | Correct warm-up analysis; distinguish sorting implementation space costs. |
 | Arrays / Strings | Developing | - | 1 | 2026-09-13 | Palindrome scan solved after local implementation guidance. |
-| HashMap / HashSet | Developing | - | 1 | 2026-09-13 | Two Sum solved using a complement-to-index HashMap after local guidance. |
-| Two Pointers | Developing | - | 1 | 2026-09-13 | Can implement inward pointers; strengthen invariant articulation. |
+| HashMap / HashSet | Developing | 5 | 1 | 2026-09-14 | Passed a frequency-counting review independently. |
+| Two Pointers | Developing | - | 2 | 2026-09-14 | Correct in-place compaction after conceptual guidance; state the write-prefix invariant earlier. |
 | Sliding Window | Not started | - | - | - | |
 | Prefix Sum | Not started | - | - | - | |
-| Binary Search | Developing | - | 1 | 2026-09-13 | Correct lower-bound implementation after a boundary-focused prompt; invariant articulated. |
+| Binary Search | Developing | - | 2 | 2026-09-14 | Repaired a right-boundary error in a lower-bound variant; invariant needs deliberate practice. |
 | Stack | Not started | - | - | - | |
 | Linked List | Not started | - | - | - | |
 | Heap | Not started | - | - | - | |
@@ -33,23 +33,23 @@ Foundation consolidation: Java implementation precision, HashMap, Two Pointers, 
 
 ## Due reviews
 
-- HashMap / complement lookup (stage 0; last result: partial; last reviewed: 2026-09-13; next review: 2026-09-14; evidence: Two Sum diagnostic)
-- Two pointers / normalized palindrome scan (stage 0; last result: partial; last reviewed: 2026-09-13; next review: 2026-09-14; evidence: Valid Palindrome diagnostic)
-- Binary Search / first greater-or-equal boundary (stage 0; last result: partial; last reviewed: 2026-09-13; next review: 2026-09-14; evidence: diagnostic lower-bound exercise)
-- Implementation precision / contract tracking (stage 0; last result: partial; last reviewed: 2026-09-13; next review: 2026-09-14; evidence: diagnostic code submissions)
+- Two pointers / in-place stable compaction (stage 0; last result: partial; last reviewed: 2026-09-14; next review: 2026-09-15; evidence: Move Zeroes review)
+- Binary Search / first greater-or-equal boundary (stage 0; last result: partial; last reviewed: 2026-09-14; next review: 2026-09-15; evidence: Search Insert Position review)
+- Implementation precision / contract tracking (stage 0; last result: partial; last reviewed: 2026-09-14; next review: 2026-09-15; evidence: boundary update in Search Insert Position)
+- HashMap / frequency accounting (stage 1; last result: pass; last reviewed: 2026-09-14; next review: 2026-09-17; evidence: Ransom Note review)
 
 ## Recent strengths
 
 - Complexity: correctly analyzes common loop/sort compositions.
-- HashMap: can derive and implement a complement-to-index lookup with guidance.
+- HashMap: independently implemented frequency accounting with a clear consumption model.
 - Two pointers: can build a correct inward scan after local implementation feedback.
-- Binary search: can establish a half-open boundary interval after a focused prompt.
+- Binary search: can repair a half-open boundary interval after focused guidance.
 
 ## Current weak points
 
-- Implementation precision: method contracts, Java scope/type consistency, and return values need a deliberate final check.
-- Pattern recognition: distinguish exact-match binary search from a boundary/lower-bound search.
+- Implementation precision: method contracts, Java scope/type consistency, return values, and boundary updates need a deliberate final check.
+- Pattern recognition: distinguish exact-match binary search from a boundary/lower-bound search; state a target-specific invariant before coding.
 
 ## Next recommended session
 
-Start with the reviews due 2026-09-14, then train HashMap and Two Pointers with implementation-focused practice. Revisit Binary Search lower bounds after one related variant.
+Review the due two-pointers and binary-search boundary variants on 2026-09-15. Use an implementation checklist before coding; HashMap frequency accounting is due again 2026-09-17.

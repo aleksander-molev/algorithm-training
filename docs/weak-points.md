@@ -10,8 +10,8 @@ Do not record every typo. Record issues likely to affect future problem solving 
 
 **Category:** implementation-bug
 **First observed:** 2026-09-13
-**Last observed:** 2026-09-13
-**Occurrences:** 3
+**Last observed:** 2026-09-14
+**Occurrences:** 4
 **Status:** active
 
 **Observed behavior**
@@ -20,15 +20,15 @@ The high-level strategy is often recovered correctly, but initial implementation
 
 **Example**
 
-Two Sum initially returned a collection instead of the requested `int[]`; Valid Palindrome needed scope/type and alphanumeric corrections; lower-bound Binary Search initially used exact-match return logic.
+Two Sum initially returned a collection instead of the requested `int[]`; Valid Palindrome needed scope/type and alphanumeric corrections; lower-bound Binary Search initially used exact-match return logic. In the Search Insert review, the right boundary was first updated as if `mid` could be discarded, which failed for insertion between two values.
 
 **Training action**
 
-Before coding, restate the method contract. Before submitting, run a short checklist: signature and types, return contract, representative edge cases, and complexity.
+Before coding, restate the method contract and target-specific invariant. Before submitting, run a short checklist: signature and types, return contract, representative edge cases, boundary updates, and complexity.
 
 **Next review**
 
-2026-09-14
+2026-09-15
 
 **Resolved when**
 
