@@ -11,15 +11,6 @@ java {
     }
 }
 
-sourceSets {
-    main {
-        java.setSrcDirs(listOf("src/main/java", "problems"))
-    }
-    test {
-        java.setSrcDirs(listOf("src/test/java", "tests"))
-    }
-}
-
 repositories {
     mavenCentral()
 }
