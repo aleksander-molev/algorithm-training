@@ -78,33 +78,42 @@ When reviews are due, follow `docs/spaced-repetition.md`. Normally include at le
 
 Whenever you assign me a new coding problem, prepare the coding workspace before asking me to solve it.
 
-Create or reuse a directory for the current ISO week using this format:
+All problem code must live inside the normal Gradle Java project source tree.
 
-`problems/week-<week-number>_<month>_<year>/`
+Create or reuse a valid Java package directory for the current ISO week using this format:
 
-Create or reuse the matching test directory:
+`src/main/java/dev/alex/algorithmtraining/problems/week_<week-number>_<month>_<year>/`
 
-`tests/week-<week-number>_<month>_<year>/`
+Create or reuse the matching test package directory:
+
+`src/test/java/dev/alex/algorithmtraining/problems/week_<week-number>_<month>_<year>/`
 
 Example:
 
-- `problems/week-37_september_2026/`
-- `tests/week-37_september_2026/`
+- `src/main/java/dev/alex/algorithmtraining/problems/week_37_september_2026/`
+- `src/test/java/dev/alex/algorithmtraining/problems/week_37_september_2026/`
+
+Use underscores, not hyphens, so the week directory is a valid Java package name.
 
 Do not create subdirectories named after the problem, topic, or algorithmic pattern. Directory structure must not reveal hints.
 
 For each new problem, create the next neutrally numbered pair:
 
-- `problems/.../Problem01.java`
-- `tests/.../Problem01Test.java`
+- `.../Problem01.java`
+- `.../Problem01Test.java`
 
 Then `Problem02.java` / `Problem02Test.java`, and so on.
 
 Do not encode the problem name, topic, pattern, or difficulty in filenames.
 
+Both files must declare the same package, for example:
+
+`package dev.alex.algorithmtraining.problems.week_37_september_2026;`
+
 ### Solution file
 
 The generated solution file must contain only:
+- the correct package declaration;
 - a public class matching the filename;
 - one public, non-static method with a natural interview/LeetCode-style signature for the method I must implement;
 - minimal imports/types required by the method signature.
@@ -122,6 +131,7 @@ Prefer the natural method name used by the original problem when one exists, for
 At the same time, create a JUnit 5 test class matching the solution number, for example `Problem01Test`.
 
 The test must:
+- declare the same package as the solution;
 - instantiate the solution class, e.g. `new Problem01()`;
 - call the public instance method;
 - contain 1–3 basic test cases from the problem statement or obvious sanity checks;
@@ -130,13 +140,13 @@ The test must:
 
 Before my first implementation attempt, keep the test intentionally basic. Do not add hidden or non-obvious edge cases whose discovery is part of the exercise. Additional targeted tests may be added during verification after I have attempted the problem.
 
-After creating the solution and test files, tell me both paths and give me the exact Windows Gradle command for running only that test:
+After creating the solution and test files, tell me both paths and give me the exact Windows Gradle command for running only that test.
 
-`gradlew.bat test --tests ProblemNNTest`
+Because tests use packages, prefer the fully qualified test name, for example:
 
-If the actual class/package layout requires a fully qualified test name, give the exact command that works for that generated test.
+`gradlew.bat test --tests "dev.alex.algorithmtraining.problems.week_37_september_2026.Problem01Test"`
 
-The purpose of the workspace is to remove all setup/boilerplate work so I spend my time implementing and debugging the algorithm.
+The purpose of the workspace is to remove all setup/boilerplate work so I spend my time implementing and debugging the algorithm while every task remains a normal part of the Java/Gradle project.
 
 ## Hint ladder
 
