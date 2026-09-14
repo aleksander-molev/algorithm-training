@@ -111,38 +111,53 @@ Before asking me to implement the solution:
 
 1. Determine the current ISO week number, month, and year.
 2. Create or reuse `problems/week-<week-number>_<month>_<year>/`.
-3. Do not create problem/topic/pattern subdirectories.
-4. Inspect existing neutral problem files in the current week directory.
-5. Create the next available file: `Problem01.java`, `Problem02.java`, and so on.
-6. Create only the boilerplate required to start coding immediately.
+3. Create or reuse matching `tests/week-<week-number>_<month>_<year>/`.
+4. Do not create problem/topic/pattern subdirectories.
+5. Inspect existing neutral files for the current week.
+6. Choose the next available number: `Problem01`, `Problem02`, and so on.
+7. Create both the solution file and its JUnit test before I start coding.
 
-The Java file must contain:
-- a class matching the filename;
-- a `main` method;
-- 1–3 basic examples from the problem statement;
-- invocation of the method I must implement;
-- simple result printing;
-- an empty method stub using a natural interview/LeetCode-style method signature.
+#### Solution file
 
-The workspace must not contain solution hints.
+Create `problems/.../ProblemNN.java` containing:
+- a public class `ProblemNN`;
+- no `main` method;
+- one public, non-static method using the natural interview/LeetCode-style signature;
+- only minimal imports/types required by the signature;
+- no algorithm implementation.
 
-Do not:
-- implement any part of the algorithm;
-- name the file or directory after the problem, topic, pattern, or difficulty;
-- mention the expected pattern in comments;
-- create helper methods that imply the intended algorithm;
-- add non-obvious edge cases before I have tried to identify them.
+Do not reveal hints through comments, helper methods, names, or structure.
 
-After creating the file, tell me its path and then let me implement the method.
+#### Test file
+
+Create `tests/.../ProblemNNTest.java` containing:
+- JUnit 5 tests;
+- `new ProblemNN()` to instantiate the solution;
+- calls to the public instance method;
+- 1–3 basic examples from the problem statement or obvious sanity checks;
+- normal JUnit assertions;
+- no hidden/non-obvious edge cases before my first attempt.
+
+The test should compile as soon as I implement the method body. I should not need to write any test boilerplate.
+
+After creating both files:
+- tell me the two paths;
+- give me the exact Windows Gradle command to run only this test, normally:
+  `gradlew.bat test --tests ProblemNNTest`
+- then let me implement the method.
 
 ### 4. Implement
-Let me write code before reviewing it unless I explicitly request earlier help.
+Let me write the public instance method before reviewing it unless I explicitly request earlier help.
 
 ### 5. Verify
 
+Use the generated JUnit test as the default verification path.
+
 In `train`, ask me to identify edge cases myself and then add or suggest more if useful.
 
-In `review`, keep verification lightweight when the implementation is clearly correct. Add targeted edge cases when they help expose a suspected bug or weak point.
+In `review`, keep verification lightweight when the implementation is clearly correct. Add targeted edge cases only when they help expose a suspected bug or weak point.
+
+When adding verification cases, prefer extending `ProblemNNTest.java` rather than introducing a `main` method.
 
 ### 6. Evaluate
 
