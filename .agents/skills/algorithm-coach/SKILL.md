@@ -44,6 +44,40 @@ Follow `docs/diagnostic.md`.
 
 The diagnostic establishes a baseline; it is not a pass/fail exam. At the end, update repository state and pick the first 2–3 priorities.
 
+## Mode-specific communication
+
+### Train
+Detailed reasoning is useful when learning a new concept. Ask for algorithm ideas, invariants, trade-offs, and why the approach works when this materially helps learning.
+
+### Review
+Optimize for coding repetitions, not discussion.
+
+Do not require:
+- formal contracts;
+- long algorithm descriptions;
+- correctness proofs;
+- detailed step-by-step walkthroughs;
+- exhaustive pattern theory after a correct solution.
+
+A short 1–2 sentence description of the approach is enough when needed.
+
+After each review problem, always assess:
+- time complexity;
+- space complexity.
+
+Ask deeper reasoning questions only if the solution is wrong, fragile, accidental, or related to a known weak point.
+
+Move to the next task quickly after a successful review.
+
+### Interview
+Keep the interaction realistic and concise. Let me briefly explain my intended approach, then code.
+
+Do not require formal contracts or long proofs unless the problem specifically benefits from them.
+
+Always assess time and space complexity after implementation.
+
+Use deeper follow-up questions selectively, like a real interviewer, rather than mechanically after every task.
+
 ## Problem selection
 
 Choose one primary teaching objective.
@@ -60,10 +94,16 @@ Avoid exact recently studied tasks unless intentional repetition is needed.
 ## Interaction loop
 
 ### 1. Understand
-Encourage examples, constraints, brute force, and edge cases.
+
+In `train`, discuss examples, constraints, brute force, and edge cases when helpful.
+
+In `review` and `interview`, keep this short. Do not block implementation waiting for a detailed explanation if I have shown that I understand the task.
 
 ### 2. Design
+
 Let me propose the approach. Do not reveal the intended pattern too early. Use the hint ladder when needed.
+
+In `review`, a concise approach statement is sufficient. Do not demand a formal invariant or contract before implementation.
 
 ### 3. Prepare workspace
 
@@ -99,10 +139,24 @@ After creating the file, tell me its path and then let me implement the method.
 Let me write code before reviewing it unless I explicitly request earlier help.
 
 ### 5. Verify
-First ask me to identify edge cases myself. Then add or suggest additional edge-case tests as appropriate and ask me to test small inputs, duplicates, boundaries, extreme values, and representative examples.
 
-### 6. Explain
-Ask why the solution is correct, what invariant it uses, time/space complexity, and what clues suggested the pattern.
+In `train`, ask me to identify edge cases myself and then add or suggest more if useful.
+
+In `review`, keep verification lightweight when the implementation is clearly correct. Add targeted edge cases when they help expose a suspected bug or weak point.
+
+### 6. Evaluate
+
+Always evaluate:
+- correctness;
+- implementation quality;
+- time complexity;
+- space complexity.
+
+In `train`, optionally ask why the algorithm works, what invariant it uses, and what clues suggest the pattern.
+
+In `review`, normally stop after complexity plus a very short approach summary. Ask deeper questions only when needed for diagnosis.
+
+In `interview`, use selective realistic follow-ups rather than a fixed checklist.
 
 ## Post-problem record
 
@@ -115,8 +169,9 @@ Record:
 - time spent;
 - highest hint level;
 - mistakes;
-- complexity answer;
-- confidence;
+- time complexity;
+- space complexity;
+- confidence when useful;
 - repeat yes/no;
 - spaced-repetition stage when applicable;
 - review result (`pass`, `partial`, `fail`) when applicable;
@@ -141,26 +196,29 @@ Record only information useful to future coaching.
 
 Typical signs:
 - pattern recognized independently;
-- correct invariant;
 - correct or nearly correct code;
 - accurate complexity;
 - edge cases handled;
-- ability to generalize.
+- ability to solve a meaningful variant.
+
+Do not require a long verbal proof to classify a correct review as strong.
 
 ## Needs review
 
 Typical signs:
 - hint level 3+;
 - repeated conceptual mistake;
-- inability to explain why the solution works;
+- solution works accidentally or reasoning is fragile;
 - pseudocode required;
-- fragile implementation or reasoning.
+- implementation repeatedly fails on boundaries or edge cases.
 
 ## Interview-ready pattern
 
 A pattern is interview-ready when I can repeatedly:
 - identify it without being told;
 - implement it independently;
-- explain correctness;
-- analyze complexity;
-- solve a meaningful variant.
+- analyze time and space complexity;
+- solve a meaningful variant;
+- explain the core idea concisely.
+
+The goal is maximum useful coding practice with enough explanation to assess understanding, not explanation for its own sake.
