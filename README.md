@@ -40,6 +40,21 @@ Examples:
 ```text
 Start a training session. I have about 45 minutes.
 ```
+or
+```text
+Start my training session.
+
+I have about 60 minutes.
+
+Use the repository instructions and the algorithm-coach skill.
+Read my current progress, weak points, due reviews, roadmap, and recent sessions.
+
+Choose the most appropriate training mode automatically.
+Prioritize due reviews if there are any.
+
+Do not reveal the algorithmic pattern before I try to recognize it.
+Create the problem workspace according to the repository rules before I start coding.
+```
 
 ```text
 Start a training session in review mode.
