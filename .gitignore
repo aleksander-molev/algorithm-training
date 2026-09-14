@@ -25,6 +25,7 @@ replay_pid*
 
 # Local Gradle caches, IDE settings, and currently untracked Gradle wrapper files
 .gradle/
+build/
 .idea/
 gradle/
 gradlew
