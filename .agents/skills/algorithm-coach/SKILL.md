@@ -110,16 +110,22 @@ In `review`, a concise approach statement is sufficient. Do not demand a formal 
 Before asking me to implement the solution:
 
 1. Determine the current ISO week number, month, and year.
-2. Create or reuse `problems/week-<week-number>_<month>_<year>/`.
-3. Create or reuse matching `tests/week-<week-number>_<month>_<year>/`.
-4. Do not create problem/topic/pattern subdirectories.
-5. Inspect existing neutral files for the current week.
-6. Choose the next available number: `Problem01`, `Problem02`, and so on.
-7. Create both the solution file and its JUnit test before I start coding.
+2. Create or reuse `src/main/java/dev/alex/algorithmtraining/problems/week_<week-number>_<month>_<year>/`.
+3. Create or reuse matching `src/test/java/dev/alex/algorithmtraining/problems/week_<week-number>_<month>_<year>/`.
+4. Use underscores, not hyphens, so the week directory is a valid Java package.
+5. Do not create problem/topic/pattern subdirectories.
+6. Inspect existing neutral files for the current week.
+7. Choose the next available number: `Problem01`, `Problem02`, and so on.
+8. Create both the solution file and its JUnit test before I start coding.
+
+Both files must use the same package, for example:
+
+`package dev.alex.algorithmtraining.problems.week_37_september_2026;`
 
 #### Solution file
 
-Create `problems/.../ProblemNN.java` containing:
+Create `src/main/java/dev/alex/algorithmtraining/problems/week_.../ProblemNN.java` containing:
+- the package declaration;
 - a public class `ProblemNN`;
 - no `main` method;
 - one public, non-static method using the natural interview/LeetCode-style signature;
@@ -130,7 +136,8 @@ Do not reveal hints through comments, helper methods, names, or structure.
 
 #### Test file
 
-Create `tests/.../ProblemNNTest.java` containing:
+Create `src/test/java/dev/alex/algorithmtraining/problems/week_.../ProblemNNTest.java` containing:
+- the same package declaration;
 - JUnit 5 tests;
 - `new ProblemNN()` to instantiate the solution;
 - calls to the public instance method;
@@ -142,8 +149,8 @@ The test should compile as soon as I implement the method body. I should not nee
 
 After creating both files:
 - tell me the two paths;
-- give me the exact Windows Gradle command to run only this test, normally:
-  `gradlew.bat test --tests ProblemNNTest`
+- give me the exact Windows Gradle command to run only this test using its fully qualified class name, for example:
+  `gradlew.bat test --tests "dev.alex.algorithmtraining.problems.week_37_september_2026.Problem01Test"`
 - then let me implement the method.
 
 ### 4. Implement
@@ -157,7 +164,7 @@ In `train`, ask me to identify edge cases myself and then add or suggest more if
 
 In `review`, keep verification lightweight when the implementation is clearly correct. Add targeted edge cases only when they help expose a suspected bug or weak point.
 
-When adding verification cases, prefer extending `ProblemNNTest.java` rather than introducing a `main` method.
+When adding verification cases, extend `ProblemNNTest.java`. Do not introduce a `main` method.
 
 ### 6. Evaluate
 
