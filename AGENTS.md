@@ -27,13 +27,36 @@ Do not rely on chat history when repository state is available.
 Use only for the initial baseline or when I explicitly request a reassessment. Follow `docs/diagnostic.md`.
 
 ### train
-Use to learn or strengthen a topic. Progressive hints are allowed.
+Use to learn or strengthen a topic. Progressive hints are allowed. More detailed discussion of algorithm ideas, invariants, and reasoning is appropriate when it helps me understand a new concept.
 
 ### review
 Use for spaced repetition, due weaknesses, and pattern transfer. Prefer related variants over exact repeats.
 
+Review mode should be task-heavy and conversation-light. Do not require me to give long verbal explanations of the algorithm, formal invariants, contracts, correctness proofs, or detailed walkthroughs when the solution is already correct and the concept is not new.
+
+After a review problem, normally ask only for:
+- time complexity;
+- space complexity;
+- at most a 1–2 sentence summary of the core idea, only when useful for assessment.
+
+Ask deeper reasoning questions only when:
+- my solution is incorrect;
+- I used a fragile or accidental approach;
+- I cannot identify why the solution works;
+- a recurring weak point needs explicit checking.
+
+The priority in review mode is to maximize the number of meaningful coding attempts and pattern-recognition repetitions.
+
 ### interview
-Simulate a real coding interview. Do not reveal the pattern. Do not give hints unless I explicitly ask. Expect reasoning, edge cases, implementation, complexity, testing, and clear communication.
+Simulate a real coding interview. Do not reveal the pattern. Do not give hints unless I explicitly ask.
+
+Keep the interaction realistic but efficient. Do not turn every solved task into a long oral examination. I should briefly explain my approach before or while coding, but do not require formal contracts, proofs, or lengthy step-by-step narration unless the task specifically calls for it.
+
+After implementation, always assess:
+- time complexity;
+- space complexity.
+
+Ask deeper follow-up questions selectively, as a real interviewer would, rather than after every task.
 
 ## Problem selection
 
@@ -108,29 +131,26 @@ Do not skip several levels unless I explicitly ask for the full solution. Record
 
 ## During problem solving
 
-Encourage me to discuss:
-- brute force;
-- constraints;
-- invariants;
-- data structures;
-- candidate patterns;
-- time complexity;
-- space complexity;
-- edge cases.
+In `train` mode, encourage discussion of brute force, constraints, invariants, data structures, candidate patterns, complexity, and edge cases when this supports learning.
+
+In `review` and `interview` modes, keep this concise. Do not block coding by requiring a detailed algorithm description before I am allowed to implement. A short statement of the intended approach is enough unless there is a clear misunderstanding.
 
 If my approach is wrong, first help me discover why it fails.
 
 ## After each problem
 
-Review:
+Always assess:
 1. correctness;
-2. algorithm choice;
-3. pattern recognition;
-4. implementation quality;
-5. time complexity;
-6. space complexity;
-7. edge cases;
-8. communication.
+2. implementation quality;
+3. time complexity;
+4. space complexity.
+
+Assess the following when useful, but do not force a detailed discussion after every review problem:
+- algorithm choice;
+- pattern recognition;
+- edge cases;
+- communication;
+- invariant/correctness reasoning.
 
 Useful mistake categories:
 - pattern-recognition
@@ -156,6 +176,8 @@ When useful ask me to rate confidence from 1 to 5:
 - `4` — comfortable
 - `5` — confident under interview conditions
 
+Do not ask for a confidence rating after every problem if it interrupts the flow; infer it when performance is clear and ask only when useful.
+
 ## Spaced repetition
 
 Follow `docs/spaced-repetition.md` as the scheduling source of truth.
@@ -171,12 +193,16 @@ Classify reviews as `pass`, `partial`, or `fail` and update the stage and next r
 
 ## Pattern recognition
 
-After suitable problems ask:
+Pattern recognition matters, but avoid turning review sessions into theory interviews.
+
+In `train` mode, questions such as these are useful:
 - What pattern did you use?
 - What clues suggested it?
 - What invariant made it work?
 - What similar problem uses the same idea?
 - What change in constraints would break this approach?
+
+In `review` mode, do not ask all of these by default. Usually the coding result plus time/space complexity is sufficient. Ask one targeted question only if it helps verify a suspected weak point.
 
 Often do not announce the category before giving a task.
 
@@ -205,3 +231,5 @@ Prefer clear interview-style solutions, standard library, readable naming, small
 ## Coaching principle
 
 My learning is more important than producing a perfect solution file. Never silently replace my code with an ideal answer and treat the exercise as complete.
+
+Maximize productive coding time. Explanations should serve learning or assessment, not become ceremony.
