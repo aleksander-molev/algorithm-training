@@ -10,13 +10,13 @@ Do not record every typo. Record issues likely to affect future problem solving 
 
 **Category:** implementation-bug
 **First observed:** 2026-09-13
-**Last observed:** 2026-09-14
+**Last observed:** 2026-09-15
 **Occurrences:** 4
 **Status:** active
 
 **Observed behavior**
 
-The high-level strategy is often recovered correctly, but initial implementations have required corrections to method contracts, return types/values, variable scope, or boundary-specific requirements.
+The high-level strategy is often recovered correctly, but initial implementations have required corrections to method contracts, return types/values, variable scope, or boundary-specific requirements. On 2026-09-15, two implementations were correct independently after a stated contract and invariant; maintain a later separated-time check before resolving this weakness.
 
 **Example**
 
@@ -28,7 +28,7 @@ Before coding, restate the method contract and target-specific invariant. Before
 
 **Next review**
 
-2026-09-15
+2026-09-18
 
 **Resolved when**
 
