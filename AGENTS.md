@@ -115,12 +115,13 @@ Both files must declare the same package, for example:
 The generated solution file must contain only:
 - the correct package declaration;
 - a public class matching the filename;
+- a concise block comment inside the class describing the full problem statement, inputs/outputs, constraints, and the basic examples needed to understand the task;
 - one public, non-static method with a natural interview/LeetCode-style signature for the method I must implement;
 - minimal imports/types required by the method signature.
 
 Do not create a `main` method.
 Do not implement the algorithm.
-Do not add algorithm hints in comments.
+The problem-statement comment is required, but it must describe only the task itself. Do not include solution ideas, algorithm hints, pattern names, complexity hints, pseudocode, or leading observations in that comment.
 Do not reveal the intended pattern through naming, comments, helper methods, test names, or directory names.
 Do not create solution-oriented helper methods unless they are part of the problem's required API.
 
