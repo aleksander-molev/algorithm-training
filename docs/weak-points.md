@@ -16,7 +16,7 @@ Do not record every typo. Record issues likely to affect future problem solving 
 
 **Observed behavior**
 
-The high-level strategy is often recovered correctly, but initial implementations have required corrections to method contracts, return types/values, variable scope, or boundary-specific requirements. On 2026-09-15, two implementations were correct independently after a stated contract and invariant; maintain a later separated-time check before resolving this weakness.
+The high-level strategy is often recovered correctly, but initial implementations have required corrections to method contracts, return types/values, variable scope, or boundary-specific requirements. On 2026-09-15, two implementations were correct independently after a stated contract and invariant. On 2026-09-17, both a frequency-accounting review and a new variable-window implementation were correct independently, including targeted edge-case checks; keep the scheduled separated-time review before resolving this weakness.
 
 **Example**
 

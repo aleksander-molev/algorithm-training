@@ -1,6 +1,6 @@
 # Current Progress
 
-Last updated: 2026-09-15
+Last updated: 2026-09-17
 
 ## Current status
 
@@ -8,7 +8,7 @@ Initial diagnostic completed on 2026-09-13.
 
 ## Current focus
 
-Foundation consolidation: implementation precision, in-place array updates, and binary-search boundary invariants.
+Foundation consolidation: implementation precision, in-place array updates, binary-search boundary invariants, and introductory variable-window string work.
 
 ## Topic status
 
@@ -16,9 +16,9 @@ Foundation consolidation: implementation precision, in-place array updates, and 
 |---|---|---:|---:|---|---|
 | Complexity | Comfortable | - | 0 | 2026-09-13 | Correct warm-up analysis; distinguish sorting implementation space costs. |
 | Arrays / Strings | Developing | - | 1 | 2026-09-13 | Palindrome scan solved after local implementation guidance. |
-| HashMap / HashSet | Developing | 5 | 1 | 2026-09-14 | Passed a frequency-counting review independently. |
+| HashMap / HashSet | Developing | 5 | 0 | 2026-09-17 | Independently passed a related frequency-accounting review. |
 | Two Pointers | Developing | 4 | 0 | 2026-09-15 | Independently passed a stable in-place filtering variant; stated the write-prefix invariant. |
-| Sliding Window | Not started | - | - | - | |
+| Sliding Window | Developing | - | 0 | 2026-09-17 | Independently implemented a variable-size distinct-character window. |
 | Prefix Sum | Not started | - | - | - | |
 | Binary Search | Developing | 4 | 0 | 2026-09-15 | Independently passed a first/last occurrence boundary variant. |
 | Stack | Not started | - | - | - | |
@@ -36,7 +36,8 @@ Foundation consolidation: implementation precision, in-place array updates, and 
 - Two pointers / in-place stable compaction (stage 1; last result: pass; last reviewed: 2026-09-15; next review: 2026-09-18; evidence: Remove Element review)
 - Binary Search / boundary search (stage 1; last result: pass; last reviewed: 2026-09-15; next review: 2026-09-18; evidence: Find First and Last Position review)
 - Implementation precision / contract tracking (stage 1; last result: pass; last reviewed: 2026-09-15; next review: 2026-09-18; evidence: two independent correct implementations)
-- HashMap / frequency accounting (stage 1; last result: pass; last reviewed: 2026-09-14; next review: 2026-09-17; evidence: Ransom Note review)
+- HashMap / frequency accounting (stage 2; last result: pass; last reviewed: 2026-09-17; next review: 2026-09-24; evidence: Valid Anagram review)
+- Sliding window / variable distinct-character window (stage 0; last result: pass; last reviewed: 2026-09-17; next review: 2026-09-18; evidence: Longest Substring Without Repeating Characters)
 
 ## Recent strengths
 

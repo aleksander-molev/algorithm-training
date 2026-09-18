@@ -14,3 +14,5 @@ Detailed discussion belongs in `sessions/`.
 | 2026-09-14 | Search Insert Position | Binary-search lower bound | Easy | Solved after boundary correction | 2 | - | yes | 2026-09-15 |
 | 2026-09-15 | Find First and Last Position | Binary-search boundary search | Easy | Solved independently | 0 | 4 | yes | 2026-09-18 |
 | 2026-09-15 | Remove Element | In-place stable filtering | Easy | Solved independently | 0 | 4 | yes | 2026-09-18 |
+| 2026-09-17 | Valid Anagram | Frequency accounting | Easy | Solved independently | 0 | - | yes | 2026-09-24 |
+| 2026-09-17 | Longest Substring Without Repeating Characters | Variable-size distinct-character window | Medium | Solved independently | 0 | - | yes | 2026-09-18 |
