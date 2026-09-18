@@ -128,9 +128,12 @@ Create `src/main/java/dev/alex/algorithmtraining/problems/week_.../ProblemNN.jav
 - the package declaration;
 - a public class `ProblemNN`;
 - no `main` method;
+- a concise block comment inside the class describing the problem statement, inputs/outputs, constraints, and basic examples;
 - one public, non-static method using the natural interview/LeetCode-style signature;
 - only minimal imports/types required by the signature;
 - no algorithm implementation.
+
+The required problem-statement comment must be self-contained enough that I can understand the task from the Java file without returning to chat. It must contain only the task description, constraints, and examples — never the intended pattern, algorithm idea, pseudocode, complexity hint, or other solving hints.
 
 Do not reveal hints through comments, helper methods, names, or structure.
 
