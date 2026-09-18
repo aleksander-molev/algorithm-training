@@ -1,6 +1,6 @@
 # Current Progress
 
-Last updated: 2026-09-17
+Last updated: 2026-09-18
 
 ## Current status
 
@@ -20,7 +20,7 @@ Foundation consolidation: implementation precision, in-place array updates, bina
 | Two Pointers | Developing | 4 | 0 | 2026-09-15 | Independently passed a stable in-place filtering variant; stated the write-prefix invariant. |
 | Sliding Window | Developing | - | 0 | 2026-09-17 | Independently implemented a variable-size distinct-character window. |
 | Prefix Sum | Not started | - | - | - | |
-| Binary Search | Developing | 4 | 0 | 2026-09-15 | Independently passed a first/last occurrence boundary variant. |
+| Binary Search | Developing | 4 | 1 | 2026-09-18 | Repaired a duplicate-value boundary case after a local hint. |
 | Stack | Not started | - | - | - | |
 | Linked List | Not started | - | - | - | |
 | Heap | Not started | - | - | - | |
@@ -34,8 +34,8 @@ Foundation consolidation: implementation precision, in-place array updates, bina
 ## Due reviews
 
 - Two pointers / in-place stable compaction (stage 1; last result: pass; last reviewed: 2026-09-15; next review: 2026-09-18; evidence: Remove Element review)
-- Binary Search / boundary search (stage 1; last result: pass; last reviewed: 2026-09-15; next review: 2026-09-18; evidence: Find First and Last Position review)
-- Implementation precision / contract tracking (stage 1; last result: pass; last reviewed: 2026-09-15; next review: 2026-09-18; evidence: two independent correct implementations)
+- Binary Search / boundary search (stage 1; last result: partial; last reviewed: 2026-09-18; next review: 2026-09-21; evidence: Next Greatest Letter review)
+- Implementation precision / contract tracking (stage 1; last result: partial; last reviewed: 2026-09-18; next review: 2026-09-19; evidence: duplicate-value return contract in Next Greatest Letter)
 - HashMap / frequency accounting (stage 2; last result: pass; last reviewed: 2026-09-17; next review: 2026-09-24; evidence: Valid Anagram review)
 - Sliding window / variable distinct-character window (stage 0; last result: pass; last reviewed: 2026-09-17; next review: 2026-09-18; evidence: Longest Substring Without Repeating Characters)
 
