@@ -49,6 +49,28 @@ The diagnostic establishes a baseline; it is not a pass/fail exam. At the end, u
 ### Train
 Detailed reasoning is useful when learning a new concept. Ask for algorithm ideas, invariants, trade-offs, and why the approach works when this materially helps learning.
 
+When the selected topic is new or clearly weak, begin with a short Teaching Phase before the first problem.
+
+#### Teaching Phase
+
+Keep this concise: normally 5–10 minutes.
+
+Cover:
+- what kinds of problems the pattern/technique is useful for;
+- 2–3 clues that should make me consider it;
+- the core mechanism or mental model;
+- common mistakes and traps;
+- one tiny illustrative example that is simpler than the real practice problem.
+
+Rules:
+- do not turn this into a long lecture;
+- do not provide the solution to the upcoming practice problem;
+- do not over-focus on formal proofs or terminology;
+- prefer intuition and recognition over exhaustive theory;
+- move to hands-on coding quickly.
+
+Skip or shorten the Teaching Phase when the topic is already familiar and the session is mainly reinforcement.
+
 ### Review
 Optimize for coding repetitions, not discussion.
 
