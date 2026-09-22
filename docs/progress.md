@@ -1,6 +1,6 @@
 # Current Progress
 
-Last updated: 2026-09-18
+Last updated: 2026-09-22
 
 ## Current status
 
@@ -18,7 +18,7 @@ Foundation consolidation: implementation precision, in-place array updates, bina
 | Arrays / Strings | Developing | - | 1 | 2026-09-13 | Palindrome scan solved after local implementation guidance. |
 | HashMap / HashSet | Developing | 5 | 0 | 2026-09-17 | Independently passed a related frequency-accounting review. |
 | Two Pointers | Developing | 4 | 0 | 2026-09-15 | Independently passed a stable in-place filtering variant; stated the write-prefix invariant. |
-| Sliding Window | Developing | - | 0 | 2026-09-17 | Independently implemented a variable-size distinct-character window. |
+| Sliding Window | Developing | - | 1 | 2026-09-22 | Recognized a minimum-length sum variant immediately; repaired shrinking-window updates after targeted debugging. |
 | Prefix Sum | Not started | - | - | - | |
 | Binary Search | Developing | 4 | 1 | 2026-09-18 | Repaired a duplicate-value boundary case after a local hint. |
 | Stack | Not started | - | - | - | |
@@ -35,9 +35,9 @@ Foundation consolidation: implementation precision, in-place array updates, bina
 
 - Two pointers / in-place stable compaction (stage 1; last result: pass; last reviewed: 2026-09-15; next review: 2026-09-18; evidence: Remove Element review)
 - Binary Search / boundary search (stage 1; last result: partial; last reviewed: 2026-09-18; next review: 2026-09-21; evidence: Next Greatest Letter review)
-- Implementation precision / contract tracking (stage 1; last result: partial; last reviewed: 2026-09-18; next review: 2026-09-19; evidence: duplicate-value return contract in Next Greatest Letter)
+- Implementation precision / contract tracking (stage 1; last result: partial; last reviewed: 2026-09-22; next review: 2026-09-23; evidence: left-boundary direction and minimum-length update in Minimum Size Subarray Sum)
 - HashMap / frequency accounting (stage 2; last result: pass; last reviewed: 2026-09-17; next review: 2026-09-24; evidence: Valid Anagram review)
-- Sliding window / variable distinct-character window (stage 0; last result: pass; last reviewed: 2026-09-17; next review: 2026-09-18; evidence: Longest Substring Without Repeating Characters)
+- Sliding window / variable window (stage 0; last result: partial; last reviewed: 2026-09-22; next review: 2026-09-23; evidence: Minimum Size Subarray Sum review)
 
 ## Recent strengths
 

@@ -10,8 +10,8 @@ Do not record every typo. Record issues likely to affect future problem solving 
 
 **Category:** implementation-bug
 **First observed:** 2026-09-13
-**Last observed:** 2026-09-18
-**Occurrences:** 5
+**Last observed:** 2026-09-22
+**Occurrences:** 6
 **Status:** active
 
 **Observed behavior**
@@ -20,7 +20,7 @@ The high-level strategy is often recovered correctly, but initial implementation
 
 **Example**
 
-Two Sum initially returned a collection instead of the requested `int[]`; Valid Palindrome needed scope/type and alphanumeric corrections; lower-bound Binary Search initially used exact-match return logic. In the Search Insert review, the right boundary was first updated as if `mid` could be discarded, which failed for insertion between two values. On 2026-09-18, Next Greatest Letter returned immediately after an equal value, violating the strictly-greater contract when duplicates followed.
+Two Sum initially returned a collection instead of the requested `int[]`; Valid Palindrome needed scope/type and alphanumeric corrections; lower-bound Binary Search initially used exact-match return logic. In the Search Insert review, the right boundary was first updated as if `mid` could be discarded, which failed for insertion between two values. On 2026-09-18, Next Greatest Letter returned immediately after an equal value, violating the strictly-greater contract when duplicates followed. On 2026-09-22, a shrinking window initially moved its left boundary in the wrong direction and did not update the minimum after each shrink.
 
 **Training action**
 
@@ -28,7 +28,7 @@ Before coding, restate the method contract and target-specific invariant. Before
 
 **Next review**
 
-2026-09-19
+2026-09-23
 
 **Resolved when**
 
