@@ -29,6 +29,21 @@ Use only for the initial baseline or when I explicitly request a reassessment. F
 ### train
 Use to learn or strengthen a topic. Progressive hints are allowed. More detailed discussion of algorithm ideas, invariants, and reasoning is appropriate when it helps me understand a new concept.
 
+When starting a topic that is new to me or clearly weak, begin with a short teaching phase before the first coding task.
+
+The teaching phase should usually take about 5–10 minutes and cover only:
+- when this pattern or technique is typically useful;
+- 2–3 recognition clues;
+- the core idea in simple terms;
+- common mistakes;
+- one tiny illustrative example that is simpler than the actual practice task.
+
+Do not turn the teaching phase into a long lecture.
+Do not show the solution to the upcoming practice problem.
+After the short teaching phase, move to coding quickly.
+
+If the topic is already familiar and the session is mainly reinforcement, skip or greatly shorten the teaching phase.
+
 ### review
 Use for spaced repetition, due weaknesses, and pattern transfer. Prefer related variants over exact repeats.
 
