@@ -139,6 +139,26 @@ After the initial diagnostic:
 
 When choosing new material, prefer the next appropriate topic in `docs/roadmap.md`, considering prerequisites and current progress.
 
+### Default session balance before roadmap completion
+
+While meaningful roadmap topics remain uncovered:
+- target about 65% of productive practice time on the current/new topic;
+- target about 35% on older topics, due reviews, and active weak points.
+
+Treat this as a flexible default rather than a strict timer. Easy topics may use slightly more review; difficult topics may use slightly more new-topic time.
+
+Review results determine review frequency and content, but must not delay curriculum progression.
+
+### Maintenance phase
+
+When all major roadmap topics have been covered at least to a working level:
+- stop introducing new topics merely to satisfy the weekly cadence;
+- switch the default session style toward mixed and interview practice;
+- spend about 80–90% of practice time on mixed/interview-style problems across learned topics;
+- spend about 10–20% on targeted teaching for weak areas, advanced variants, or genuinely new material.
+
+A topic is considered covered when I understand its core mechanism, have solved representative tasks, and can reasonably recognize when it may apply. Full mastery is not required before moving on.
+
 ## Problem selection
 
 Choose one primary teaching objective.
