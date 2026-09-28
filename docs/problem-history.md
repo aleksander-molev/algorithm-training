@@ -20,3 +20,4 @@ Detailed discussion belongs in `sessions/`.
 | 2026-09-22 | Minimum Size Subarray Sum | Variable-size shrinking window | Medium | Solved after implementation corrections | 1 | - | yes | 2026-09-23 |
 | 2026-09-24 | Ransom Note | Frequency accounting | Easy | Solved independently; complexity correction | 0 | - | yes | 2026-10-01 |
 | 2026-09-24 | Find Minimum in Rotated Sorted Array | Binary-search boundary reasoning | Medium | Solved after boundary correction | 1 | - | yes | 2026-09-27 |
+| 2026-09-28 | Max Consecutive Ones III | Variable window / zero budget | Medium | Solved independently; review pass | 0 | - | yes | 2026-10-01 |

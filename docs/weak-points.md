@@ -22,13 +22,17 @@ The high-level strategy is often recovered correctly, but initial implementation
 
 Two Sum initially returned a collection instead of the requested `int[]`; Valid Palindrome needed scope/type and alphanumeric corrections; lower-bound Binary Search initially used exact-match return logic. In the Search Insert review, the right boundary was first updated as if `mid` could be discarded, which failed for insertion between two values. On 2026-09-18, Next Greatest Letter returned immediately after an equal value, violating the strictly-greater contract when duplicates followed. On 2026-09-22, a shrinking window initially moved its left boundary in the wrong direction and did not update the minimum after each shrink. On 2026-09-24, Find Minimum in Rotated Sorted Array initially returned an index and used a boundary update that could fail to make progress.
 
+**Recovery evidence**
+
+2026-09-28: Max Consecutive Ones III was correct independently, including zero budget, consecutive zeros, a later longest run, and input preservation. Correct O(n) time and O(1) auxiliary-space analysis. This is one convincing demonstration since the latest regression; keep active until another independent demonstration on a different pattern, separated in time. Review stage advanced to 2 (pass).
+
 **Training action**
 
 Before coding, restate the method contract and target-specific invariant. Before submitting, run a short checklist: signature and types, return contract, representative edge cases, boundary updates, and complexity.
 
 **Next review**
 
-2026-09-27
+2026-10-05
 
 **Resolved when**
 
