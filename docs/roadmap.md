@@ -12,6 +12,9 @@ This roadmap is intentionally stable. Codex may recommend changes, but should no
 - Dynamic Programming, Graphs, Trees, or similarly deep areas can reasonably use the longer cadence.
 - Do not wait for complete mastery before continuing; unresolved weaknesses stay in spaced repetition.
 - Within a multi-week topic, advance through distinct subtopics instead of repeating the same narrow problem type.
+- Before roadmap completion, use roughly 65% of practice time for the current/new topic and 35% for older topics and weak points.
+- Review should reinforce older material without blocking progression.
+- After all major roadmap topics have been covered at least to a working level, switch to maintenance: roughly 80–90% mixed/interview practice and 10–20% targeted learning.
 
 ## Phase 0 — Foundations
 
