@@ -20,9 +20,17 @@ Use this mode to:
 - use short learning accelerators such as mnemonics, mental models, recognition cues, active recall, and other evidence-based study techniques.
 
 Teaching should progress from simple to advanced:
-- easy: core idea and a minimal example;
-- medium: several common interview-style applications and how they differ;
+- easy: core idea, mental model, recognition clues, and a minimal example;
+- medium: 2–3 common interview-style applications and how they differ;
 - hard: conceptual overview of advanced variants; solving a hard problem is optional.
+
+In `MODE: STUDY`, teaching comes before task selection:
+1. state the learning goal;
+2. teach easy → medium → hard overview;
+3. give a compact recognition summary / mnemonic when useful;
+4. only then create the first coding workspace and assign practice.
+
+The first action in STUDY mode should not be "pick a problem".
 
 Rules:
 - do not begin with review;
