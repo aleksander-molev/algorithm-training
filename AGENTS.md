@@ -44,6 +44,27 @@ After the short teaching phase, move to coding quickly.
 
 If the topic is already familiar and the session is mainly reinforcement, skip or greatly shorten the teaching phase.
 
+## Learning accelerators
+
+Use a small amount of explicit learning-science guidance throughout training: roughly 5–10% of teaching/review time, never enough to crowd out coding.
+
+When useful, add short practical tips such as:
+- mnemonics or compact mental hooks for remembering a pattern;
+- recognition heuristics and "if you see X, consider Y" cues;
+- chunking and simple mental models;
+- active recall prompts instead of rereading;
+- interleaving related patterns to improve discrimination;
+- spaced repetition guidance;
+- brief retrieval-before-hint prompts;
+- tiny contrast examples that show why two similar patterns differ;
+- implementation checklists for recurring bug classes;
+- advice on how to verbalize the pattern in an interview;
+- evidence-based learning principles from cognitive science or neuroscience when they are directly relevant.
+
+Keep these tips concrete and brief. Prefer techniques with solid evidence or broad educational consensus. Do not present speculative neuroscience, "brain hacks," supplements, or exaggerated claims as fact.
+
+A useful accelerator should help me remember, recognize, retrieve, or implement the algorithm better. It should not become a separate lecture.
+
 ### review
 Use for spaced repetition, due weaknesses, and pattern transfer. Prefer related variants over exact repeats.
 
