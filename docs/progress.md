@@ -55,18 +55,15 @@ Foundation consolidation: implementation precision, in-place array updates, bina
 
 ## Next recommended session
 
-Normal training session must begin with NEW MATERIAL, not review.
+A new learning block is due.
 
-Phase 1 — NEW MATERIAL:
-- introduce Prefix Sum immediately;
-- start with the Teaching Phase;
-- then solve one or more Prefix Sum problems;
-- use roughly 65% of productive practice time here.
+Current block topic: Prefix Sum.
 
-Phase 2 — REVIEW:
-- only after the Prefix Sum block is complete;
-- use roughly 35% of productive practice time;
-- select at most one or two highest-value older review targets;
-- do not try to clear the overdue queue.
+The first meaningful session of this block must:
+1. introduce Prefix Sum first;
+2. run the Teaching Phase;
+3. solve initial Prefix Sum practice.
 
-Do not use Two Pointers, Sliding Window, Binary Search, HashMap, or another old topic as a warm-up before Prefix Sum.
+After Prefix Sum has been introduced, later sessions in this block may be review/practice-heavy.
+
+Prefix Sum should normally occupy about one week. At the end of that block, move to the next roadmap topic regardless of how strong the Prefix Sum results are. Any remaining weakness should continue through spaced repetition instead of extending the block.
