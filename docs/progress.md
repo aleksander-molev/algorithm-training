@@ -55,4 +55,12 @@ Foundation consolidation: implementation precision, in-place array updates, bina
 
 ## Next recommended session
 
-Prioritize the overdue two-pointers and sliding-window reviews. Continue the binary-search boundary review on 2026-09-27 and HashMap frequency accounting on 2026-10-01.
+Use a mixed session rather than review-only mode.
+
+For a 60–90 minute session:
+1. spend at most 15–20 minutes on the highest-value overdue review;
+2. introduce a genuinely new roadmap topic;
+3. use the Teaching Phase before the first problem on that topic;
+4. keep remaining overdue items in the spaced-repetition queue instead of trying to clear them all.
+
+Recommended next new topic: Prefix Sum, since it is the next not-started core pattern in the suggested roadmap sequence.
