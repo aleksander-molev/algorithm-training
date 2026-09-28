@@ -2,6 +2,14 @@
 
 This roadmap is intentionally stable. Codex may recommend changes, but should not substantially rewrite it automatically.
 
+## Recommended learning cadence
+
+- Introduce a new topic or major subtopic roughly once per week.
+- Broad or difficult topics may occupy up to about two weeks.
+- Dynamic Programming, Graphs, Trees, or similarly deep areas can reasonably use the longer cadence.
+- Do not wait for complete mastery before continuing; unresolved weaknesses stay in spaced repetition.
+- Within a multi-week topic, advance through distinct subtopics instead of repeating the same narrow problem type.
+
 ## Phase 0 — Foundations
 
 - [ ] Complexity analysis
