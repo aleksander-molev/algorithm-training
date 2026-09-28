@@ -19,6 +19,25 @@ Use this mode to:
 - practice the current topic;
 - use short learning accelerators such as mnemonics, mental models, recognition cues, active recall, and other evidence-based study techniques.
 
+Teaching should progress from simple to advanced:
+- easy: core idea, mental model, recognition clues, and a minimal example;
+- medium: 2–3 common interview-style applications and how they differ;
+- hard: conceptual overview of advanced variants; solving a hard problem is optional.
+
+In `MODE: STUDY`, teaching comes before task selection:
+1. state the learning goal;
+2. teach easy → medium → hard overview;
+3. give a compact recognition summary / mnemonic when useful;
+4. only then create the first coding workspace and assign practice.
+
+The first action in STUDY mode should not be "pick a problem".
+
+Each topic lesson is saved as Markdown at:
+
+`lessons/<topic-slug>/lesson.md`
+
+The lesson should be a standalone study note, not a chat transcript.
+
 Rules:
 - do not begin with review;
 - do not assign old-topic warm-ups;
@@ -72,6 +91,7 @@ Simulate a coding interview:
 - `docs/problem-history.md` — compact history of attempted problems.
 - `docs/spaced-repetition.md` — review calendar and scheduling rules.
 - `sessions/` — chronological session notes.
+- `lessons/` — Markdown lesson materials organized by topic.
 - `templates/` — templates for session/problem records.
 
 ## Starting a session
