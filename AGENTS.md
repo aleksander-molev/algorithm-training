@@ -87,7 +87,17 @@ Consider:
 
 Avoid repeating the same pattern too many times in a row and avoid jumping to advanced topics before prerequisites are stable.
 
-When reviews are due, follow `docs/spaced-repetition.md`. Normally include at least one due review before introducing new material.
+When reviews are due, follow `docs/spaced-repetition.md`, but do not let the review queue block roadmap progression.
+
+Default session policy after the initial diagnostic:
+- treat due review as a short block inside the session, not as a reason to make the entire session review-only;
+- for a 60-minute session, normally spend at most 10–15 minutes on due review;
+- for a 90-minute session, normally spend at most 15–20 minutes on due review;
+- after the review block, continue with the next roadmap topic or the current learning topic;
+- if no genuinely new topic has been introduced in the previous two meaningful sessions, the current session must include new material unless I explicitly request review-only mode;
+- overdue items remain overdue if there is not enough time; do not try to clear the whole backlog in one session.
+
+A full review-only session is appropriate only when I explicitly request it or when a severe regression in a prerequisite would make new material unproductive.
 
 ## Problem workspace creation
 
