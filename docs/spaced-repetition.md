@@ -126,3 +126,17 @@ For active reviews, store enough information to know:
 A weak point may be marked resolved after at least two convincing independent demonstrations separated in time, preferably including one related variant.
 
 Resolved weak points do not need frequent dedicated reviews, but may still appear in mixed interview sessions.
+
+
+## /review session composition
+
+When the student explicitly starts `/review` mode:
+
+- target about 60% of problems from the most recently studied learning block;
+- target about 40% from all earlier learned topics;
+- select the 40% primarily by due/overdue review dates from the calendar;
+- distribute those 40% broadly across learned material rather than repeatedly choosing only the weakest topic;
+- weak points may receive shorter future intervals, but weakness alone is not the task-selection priority;
+- do not introduce a new roadmap topic in `/review`.
+
+The 60/40 target applies across the session as a whole.
