@@ -164,10 +164,15 @@ Do not wait for complete mastery before moving forward. Keep unfinished material
 
 After the initial diagnostic:
 - roadmap progression and review must coexist;
-- repeated practice of already-known patterns must not consume consecutive sessions indefinitely;
-- after at most two meaningful sessions without new material, the next session must introduce the next appropriate roadmap topic;
+- repeated practice of already-known patterns must not consume the learning-block transition;
 - one weak pattern does not need to be fully mastered before adjacent core topics are introduced;
 - continue reviewing weak patterns later through spaced repetition.
+
+Hard startup precedence:
+- `docs/progress.md` decides whether a new learning-block introduction is pending;
+- if the current block introduction date is not set or is marked "not started yet", the first task of the session must belong to that new topic;
+- overdue reviews, oldest-due ordering, warm-ups, pending old workspaces, and weak-point severity cannot override this;
+- do not start in review mode when a new block introduction is pending.
 
 When choosing new material, prefer the next appropriate topic in `docs/roadmap.md`, considering prerequisites and current progress.
 
