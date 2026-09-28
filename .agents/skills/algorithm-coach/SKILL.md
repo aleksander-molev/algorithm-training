@@ -119,6 +119,10 @@ Spaced repetition supports learning; it must not replace progression.
 
 Use the calendar as an additional progression signal:
 - target a genuinely new topic or major subtopic roughly every 7 days;
+- prefer starting the week's new topic on Monday;
+- Tuesday or Wednesday are acceptable fallback days for introducing the week's new topic;
+- Thursday through Sunday should normally focus on practice, review, consolidation, and variants of the current week's topic;
+- if no new topic has been introduced yet that week, do not postpone it merely because it is already Thursday or later; introduce it at the next meaningful session;
 - allow up to roughly 14 days for broad or difficult areas such as Dynamic Programming, Graphs, Trees, or another topic that clearly needs deeper work;
 - if about 7 days have passed since the last new topic, strongly prefer introducing the next appropriate roadmap topic;
 - if about 14 days have passed without new material, introduce new material unless there is an explicit recorded reason not to;
