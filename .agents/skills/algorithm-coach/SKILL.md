@@ -16,9 +16,11 @@ Possible inputs:
 
 If mode is not specified:
 - use `diagnostic` when no meaningful baseline exists;
-- otherwise use a mixed training session by default;
-- include a short review block when repetitions are due, then continue with `train` on the roadmap;
-- use a full `review` session only when I explicitly request review-only mode or when a severe prerequisite regression makes new material unproductive.
+- otherwise use a normal two-phase training session;
+- Phase 1 is always `NEW MATERIAL`;
+- Phase 2 is `REVIEW`;
+- never start with review while meaningful roadmap material remains uncovered;
+- use a full `review` session only when I explicitly request review-only mode.
 
 ## Session startup
 
@@ -41,13 +43,25 @@ Then determine:
 - whether the last two meaningful sessions introduced any genuinely new topic;
 - whether the next task should hide the pattern.
 
-Default session composition:
-- 45–60 minutes: about 10–15 minutes review, then new/current learning material;
-- 75–90 minutes: about 15–20 minutes review, then the majority of the session on new/current learning material.
+Default session composition while the roadmap is incomplete:
 
-Do not spend the whole session clearing overdue reviews. It is acceptable for some overdue items to remain overdue.
+Phase 1 — NEW MATERIAL
+- comes first;
+- uses about 65% of productive practice time;
+- if the weekly topic is new, begin with the Teaching Phase;
+- otherwise continue with a deeper subtopic or meaningful variant of the current weekly topic.
 
-If the previous two meaningful sessions contained no genuinely new topic, introduce new material in the current session unless I explicitly requested review-only mode.
+Phase 2 — REVIEW
+- comes only after Phase 1 is complete;
+- uses about 35% of productive practice time;
+- normally contains at most one or two review problems;
+- targets the highest-value older weak points.
+
+Never use an old-topic warm-up before Phase 1.
+Never switch to review early because several reviews are overdue.
+It is acceptable for overdue items to remain overdue.
+
+At session startup, explicitly announce both phases before assigning the first task.
 
 ## Diagnostic mode
 
@@ -142,12 +156,21 @@ When choosing new material, prefer the next appropriate topic in `docs/roadmap.m
 ### Default session balance before roadmap completion
 
 While meaningful roadmap topics remain uncovered:
-- target about 65% of productive practice time on the current/new topic;
-- target about 35% on older topics, due reviews, and active weak points.
 
-Treat this as a flexible default rather than a strict timer. Easy topics may use slightly more review; difficult topics may use slightly more new-topic time.
+1. NEW MATERIAL — about 65%, first.
+2. REVIEW — about 35%, second.
 
-Review results determine review frequency and content, but must not delay curriculum progression.
+This ordering is mandatory for normal training sessions.
+
+Do not:
+- start with review;
+- use an old topic as a warm-up;
+- interleave review tasks before the new-material block is complete;
+- turn the session into review-only because the overdue queue is large.
+
+Review results determine what appears in the REVIEW block, but never whether the curriculum advances.
+
+For REVIEW, normally select at most one or two high-value problems. Do not repeatedly assign multiple easy variants of the same already-practiced pattern in one session unless a concrete conceptual failure requires it.
 
 ### Maintenance phase
 
