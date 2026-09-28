@@ -126,6 +126,13 @@ After the new topic has been introduced:
 
 Topic switching is CALENDAR DRIVEN, not mastery driven.
 
+Track each learning block explicitly:
+- topic;
+- actual introduction/start date;
+- target transition date;
+- whether the block ended early because the topic was learned quickly;
+- whether it used the extended window because the topic was difficult.
+
 When the block ends:
 - move to the next roadmap topic even if performance on the current topic is weak;
 - never extend a topic merely because reviews are failing, partial, overdue, or confidence is low;
@@ -140,9 +147,13 @@ The only session that must start with new material is the first meaningful sessi
 Maintain forward progress through the roadmap on a calendar basis, not only by review completion.
 
 Default cadence:
-- introduce a genuinely new topic or major subtopic about once every 7 days;
+- learning-block length is adaptive, not fixed;
+- introduce a genuinely new topic or major subtopic roughly once every 7 days by default;
 - prefer introducing the week's new topic at the beginning of the week: Monday is ideal; Tuesday or Wednesday are also preferred;
 - Thursday through Sunday should usually emphasize practice, review, consolidation, and variants of the current week's topic rather than starting a new topic, unless the week's new topic has not yet been introduced;
+- if I demonstrate that a topic is easy for me, move to the next roadmap topic early; do not wait for the nominal 7-day block to finish;
+- if a topic is difficult, keep practicing it longer, but never let that topic block roadmap progression for more than about 14 days;
+- my explicit feedback such as "this is easy, move on" or "I need more time on this" should strongly influence block length, subject to the 14-day maximum;
 - for broader or harder areas, it is acceptable to stay on the same topic for up to about 14 days;
 - examples of topics that may reasonably take closer to 14 days include Dynamic Programming, Graphs, Trees, or another area that clearly needs multiple teaching/practice sessions;
 - do not stay on the same topic beyond about 14 days without an explicit reason recorded in progress/session notes.

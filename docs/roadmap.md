@@ -13,8 +13,11 @@ This roadmap is intentionally stable. Codex may recommend changes, but should no
 - Do not wait for complete mastery before continuing; unresolved weaknesses stay in spaced repetition.
 - Within a multi-week topic, advance through distinct subtopics instead of repeating the same narrow problem type.
 - Use calendar-based learning blocks instead of mastery-based gating.
-- Ordinary topics normally get about 1 week.
+- Ordinary topics normally get about 1 week, but may finish earlier if the topic is learned quickly.
 - Broad or difficult topics may get up to about 2 weeks.
+- User feedback can shorten or extend a block within that range.
+- Count block length from the actual date the topic was first introduced.
+- Fourteen days is the maximum time a weak topic may block progression to the next roadmap topic.
 - Introduce the block topic at the start, then use the rest of the block for practice and review.
 - At the end of the block, move to the next roadmap topic regardless of results.
 - Weak topics stay in spaced repetition and appear more often in future reviews; they must not block progression.
