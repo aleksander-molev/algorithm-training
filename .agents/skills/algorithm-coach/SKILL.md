@@ -90,6 +90,30 @@ Rules:
 
 Skip or shorten the Teaching Phase when the topic is already familiar and the session is mainly reinforcement.
 
+#### Learning accelerators
+
+Reserve roughly 5–10% of teaching/review time for short, practical learning aids when useful.
+
+Good examples:
+- a mnemonic or memorable mental hook;
+- a recognition cue for spotting the pattern;
+- a contrast between two commonly confused patterns;
+- a short active-recall prompt;
+- an interleaving suggestion;
+- a spaced-repetition tip;
+- a compact debugging/implementation checklist;
+- a mental model that compresses the idea;
+- a small interview communication trick;
+- a relevant evidence-based learning principle from cognitive science or neuroscience.
+
+Rules:
+- keep each tip short and immediately applicable;
+- do not reduce meaningful coding time;
+- do not force a tip after every problem;
+- prefer well-supported learning principles;
+- avoid speculative neuroscience, pop-science claims, or pseudo-scientific "brain hacks";
+- connect the tip to the current algorithm or observed weakness whenever possible.
+
 ### Review
 Optimize for coding repetitions, not discussion.
 
