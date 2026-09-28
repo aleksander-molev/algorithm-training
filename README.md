@@ -19,6 +19,11 @@ Use this mode to:
 - practice the current topic;
 - use short learning accelerators such as mnemonics, mental models, recognition cues, active recall, and other evidence-based study techniques.
 
+Teaching should progress from simple to advanced:
+- easy: core idea and a minimal example;
+- medium: several common interview-style applications and how they differ;
+- hard: conceptual overview of advanced variants; solving a hard problem is optional.
+
 Rules:
 - do not begin with review;
 - do not assign old-topic warm-ups;
