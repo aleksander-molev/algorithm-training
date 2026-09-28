@@ -58,6 +58,8 @@ Foundation consolidation: implementation precision, in-place array updates, bina
 A new learning block is due.
 
 Current block topic: Prefix Sum.
+Block introduction date: not started yet — set this when Prefix Sum is actually introduced.
+Target transition: normally about 7 days after introduction; may move earlier if it is learned quickly; hard maximum 14 days after introduction.
 
 The first meaningful session of this block must:
 1. introduce Prefix Sum first;
@@ -66,4 +68,9 @@ The first meaningful session of this block must:
 
 After Prefix Sum has been introduced, later sessions in this block may be review/practice-heavy.
 
-Prefix Sum should normally occupy about one week. At the end of that block, move to the next roadmap topic regardless of how strong the Prefix Sum results are. Any remaining weakness should continue through spaced repetition instead of extending the block.
+Prefix Sum should normally occupy about one week, but this is adaptive:
+- if it becomes comfortable quickly, move to the next topic early;
+- if it is difficult, keep practicing it longer;
+- in all cases, move on no later than 14 days after the actual introduction date.
+
+Any remaining weakness should continue through spaced repetition instead of blocking the next topic.
