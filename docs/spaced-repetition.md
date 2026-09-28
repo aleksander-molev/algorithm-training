@@ -72,32 +72,30 @@ If the student already demonstrates strong independent mastery during diagnostic
 
 ## Due review priority
 
+Spaced repetition is subordinate to the learning-block schedule.
+
 At session startup:
+1. read `docs/progress.md` and determine the current learning block;
+2. if the current block topic has not yet been introduced, introduce that topic before selecting any review problem;
+3. only after the block topic has been introduced may due or overdue reviews drive task selection in later sessions;
+4. when reviewing, prefer the highest-value weakness rather than mechanically choosing the oldest overdue item.
 
-1. identify all reviews with `next review <= today`;
-2. keep them queued for the REVIEW phase;
-3. first complete the session's NEW MATERIAL phase;
-4. only then select the highest-value one or two review items that fit the remaining review budget.
+If `docs/progress.md` marks the current block introduction as not started yet:
+- do not start in review mode;
+- do not use an old-topic warm-up;
+- do not select the oldest overdue item first;
+- do not reuse an old pending workspace as the first task;
+- introduce the current block topic first and record its actual introduction date.
 
-Do not use overdue reviews as a warm-up before new material.
+Overdue reviews never delay a scheduled topic introduction or transition.
 
-Do not interpret an overdue queue as a requirement to clear every overdue item before learning something new.
-
-Default review budget:
-- 45–60 minute session: 10–15 minutes;
-- 75–90 minute session: 15–20 minutes.
-
-The majority of a normal session should be spent on new/current learning material.
-
-A full review-only session should happen only when:
-- the student explicitly requests review-only mode; or
-- a severe prerequisite regression makes the planned new topic unproductive.
-
-If there is more review work than fits the budget, leave the remaining items scheduled/overdue for later sessions.
+After the block topic has been introduced, review-heavy sessions are allowed. Weak review results affect future review frequency, not roadmap timing.
 
 Progression guardrail:
-- if two consecutive meaningful sessions introduced no genuinely new topic, the next normal session must introduce new material;
-- a weak topic may remain in spaced repetition while the roadmap continues.
+- ordinary blocks are about 7 days by default and may end earlier;
+- difficult blocks may extend up to 14 days from the actual introduction date;
+- after 14 days, advance regardless of review results;
+- weak topics remain in spaced repetition while the roadmap continues.
 
 ## Pattern transfer
 
