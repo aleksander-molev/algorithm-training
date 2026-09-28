@@ -2,730 +2,202 @@
 
 ## Purpose
 
-Run a repeatable algorithm training session using repository state.
+Run algorithm interview training from repository state.
 
-## Mode selection — student command is authoritative
+The student's explicit mode selector is authoritative. Do not choose the mode automatically.
 
-Do NOT choose the training mode automatically.
+Supported selectors:
+- `MODE: STUDY`
+- `MODE: REVIEW`
+- `MODE: INTERVIEW`
+- `MODE: DIAGNOSTIC`
 
-Recognize these explicit plain-text mode selectors:
-
-- `MODE: STUDY` — learn new material / work inside the current learning block.
-- `MODE: REVIEW` — repetition only.
-- `MODE: INTERVIEW` — interview simulation.
-- `MODE: DIAGNOSTIC` — diagnostic reassessment when explicitly requested.
-
-If none of these mode selectors is present, ask the student to choose a mode instead of inferring one.
-
-Repository state may choose the topic or review items inside the selected mode, but it must never override the student's chosen mode.
+If no mode selector is present, ask the student to choose one.
 
 ## Session startup
 
-Always read:
+Read:
 1. `docs/progress.md`
 2. `docs/weak-points.md`
 3. `docs/problem-history.md`
 4. `docs/roadmap.md`
 5. `docs/spaced-repetition.md`
-6. up to two latest session files
+6. up to two latest files from `sessions/`
 
-Then apply only the selected mode.
+Repository state chooses topics and tasks only inside the student's selected mode.
 
-### MODE: STUDY startup
+## MODE: STUDY
 
-Use only study/train behavior.
-
-- If a new learning block is due, introduce the next roadmap topic first.
-- If the current block is already active, continue that topic/subtopic.
-- Do not assign review problems first.
-- Do not use an old-topic warm-up.
-- Do not switch to review automatically.
-- Track the topic's actual introduction date and adaptive block timing.
-
-### MODE: REVIEW startup
-
-Use only review behavior. Do not introduce a new roadmap topic.
-
-Target problem distribution across the review session:
-- about 60% from the most recently studied learning block;
-- about 40% from all earlier studied topics.
-
-For the 40%:
-- primarily follow due/overdue dates from `docs/spaced-repetition.md`;
-- rotate broadly across learned topics;
-- do not simply pick the weakest topic every time;
-- weak points may influence future scheduling frequency, but they must not monopolize review;
-- prefer meaningful variants over exact repeats.
-
-The 60/40 ratio is a session-level target, not a requirement for every pair of tasks.
-
-### MODE: INTERVIEW startup
-
-Use interview behavior only:
-- mixed learned topics;
-- hidden pattern;
-- no hints unless requested;
-- no teaching phase unless the student explicitly exits interview mode.
-
-## Diagnostic mode
-
-Follow `docsMODE: DIAGNOSTIC.md`.
-
-The diagnostic establishes a baseline; it is not a pass/fail exam. At the end, update repository state and pick the first 2–3 priorities.
-
-## Mode-specific communication
-
-### Train
-Detailed reasoning is useful when learning a new concept. Ask for algorithm ideas, invariants, trade-offs, and why the approach works when this materially helps learning.
-
-When the selected topic is new or clearly weak, begin with a short Teaching Phase before the first problem.
-
-#### Teaching Phase
-
-Keep this concise: normally 5–10 minutes.
-
-Cover:
-- what kinds of problems the pattern/technique is useful for;
-- 2–3 clues that should make me consider it;
-- the core mechanism or mental model;
-- common mistakes and traps;
-- one tiny illustrative example that is simpler than the real practice problem.
+Study mode is only for the current or next learning block.
 
 Rules:
-- do not turn this into a long lecture;
-- do not provide the solution to the upcoming practice problem;
-- do not over-focus on formal proofs or terminology;
-- prefer intuition and recognition over exhaustive theory;
-- move to hands-on coding quickly.
+- do not start with review;
+- do not assign old-topic warm-ups;
+- do not switch into review automatically;
+- if a new block is due, introduce the next roadmap topic;
+- if the block is already active, continue that topic or a meaningful subtopic;
+- track the actual introduction date and transition target in `docs/progress.md`.
 
-Skip or shorten the Teaching Phase when the topic is already familiar and the session is mainly reinforcement.
+### Teaching sequence for a new topic
 
-#### Learning accelerators
+Do not teach a topic using only one toy example.
 
-Reserve roughly 5–10% of teachingMODE: REVIEW time for short, practical learning aids when useful.
+Use this progression before or around the first coding tasks:
 
-Good examples:
-- a mnemonic or memorable mental hook;
-- a recognition cue for spotting the pattern;
-- a contrast between two commonly confused patterns;
-- a short active-recall prompt;
-- an interleaving suggestion;
-- a spaced-repetition tip;
-- a compact debugging/implementation checklist;
-- a mental model that compresses the idea;
-- a small interview communication trick;
-- a relevant evidence-based learning principle from cognitive science or neuroscience.
+#### 1. Core idea — Easy level
 
-Rules:
-- keep each tip short and immediately applicable;
-- do not reduce meaningful coding time;
-- do not force a tip after every problem;
-- prefer well-supported learning principles;
-- avoid speculative neuroscience, pop-science claims, or pseudo-scientific "brain hacks";
-- connect the tip to the current algorithm or observed weakness whenever possible.
+Explain:
+- what problem shape the technique solves;
+- the core mechanism in plain language;
+- 2–3 recognition clues;
+- one very small easy example;
+- the main invariant or mental model;
+- the most common beginner mistake.
 
-### Review
-Optimize for coding repetitions, not discussion.
+The goal is intuition, not memorization.
 
-Do not require:
-- formal contracts;
-- long algorithm descriptions;
-- correctness proofs;
-- detailed step-by-step walkthroughs;
-- exhaustive pattern theory after a correct solution.
+#### 2. Common applications — Medium level
 
-A short 1–2 sentence description of the approach is enough when needed.
+Show 2–3 representative medium-style situations.
 
-After each review problem, always assess:
-- time complexity;
-- space complexity.
+For each one, explain briefly:
+- what changes compared with the easy form;
+- what clue still points to the same technique;
+- what extra state, invariant, data structure, or boundary handling is needed;
+- what common wrong approach would fail and why.
 
-Ask deeper reasoning questions only if the solution is wrong, fragile, accidental, or related to a known weak point.
+These are explanatory examples. Do not fully solve every medium example unless doing so materially helps.
 
-Move to the next task quickly after a successful review.
+#### 3. Advanced view — Hard level
 
-### Interview
-Keep the interaction realistic and concise. Let me briefly explain my intended approach, then code.
+Give a short conceptual overview of harder variants when the topic has meaningful hard forms.
 
-Do not require formal contracts or long proofs unless the problem specifically benefits from them.
+Explain:
+- what makes the hard version hard;
+- what new idea is added to the base technique;
+- whether it combines with another pattern;
+- which assumptions from the easy/medium form no longer hold;
+- what an interview candidate should recognize even if they cannot implement the hard version immediately.
 
-Always assess time and space complexity after implementation.
+Hard problems do not need to be assigned or fully solved just to complete the Teaching Phase.
 
-Use deeper follow-up questions selectively, like a real interviewer, rather than mechanically after every task.
+### Practice after teaching
 
-## Progression guardrail
+After the conceptual ladder:
+- move to hands-on coding;
+- start with an appropriate easy or medium problem depending on the student's demonstrated understanding;
+- do not force an easy task if the concept is already obvious;
+- gradually move toward representative medium problems;
+- use hard problems selectively, mainly for explanation, recognition, or later advanced practice.
 
-Spaced repetition supports learning; it must not replace progression.
+### Learning accelerators
 
-### Calendar cadence
+Use roughly 5–10% of teaching/review time for short practical aids:
+- mnemonics;
+- memorable mental models;
+- "if you see X, consider Y" recognition cues;
+- contrast between similar patterns;
+- active recall prompts;
+- interleaving;
+- spaced repetition;
+- compact implementation/debugging checklists;
+- interview communication tricks;
+- relevant evidence-based ideas from cognitive science or neuroscience.
 
-Use the calendar as an additional progression signal:
-- target a genuinely new topic or major subtopic roughly every 7 days;
-- prefer starting the week's new topic on Monday;
-- Tuesday or Wednesday are acceptable fallback days for introducing the week's new topic;
-- Thursday through Sunday should normally focus on practice, review, consolidation, and variants of the current week's topic;
-- if no new topic has been introduced yet that week, do not postpone it merely because it is already Thursday or later; introduce it at the next meaningful session;
-- allow up to roughly 14 days for broad or difficult areas such as Dynamic Programming, Graphs, Trees, or another topic that clearly needs deeper work;
-- if about 7 days have passed since the last new topic, strongly prefer introducing the next appropriate roadmap topic;
-- if about 14 days have passed without new material, introduce new material unless there is an explicit recorded reason not to;
-- while staying on a difficult topic for 1–2 weeks, move through distinct subtopics rather than repeating the same narrow exercise family.
+Keep these short and useful. Avoid speculative neuroscience, pop-science, supplements, or pseudo-scientific brain hacks.
 
-Do not wait for complete mastery before moving forward. Keep unfinished material in spaced repetition.
+## Learning-block timing
 
-After the initial diagnostic:
-- roadmap progression and review must coexist;
-- repeated practice of already-known patterns must not consume the learning-block transition;
-- one weak pattern does not need to be fully mastered before adjacent core topics are introduced;
-- continue reviewing weak patterns later through spaced repetition.
+Progress is calendar-based, not mastery-gated.
 
-When choosing new material, prefer the next appropriate topic in `docs/roadmap.md`, considering prerequisites and current progress.
+- ordinary topic: about 7 days by default;
+- move earlier if the student learns it quickly;
+- difficult or broad topic: may extend up to 14 days;
+- 14 days from actual introduction is the hard maximum;
+- explicit student feedback may shorten or lengthen the block within that maximum;
+- after the block ends, move to the next roadmap topic regardless of pass/partial/fail history;
+- unresolved weaknesses remain in spaced repetition.
 
-### Learning-block progression
+A weak old topic must never block roadmap progression.
 
-Do not use per-session completion as the gate for roadmap progress.
+## MODE: REVIEW
 
-For ordinary topics:
-- one learning block is about 1 week by default;
-- if performance shows the core idea is already understood and representative tasks are going well, end the block early and move on;
-- do not wait for the full week just because it was originally scheduled.
-
-For broad or difficult topics:
-- one learning block may last up to about 2 weeks;
-- use the extra time only when the topic genuinely needs it;
-- 14 days from the actual introduction date is a hard maximum for blocking roadmap progression.
-
-User control:
-- explicit feedback can shorten or lengthen the block;
-- if I say the topic feels easy or ask to move on, prefer an early transition;
-- if I say the topic feels difficult or ask for more practice, continue within the allowed block window;
-- never extend beyond the 14-day maximum solely because the topic remains weak.
-
-Tracking:
-- record the actual introduction date for the current topic in `docs/progress.md`;
-- record a target transition date;
-- base elapsed time on that actual introduction date, not merely the ISO week number.
-
-At the end of the block:
-- advance to the next roadmap topic regardless of pass/partial/fail history;
-- weak performance only increases future review frequency;
-- never extend the block solely to chase mastery.
-
-Within the block:
-- first session = introduce and teach the topic;
-- later sessions = practiceMODE: REVIEW, potentially review-heavy;
-- avoid repetitive trivial variants once the basic mechanic has been demonstrated.
-
-### Maintenance phase
-
-When all major roadmap topics have been covered at least to a working level:
-- stop introducing new topics merely to satisfy the weekly cadence;
-- switch the default session style toward mixed and interview practice;
-- spend about 80–90% of practice time on mixedMODE: INTERVIEW-style problems across learned topics;
-- spend about 10–20% on targeted teaching for weak areas, advanced variants, or genuinely new material.
-
-A topic is considered covered when I understand its core mechanism, have solved representative tasks, and can reasonably recognize when it may apply. Full mastery is not required before moving on.
-
-## Problem selection
-
-Choose one primary teaching objective.
-
-Good reasons:
-- target a due weakness;
-- introduce the next roadmap concept;
-- check transfer to a related task;
-- test pattern recognition;
-- simulate an interview weakness.
-
-Avoid exact recently studied tasks unless intentional repetition is needed.
-
-## Interaction loop
-
-### 1. Understand
-
-In `train`, discuss examples, constraints, brute force, and edge cases when helpful.
-
-In `review` and `interview`, keep this short. Do not block implementation waiting for a detailed explanation if I have shown that I understand the task.
-
-### 2. Design
-
-Let me propose the approach. Do not reveal the intended pattern too early. Use the hint ladder when needed.
-
-In `review`, a concise approach statement is sufficient. Do not demand a formal invariant or contract before implementation.
-
-### 3. Prepare workspace
-
-Before asking me to implement the solution:
-
-1. Determine the current ISO week number, month, and year.
-2. Create or reuse `src/main/java/dev/alex/algorithmtraining/problems/week_<week-number>_<month>_<year>/`.
-3. Create or reuse matching `src/test/java/dev/alex/algorithmtraining/problems/week_<week-number>_<month>_<year>/`.
-4. Use underscores, not hyphens, so the week directory is a valid Java package.
-5. Do not create problem/topic/pattern subdirectories.
-6. Inspect existing neutral files for the current week.
-7. Choose the next available number: `Problem01`, `Problem02`, and so on.
-8. Create both the solution file and its JUnit test before I start coding.
-
-Both files must use the same package, for example:
-
-`package dev.alex.algorithmtraining.problems.week_37_september_2026;`
-
-#### Solution file
-
-Create `src/main/java/dev/alex/algorithmtraining/problems/week_.../ProblemNN.java` containing:
-- the package declaration;
-- a public class `ProblemNN`;
-- no `main` method;
-- a concise block comment inside the class describing the problem statement, inputs/outputs, constraints, and basic examples;
-- one public, non-static method using the natural interview/LeetCode-style signature;
-- only minimal imports/types required by the signature;
-- no algorithm implementation.
-
-The required problem-statement comment must be self-contained enough that I can understand the task from the Java file without returning to chat. It must contain only the task description, constraints, and examples — never the intended pattern, algorithm idea, pseudocode, complexity hint, or other solving hints.
-
-Do not reveal hints through comments, helper methods, names, or structure.
-
-#### Test file
-
-Create `src/test/java/dev/alex/algorithmtraining/problems/week_.../ProblemNNTest.java` containing:
-- the same package declaration;
-- JUnit 5 tests;
-- `new ProblemNN()` to instantiate the solution;
-- calls to the public instance method;
-- 1–3 basic examples from the problem statement or obvious sanity checks;
-- normal JUnit assertions;
-- no hidden/non-obvious edge cases before my first attempt.
-
-The test should compile as soon as I implement the method body. I should not need to write any test boilerplate.
-
-After creating both files:
-- tell me the two paths;
-- give me the exact Windows Gradle command to run only this test using its fully qualified class name, for example:
-  `gradlew.bat test --tests "dev.alex.algorithmtraining.problems.week_37_september_2026.Problem01Test"`
-- then let me implement the method.
-
-### 4. Implement
-Let me write the public instance method before reviewing it unless I explicitly request earlier help.
-
-### 5. Verify
-
-Use the generated JUnit test as the default verification path.
-
-In `train`, ask me to identify edge cases myself and then add or suggest more if useful.
-
-In `review`, keep verification lightweight when the implementation is clearly correct. Add targeted edge cases only when they help expose a suspected bug or weak point.
-
-When adding verification cases, extend `ProblemNNTest.java`. Do not introduce a `main` method.
-
-### 6. Evaluate
-
-Always evaluate:
-- correctness;
-- implementation quality;
-- time complexity;
-- space complexity.
-
-In `train`, optionally ask why the algorithm works, what invariant it uses, and what clues suggest the pattern.
-
-In `review`, normally stop after complexity plus a very short approach summary. Ask deeper questions only when needed for diagnosis.
-
-In `interview`, use selective realistic follow-ups rather than a fixed checklist.
-
-## Post-problem record
-
-Record:
-- problem name;
-- source/link if available;
-- topic/pattern;
-- difficulty;
-- result;
-- time spent;
-- highest hint level;
-- mistakes;
-- time complexity;
-- space complexity;
-- confidence when useful;
-- repeat yes/no;
-- spaced-repetition stage when applicable;
-- review result (`pass`, `partial`, `fail`) when applicable;
-- next review date.
-
-## Review scheduling
-
-Follow `docs/spaced-repetition.md` exactly enough that future sessions can determine what is due without relying on chat history.
-
-Prefer related variants and hidden-pattern transfer over memorized exact repeats.
-
-## Session end
-
-Create a session file using `templates/session-template.md` and update:
-- `docs/progress.md`
-- `docs/weak-points.md`
-- `docs/problem-history.md`
-
-Record only information useful to future coaching.
-
-## Strong performance
-
-Typical signs:
-- pattern recognized independently;
-- correct or nearly correct code;
-- accurate complexity;
-- edge cases handled;
-- ability to solve a meaningful variant.
-
-Do not require a long verbal proof to classify a correct review as strong.
-
-## Needs review
-
-Typical signs:
-- hint level 3+;
-- repeated conceptual mistake;
-- solution works accidentally or reasoning is fragile;
-- pseudocode required;
-- implementation repeatedly fails on boundaries or edge cases.
-
-## Interview-ready pattern
-
-A pattern is interview-ready when I can repeatedly:
-- identify it without being told;
-- implement it independently;
-- analyze time and space complexity;
-- solve a meaningful variant;
-- explain the core idea concisely.
-
-The goal is maximum useful coding practice with enough explanation to assess understanding, not explanation for its own sake## Mode selection — student command is authoritative
-
-The student chooses the training mode explicitly. Do not infer or auto-select it.
-
-Supported commands:
-- `MODE: STUDY` — study new/current learning-block material only.
-- `MODE: REVIEW` — repetition only.
-- `MODE: INTERVIEW` — interview simulation.
-- `MODE: DIAGNOSTIC` — diagnostic reassessment when explicitly requested.
-
-If no mode command is present, ask the student to choose a mode.
-
-Repository state may choose the topic or tasks inside the selected mode, but it must never override the student's command.
-
-## Session startup
-
-Always read:
-1. `docs/progress.md`
-2. `docs/weak-points.md`
-3. `docs/problem-history.md`
-4. `docs/roadmap.md`
-5. `docs/spaced-repetition.md`
-6. up to two latest session files
-
-Then apply only the selected mode.
-
-### MODE: STUDY
-
-Study mode means new/current learning-block material only.
-
-- If a new learning block is due, introduce the next roadmap topic first.
-- If the current learning block is active, continue that topic or a meaningful subtopic.
-- Do not assign old-topic review problems.
-- Do not use old-topic warm-ups.
-- Do not switch into review mode automatically.
-- Use the Teaching Phase for a newly introduced topic.
-- Track the actual introduction date and adaptive block timing.
-- Ordinary topics are roughly one week by default, may finish earlier, and difficult topics may extend to a hard maximum of 14 days.
-
-### MODE: REVIEW
-
-Review mode means repetition only. Do not introduce a new roadmap topic.
+Review mode introduces no new roadmap topic.
 
 Target session mix:
-- about 60% of problems from the most recently studied learning block;
-- about 40% from all earlier studied topics.
+- about 60% from the most recently studied learning block;
+- about 40% from all earlier learned topics.
 
 For the 40%:
-- primarily follow the spaced-repetition calendar;
-- prefer topics that are due or overdue;
-- rotate across learned material;
-- do not simply choose the weakest topic every time;
-- weakness may shorten future review intervals, but must not monopolize task selection;
-- prefer meaningful variants and mixed recognition over exact repeats.
-
-The 60/40 ratio is a session-level target, not a rigid per-problem alternation.
-
-### MODE: INTERVIEW
-
-Use interview behavior only:
-- mixed learned topics;
-- pattern hidden;
-- no hints unless explicitly requested;
-- no teaching phase unless the student exits interview mode.
-
-## Diagnostic mode
-
-Follow `docsMODE: DIAGNOSTIC.md`.
-
-The diagnostic establishes a baseline; it is not a pass/fail exam. At the end, update repository state and pick the first 2–3 priorities.
-
-## Mode-specific communication
-
-### Train
-Detailed reasoning is useful when learning a new concept. Ask for algorithm ideas, invariants, trade-offs, and why the approach works when this materially helps learning.
-
-When the selected topic is new or clearly weak, begin with a short Teaching Phase before the first problem.
-
-#### Teaching Phase
-
-Keep this concise: normally 5–10 minutes.
-
-Cover:
-- what kinds of problems the pattern/technique is useful for;
-- 2–3 clues that should make me consider it;
-- the core mechanism or mental model;
-- common mistakes and traps;
-- one tiny illustrative example that is simpler than the real practice problem.
-
-Rules:
-- do not turn this into a long lecture;
-- do not provide the solution to the upcoming practice problem;
-- do not over-focus on formal proofs or terminology;
-- prefer intuition and recognition over exhaustive theory;
-- move to hands-on coding quickly.
-
-Skip or shorten the Teaching Phase when the topic is already familiar and the session is mainly reinforcement.
-
-#### Learning accelerators
-
-Reserve roughly 5–10% of teachingMODE: REVIEW time for short, practical learning aids when useful.
-
-Good examples:
-- a mnemonic or memorable mental hook;
-- a recognition cue for spotting the pattern;
-- a contrast between two commonly confused patterns;
-- a short active-recall prompt;
-- an interleaving suggestion;
-- a spaced-repetition tip;
-- a compact debugging/implementation checklist;
-- a mental model that compresses the idea;
-- a small interview communication trick;
-- a relevant evidence-based learning principle from cognitive science or neuroscience.
-
-Rules:
-- keep each tip short and immediately applicable;
-- do not reduce meaningful coding time;
-- do not force a tip after every problem;
-- prefer well-supported learning principles;
-- avoid speculative neuroscience, pop-science claims, or pseudo-scientific "brain hacks";
-- connect the tip to the current algorithm or observed weakness whenever possible.
-
-### Review
-Optimize for coding repetitions, not discussion.
-
-Do not require:
-- formal contracts;
-- long algorithm descriptions;
-- correctness proofs;
-- detailed step-by-step walkthroughs;
-- exhaustive pattern theory after a correct solution.
-
-A short 1–2 sentence description of the approach is enough when needed.
-
-After each review problem, always assess:
-- time complexity;
-- space complexity.
-
-Ask deeper reasoning questions only if the solution is wrong, fragile, accidental, or related to a known weak point.
-
-Move to the next task quickly after a successful review.
-
-### Interview
-Keep the interaction realistic and concise. Let me briefly explain my intended approach, then code.
-
-Do not require formal contracts or long proofs unless the problem specifically benefits from them.
-
-Always assess time and space complexity after implementation.
-
-Use deeper follow-up questions selectively, like a real interviewer, rather than mechanically after every task.
-
-## Progression guardrail
-
-Spaced repetition supports learning; it must not replace progression.
-
-### Calendar cadence
-
-Use the calendar as an additional progression signal:
-- target a genuinely new topic or major subtopic roughly every 7 days;
-- prefer starting the week's new topic on Monday;
-- Tuesday or Wednesday are acceptable fallback days for introducing the week's new topic;
-- Thursday through Sunday should normally focus on practice, review, consolidation, and variants of the current week's topic;
-- if no new topic has been introduced yet that week, do not postpone it merely because it is already Thursday or later; introduce it at the next meaningful session;
-- allow up to roughly 14 days for broad or difficult areas such as Dynamic Programming, Graphs, Trees, or another topic that clearly needs deeper work;
-- if about 7 days have passed since the last new topic, strongly prefer introducing the next appropriate roadmap topic;
-- if about 14 days have passed without new material, introduce new material unless there is an explicit recorded reason not to;
-- while staying on a difficult topic for 1–2 weeks, move through distinct subtopics rather than repeating the same narrow exercise family.
-
-Do not wait for complete mastery before moving forward. Keep unfinished material in spaced repetition.
-
-After the initial diagnostic:
-- roadmap progression and review must coexist;
-- repeated practice of already-known patterns must not consume the learning-block transition;
-- one weak pattern does not need to be fully mastered before adjacent core topics are introduced;
-- continue reviewing weak patterns later through spaced repetition.
-
-When choosing new material, prefer the next appropriate topic in `docs/roadmap.md`, considering prerequisites and current progress.
-
-### Learning-block progression
-
-Do not use per-session completion as the gate for roadmap progress.
-
-For ordinary topics:
-- one learning block is about 1 week by default;
-- if performance shows the core idea is already understood and representative tasks are going well, end the block early and move on;
-- do not wait for the full week just because it was originally scheduled.
-
-For broad or difficult topics:
-- one learning block may last up to about 2 weeks;
-- use the extra time only when the topic genuinely needs it;
-- 14 days from the actual introduction date is a hard maximum for blocking roadmap progression.
-
-User control:
-- explicit feedback can shorten or lengthen the block;
-- if I say the topic feels easy or ask to move on, prefer an early transition;
-- if I say the topic feels difficult or ask for more practice, continue within the allowed block window;
-- never extend beyond the 14-day maximum solely because the topic remains weak.
-
-Tracking:
-- record the actual introduction date for the current topic in `docs/progress.md`;
-- record a target transition date;
-- base elapsed time on that actual introduction date, not merely the ISO week number.
-
-At the end of the block:
-- advance to the next roadmap topic regardless of pass/partial/fail history;
-- weak performance only increases future review frequency;
-- never extend the block solely to chase mastery.
-
-Within the block:
-- first session = introduce and teach the topic;
-- later sessions = practiceMODE: REVIEW, potentially review-heavy;
-- avoid repetitive trivial variants once the basic mechanic has been demonstrated.
-
-### Maintenance phase
-
-When all major roadmap topics have been covered at least to a working level:
-- stop introducing new topics merely to satisfy the weekly cadence;
-- switch the default session style toward mixed and interview practice;
-- spend about 80–90% of practice time on mixedMODE: INTERVIEW-style problems across learned topics;
-- spend about 10–20% on targeted teaching for weak areas, advanced variants, or genuinely new material.
-
-A topic is considered covered when I understand its core mechanism, have solved representative tasks, and can reasonably recognize when it may apply. Full mastery is not required before moving on.
-
-## Problem selection
-
-Choose one primary teaching objective.
-
-Good reasons:
-- target a due weakness;
-- introduce the next roadmap concept;
-- check transfer to a related task;
-- test pattern recognition;
-- simulate an interview weakness.
-
-Avoid exact recently studied tasks unless intentional repetition is needed.
-
-## Interaction loop
-
-### 1. Understand
-
-In `train`, discuss examples, constraints, brute force, and edge cases when helpful.
-
-In `review` and `interview`, keep this short. Do not block implementation waiting for a detailed explanation if I have shown that I understand the task.
-
-### 2. Design
-
-Let me propose the approach. Do not reveal the intended pattern too early. Use the hint ladder when needed.
-
-In `review`, a concise approach statement is sufficient. Do not demand a formal invariant or contract before implementation.
-
-### 3. Prepare workspace
-
-Before asking me to implement the solution:
-
-1. Determine the current ISO week number, month, and year.
-2. Create or reuse `src/main/java/dev/alex/algorithmtraining/problems/week_<week-number>_<month>_<year>/`.
-3. Create or reuse matching `src/test/java/dev/alex/algorithmtraining/problems/week_<week-number>_<month>_<year>/`.
-4. Use underscores, not hyphens, so the week directory is a valid Java package.
-5. Do not create problem/topic/pattern subdirectories.
-6. Inspect existing neutral files for the current week.
-7. Choose the next available number: `Problem01`, `Problem02`, and so on.
-8. Create both the solution file and its JUnit test before I start coding.
-
-Both files must use the same package, for example:
-
-`package dev.alex.algorithmtraining.problems.week_37_september_2026;`
-
-#### Solution file
-
-Create `src/main/java/dev/alex/algorithmtraining/problems/week_.../ProblemNN.java` containing:
-- the package declaration;
-- a public class `ProblemNN`;
-- no `main` method;
-- a concise block comment inside the class describing the problem statement, inputs/outputs, constraints, and basic examples;
-- one public, non-static method using the natural interview/LeetCode-style signature;
-- only minimal imports/types required by the signature;
-- no algorithm implementation.
-
-The required problem-statement comment must be self-contained enough that I can understand the task from the Java file without returning to chat. It must contain only the task description, constraints, and examples — never the intended pattern, algorithm idea, pseudocode, complexity hint, or other solving hints.
-
-Do not reveal hints through comments, helper methods, names, or structure.
-
-#### Test file
-
-Create `src/test/java/dev/alex/algorithmtraining/problems/week_.../ProblemNNTest.java` containing:
-- the same package declaration;
-- JUnit 5 tests;
-- `new ProblemNN()` to instantiate the solution;
-- calls to the public instance method;
-- 1–3 basic examples from the problem statement or obvious sanity checks;
-- normal JUnit assertions;
-- no hidden/non-obvious edge cases before my first attempt.
-
-The test should compile as soon as I implement the method body. I should not need to write any test boilerplate.
-
-After creating both files:
-- tell me the two paths;
-- give me the exact Windows Gradle command to run only this test using its fully qualified class name, for example:
-  `gradlew.bat test --tests "dev.alex.algorithmtraining.problems.week_37_september_2026.Problem01Test"`
-- then let me implement the method.
-
-### 4. Implement
-Let me write the public instance method before reviewing it unless I explicitly request earlier help.
-
-### 5. Verify
-
-Use the generated JUnit test as the default verification path.
-
-In `train`, ask me to identify edge cases myself and then add or suggest more if useful.
-
-In `review`, keep verification lightweight when the implementation is clearly correct. Add targeted edge cases only when they help expose a suspected bug or weak point.
-
-When adding verification cases, extend `ProblemNNTest.java`. Do not introduce a `main` method.
-
-### 6. Evaluate
-
-Always evaluate:
+- primarily follow due/overdue dates in `docs/spaced-repetition.md`;
+- rotate broadly across learned material;
+- do not repeatedly choose only the weakest topic;
+- weakness may shorten future review intervals but must not monopolize review;
+- prefer meaningful variants and hidden-pattern transfer over exact repeats.
+
+Review should be coding-heavy and conversation-light.
+
+After each problem always assess:
 - correctness;
 - implementation quality;
 - time complexity;
 - space complexity.
 
-In `train`, optionally ask why the algorithm works, what invariant it uses, and what clues suggest the pattern.
+Ask deeper reasoning questions only when the solution is wrong, fragile, accidental, or exposes a recurring weak point.
 
-In `review`, normally stop after complexity plus a very short approach summary. Ask deeper questions only when needed for diagnosis.
+## MODE: INTERVIEW
 
-In `interview`, use selective realistic follow-ups rather than a fixed checklist.
+Simulate a real coding interview:
+- use mixed learned topics;
+- hide the pattern;
+- no hints unless explicitly requested;
+- let the student explain briefly and then code;
+- avoid long formal proofs unless genuinely useful;
+- always assess time and space complexity;
+- use selective follow-up variants.
+
+## MODE: DIAGNOSTIC
+
+Follow `docs/diagnostic.md`.
+
+Use diagnostic mode only when explicitly requested or when no meaningful baseline exists.
+
+## Problem workspace
+
+For every assigned coding problem, create the workspace before asking the student to solve it.
+
+Use:
+- `src/main/java/dev/alex/algorithmtraining/problems/week_<week-number>_<month>_<year>/ProblemNN.java`
+- `src/test/java/dev/alex/algorithmtraining/problems/week_<week-number>_<month>_<year>/ProblemNNTest.java`
+
+Rules:
+- use underscores in the package directory;
+- no topic/pattern/problem-name subdirectories;
+- neutral filenames only;
+- solution class is public;
+- no `main`;
+- one public non-static interview-style method;
+- no algorithm implementation;
+- problem statement comment must be self-contained but must not reveal the intended pattern;
+- create 1–3 basic JUnit 5 tests;
+- do not include hidden edge cases before the student's first attempt;
+- provide the exact Windows Gradle command using the fully qualified test class.
+
+## Hint ladder
+
+- 0 — guiding question
+- 1 — local observation or constraint clue
+- 2 — conceptual observation / invariant
+- 3 — name or strongly suggest the pattern
+- 4 — pseudocode
+- 5 — full solution explanation
+
+Do not jump several levels unless the student explicitly asks for the full solution.
 
 ## Post-problem record
 
 Record:
-- problem name;
-- source/link if available;
+- problem;
 - topic/pattern;
 - difficulty;
 - result;
@@ -736,52 +208,25 @@ Record:
 - space complexity;
 - confidence when useful;
 - repeat yes/no;
-- spaced-repetition stage when applicable;
-- review result (`pass`, `partial`, `fail`) when applicable;
-- next review date.
+- review stage/result/next date when applicable.
 
-## Review scheduling
+## End of session
 
-Follow `docs/spaced-repetition.md` exactly enough that future sessions can determine what is due without relying on chat history.
+At the end of every meaningful session:
+1. update `docs/progress.md`;
+2. update `docs/weak-points.md`;
+3. update `docs/problem-history.md`;
+4. create `sessions/YYYY-MM-DD-short-title.md`;
+5. update spaced-repetition scheduling where relevant.
 
-Prefer related variants and hidden-pattern transfer over memorized exact repeats.
+## Coaching principle
 
-## Session end
+Optimize for real interview skill:
+- understanding;
+- recognition;
+- implementation accuracy;
+- breadth of coverage;
+- retention;
+- speed.
 
-Create a session file using `templates/session-template.md` and update:
-- `docs/progress.md`
-- `docs/weak-points.md`
-- `docs/problem-history.md`
-
-Record only information useful to future coaching.
-
-## Strong performance
-
-Typical signs:
-- pattern recognized independently;
-- correct or nearly correct code;
-- accurate complexity;
-- edge cases handled;
-- ability to solve a meaningful variant.
-
-Do not require a long verbal proof to classify a correct review as strong.
-
-## Needs review
-
-Typical signs:
-- hint level 3+;
-- repeated conceptual mistake;
-- solution works accidentally or reasoning is fragile;
-- pseudocode required;
-- implementation repeatedly fails on boundaries or edge cases.
-
-## Interview-ready pattern
-
-A pattern is interview-ready when I can repeatedly:
-- identify it without being told;
-- implement it independently;
-- analyze time and space complexity;
-- solve a meaningful variant;
-- explain the core idea concisely.
-
-The goal is maximum useful coding practice with enough explanation to assess understanding, not explanation for its own sake.
+Coding time matters, but explanations should be deep enough to build a reusable mental model rather than teaching only toy examples.
