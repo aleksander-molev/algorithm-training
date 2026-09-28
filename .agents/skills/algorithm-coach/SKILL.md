@@ -16,11 +16,10 @@ Possible inputs:
 
 If mode is not specified:
 - use `diagnostic` when no meaningful baseline exists;
-- otherwise use a normal two-phase training session;
-- Phase 1 is always `NEW MATERIAL`;
-- Phase 2 is `REVIEW`;
-- never start with review while meaningful roadmap material remains uncovered;
-- use a full `review` session only when I explicitly request review-only mode.
+- otherwise determine whether a new learning block is due;
+- if a new block is due, start with `train` and introduce the new topic first;
+- if the current block topic has already been introduced, review/practice-heavy sessions are allowed and expected;
+- never keep a topic active past its block deadline just because performance is weak.
 
 ## Session startup
 
@@ -43,25 +42,20 @@ Then determine:
 - whether the last two meaningful sessions introduced any genuinely new topic;
 - whether the next task should hide the pattern.
 
-Default session composition while the roadmap is incomplete:
+Session composition while the roadmap is incomplete depends on the current learning block.
 
-Phase 1 — NEW MATERIAL
-- comes first;
-- uses about 65% of productive practice time;
-- if the weekly topic is new, begin with the Teaching Phase;
-- otherwise continue with a deeper subtopic or meaningful variant of the current weekly topic.
+If a new block starts now:
+- introduce the new topic first;
+- run the Teaching Phase;
+- then assign first practice on that topic.
 
-Phase 2 — REVIEW
-- comes only after Phase 1 is complete;
-- uses about 35% of productive practice time;
-- normally contains at most one or two review problems;
-- targets the highest-value older weak points.
+If the current block topic was already introduced:
+- the session may be review/practice-heavy;
+- include the current topic frequently;
+- mix in older weak points according to spaced repetition;
+- no artificial NEW MATERIAL phase is required.
 
-Never use an old-topic warm-up before Phase 1.
-Never switch to review early because several reviews are overdue.
-It is acceptable for overdue items to remain overdue.
-
-At session startup, explicitly announce both phases before assigning the first task.
+Do not confuse "new topic every 1–2 weeks" with "new material every session."
 
 ## Diagnostic mode
 
@@ -153,24 +147,25 @@ After the initial diagnostic:
 
 When choosing new material, prefer the next appropriate topic in `docs/roadmap.md`, considering prerequisites and current progress.
 
-### Default session balance before roadmap completion
+### Learning-block progression
 
-While meaningful roadmap topics remain uncovered:
+Do not use per-session completion as the gate for roadmap progress.
 
-1. NEW MATERIAL — about 65%, first.
-2. REVIEW — about 35%, second.
+For ordinary topics:
+- one learning block is about 1 week.
 
-This ordering is mandatory for normal training sessions.
+For broad or difficult topics:
+- one learning block may last up to about 2 weeks.
 
-Do not:
-- start with review;
-- use an old topic as a warm-up;
-- interleave review tasks before the new-material block is complete;
-- turn the session into review-only because the overdue queue is large.
+At the end of the block:
+- advance to the next roadmap topic regardless of pass/partial/fail history;
+- weak performance only increases future review frequency;
+- never extend the block solely to chase mastery.
 
-Review results determine what appears in the REVIEW block, but never whether the curriculum advances.
-
-For REVIEW, normally select at most one or two high-value problems. Do not repeatedly assign multiple easy variants of the same already-practiced pattern in one session unless a concrete conceptual failure requires it.
+Within the block:
+- first session = introduce and teach the topic;
+- later sessions = practice/review, potentially review-heavy;
+- avoid repetitive trivial variants once the basic mechanic has been demonstrated.
 
 ### Maintenance phase
 
