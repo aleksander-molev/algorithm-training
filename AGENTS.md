@@ -90,14 +90,30 @@ Avoid repeating the same pattern too many times in a row and avoid jumping to ad
 When reviews are due, follow `docs/spaced-repetition.md`, but do not let the review queue block roadmap progression.
 
 Default session policy after the initial diagnostic:
-- treat due review as a short block inside the session, not as a reason to make the entire session review-only;
-- for a 60-minute session, normally spend at most 10–15 minutes on due review;
-- for a 90-minute session, normally spend at most 15–20 minutes on due review;
-- after the review block, continue with the next roadmap topic or the current learning topic;
-- if no genuinely new topic has been introduced in the previous two meaningful sessions, the current session must include new material unless I explicitly request review-only mode;
-- overdue items remain overdue if there is not enough time; do not try to clear the whole backlog in one session.
 
-A full review-only session is appropriate only when I explicitly request it or when a severe regression in a prerequisite would make new material unproductive.
+A normal training session MUST be split into two explicit sequential phases:
+
+1. NEW MATERIAL
+2. REVIEW
+
+NEW MATERIAL always comes first while the roadmap is not fully covered.
+
+Rules:
+- do not start a normal session with an old-topic warm-up;
+- do not assign an overdue-review problem before the NEW MATERIAL phase;
+- do not interleave old review tasks into the NEW MATERIAL phase;
+- spend about 65% of productive practice time on NEW MATERIAL;
+- only after the NEW MATERIAL block is complete, spend about 35% on REVIEW;
+- overdue review items may remain overdue; never clear the backlog at the cost of the NEW MATERIAL block.
+
+At the start of the session, explicitly state the plan in these terms:
+- Phase 1 — NEW MATERIAL: <topic/subtopic>
+- Phase 2 — REVIEW: <one or two older targets>
+
+If this week's topic has not yet been introduced, NEW MATERIAL begins with the Teaching Phase and then a first problem on that topic.
+If this week's topic was already introduced, NEW MATERIAL means deeper work or a new subtopic/variant within the current week's topic, not review of an older topic.
+
+A full review-only session is allowed only when I explicitly request review-only mode. Do not automatically choose review-only mode because reviews are overdue or because a weakness is active.
 
 ## Learning cadence
 
@@ -119,12 +135,18 @@ When a topic is broad, progress through meaningful subtopics during the 1–2 we
 
 While there are still meaningful roadmap topics that have not been covered, use this as the default balance for a normal training session:
 
-- about 65% of productive practice time on the current/new topic;
-- about 35% on older topics, due reviews, and active weak points.
+- about 65% of productive practice time on the current/new topic, always first;
+- about 35% on older topics, due reviews, and active weak points, always second.
 
 This is a default, not a rigid quota. It may shift temporarily for a particularly easy or difficult topic, but forward progress must remain the majority of the session.
 
 Review outcomes may change what appears in the 35% review block, but must not determine whether the curriculum advances.
+
+During the REVIEW phase:
+- normally use at most one or two review problems;
+- prefer the highest-value weak points rather than mechanically consuming the overdue queue;
+- avoid repeating the same old pattern multiple times in one session unless there is a specific unresolved conceptual failure;
+- avoid exact repeats and near-identical easy variants when the concept has already been demonstrated; prefer transfer or a meaningfully different variant.
 
 ## Maintenance phase after roadmap coverage
 
