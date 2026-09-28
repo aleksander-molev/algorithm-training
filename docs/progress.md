@@ -54,6 +54,18 @@ Mixed session in progress: overdue variable-window review passed; one more overd
 - Pattern recognition: distinguish exact-match binary search from a boundary/lower-bound search; state a target-specific invariant before coding.
 - Complexity reporting: account for auxiliary maps by the number of distinct stored keys.
 
+## NEXT TASK LOCK
+
+Prefix Sum MUST be the next training topic.
+
+Until Prefix Sum has actually been introduced and its introduction date is recorded:
+- do not assign any review problem first;
+- do not start in review mode;
+- do not use Remove Duplicates from Sorted Array or another old-topic warm-up;
+- ignore pending old-topic workspaces as startup candidates.
+
+This lock is cleared only after the first genuine Prefix Sum teaching/practice session is recorded.
+
 ## Next recommended session
 
 A new learning block is due.

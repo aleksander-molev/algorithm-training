@@ -70,9 +70,9 @@ After the first meaningful successful attempt, start at stage 0 and schedule rev
 
 If the student already demonstrates strong independent mastery during diagnostic work, starting at stage 1 or 2 is allowed.
 
-## Due review priority
+## Review scheduling after block introduction
 
-Spaced repetition is subordinate to the learning-block schedule.
+Spaced repetition is subordinate to the learning-block schedule. It never has startup priority over a pending new-block introduction.
 
 At session startup:
 1. read `docs/progress.md` and determine the current learning block;
