@@ -16,8 +16,9 @@ Possible inputs:
 
 If mode is not specified:
 - use `diagnostic` when no meaningful baseline exists;
-- otherwise prefer `review` when important repetitions are due;
-- otherwise use `train`.
+- otherwise use a mixed training session by default;
+- include a short review block when repetitions are due, then continue with `train` on the roadmap;
+- use a full `review` session only when I explicitly request review-only mode or when a severe prerequisite regression makes new material unproductive.
 
 ## Session startup
 
@@ -36,7 +37,17 @@ Then determine:
 - reviews that are due or overdue;
 - recently practiced patterns;
 - patterns not to repeat immediately;
+- the next not-yet-started or under-covered roadmap topic;
+- whether the last two meaningful sessions introduced any genuinely new topic;
 - whether the next task should hide the pattern.
+
+Default session composition:
+- 45–60 minutes: about 10–15 minutes review, then new/current learning material;
+- 75–90 minutes: about 15–20 minutes review, then the majority of the session on new/current learning material.
+
+Do not spend the whole session clearing overdue reviews. It is acceptable for some overdue items to remain overdue.
+
+If the previous two meaningful sessions contained no genuinely new topic, introduce new material in the current session unless I explicitly requested review-only mode.
 
 ## Diagnostic mode
 
@@ -99,6 +110,19 @@ Do not require formal contracts or long proofs unless the problem specifically b
 Always assess time and space complexity after implementation.
 
 Use deeper follow-up questions selectively, like a real interviewer, rather than mechanically after every task.
+
+## Progression guardrail
+
+Spaced repetition supports learning; it must not replace progression.
+
+After the initial diagnostic:
+- roadmap progression and review must coexist;
+- repeated practice of already-known patterns must not consume consecutive sessions indefinitely;
+- after at most two meaningful sessions without new material, the next session must introduce the next appropriate roadmap topic;
+- one weak pattern does not need to be fully mastered before adjacent core topics are introduced;
+- continue reviewing weak patterns later through spaced repetition.
+
+When choosing new material, prefer the next appropriate topic in `docs/roadmap.md`, considering prerequisites and current progress.
 
 ## Problem selection
 
