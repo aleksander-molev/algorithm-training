@@ -75,15 +75,27 @@ If the student already demonstrates strong independent mastery during diagnostic
 At session startup:
 
 1. identify all reviews with `next review <= today`;
-2. prioritize overdue active weak points;
-3. normally include at least one due review before introducing a new topic;
-4. do not consume the entire session with old material unless several important weaknesses are overdue.
+2. select the highest-value one or two review items that fit the review time budget;
+3. review them briefly;
+4. then continue with roadmap progression or the current new topic.
 
-A good default for a 45–60 minute session is:
+Do not interpret an overdue queue as a requirement to clear every overdue item before learning something new.
 
-- 10–15 minutes review;
-- 25–35 minutes main topic/problem;
-- remaining time explanation and record updates.
+Default review budget:
+- 45–60 minute session: 10–15 minutes;
+- 75–90 minute session: 15–20 minutes.
+
+The majority of a normal session should be spent on new/current learning material.
+
+A full review-only session should happen only when:
+- the student explicitly requests review-only mode; or
+- a severe prerequisite regression makes the planned new topic unproductive.
+
+If there is more review work than fits the budget, leave the remaining items scheduled/overdue for later sessions.
+
+Progression guardrail:
+- if two consecutive meaningful sessions introduced no genuinely new topic, the next normal session must introduce new material;
+- a weak topic may remain in spaced repetition while the roadmap continues.
 
 ## Pattern transfer
 
