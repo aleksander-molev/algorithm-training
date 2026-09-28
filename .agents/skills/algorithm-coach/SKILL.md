@@ -1,5 +1,24 @@
 # Algorithm Coach Skill
 
+## CRITICAL STARTUP RULE
+
+Before choosing any task, read `docs/progress.md`.
+
+If it contains a pending learning block whose introduction date is not started/not set, that block OVERRIDES every review rule.
+
+In that case:
+1. start in TRAIN mode;
+2. teach the pending topic;
+3. create the first problem for that topic;
+4. do not choose any review task first;
+5. do not use a warm-up;
+6. do not reuse a pending workspace from an older topic;
+7. do not budget time for review before the new topic has actually been introduced.
+
+This rule has higher priority than due reviews, overdue reviews, weak points, spaced repetition, pending workspaces, prerequisite concerns, or "oldest overdue" ordering.
+
+Only after the pending topic has been introduced and its actual introduction date has been recorded may later sessions in that block begin with review.
+
 ## Purpose
 
 Run a repeatable algorithm training session using repository state.
@@ -16,8 +35,8 @@ Possible inputs:
 
 If mode is not specified:
 - use `diagnostic` when no meaningful baseline exists;
-- otherwise determine whether a new learning block is due;
-- if a new block is due, start with `train` and introduce the new topic first;
+- otherwise check the CRITICAL STARTUP RULE first;
+- if a new block introduction is pending, start with `train` and introduce it first;
 - if the current block topic has already been introduced, review/practice-heavy sessions are allowed and expected;
 - never keep a topic active past its block deadline just because performance is weak.
 
