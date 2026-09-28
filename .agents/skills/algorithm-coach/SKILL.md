@@ -8,14 +8,14 @@ Run a repeatable algorithm training session using repository state.
 
 Do NOT choose the training mode automatically.
 
-Recognize these explicit commands:
+Recognize these explicit plain-text mode selectors:
 
-- `/study` — learn new material / work inside the current learning block.
-- `/review` — repetition only.
-- `/interview` — interview simulation.
-- `/diagnostic` — diagnostic reassessment when explicitly requested.
+- `MODE: STUDY` — learn new material / work inside the current learning block.
+- `MODE: REVIEW` — repetition only.
+- `MODE: INTERVIEW` — interview simulation.
+- `MODE: DIAGNOSTIC` — diagnostic reassessment when explicitly requested.
 
-If none of these commands is present, ask the student to choose a mode instead of inferring one.
+If none of these mode selectors is present, ask the student to choose a mode instead of inferring one.
 
 Repository state may choose the topic or review items inside the selected mode, but it must never override the student's chosen mode.
 
@@ -31,7 +31,7 @@ Always read:
 
 Then apply only the selected mode.
 
-### /study startup
+### MODE: STUDY startup
 
 Use only study/train behavior.
 
@@ -42,7 +42,7 @@ Use only study/train behavior.
 - Do not switch to review automatically.
 - Track the topic's actual introduction date and adaptive block timing.
 
-### /review startup
+### MODE: REVIEW startup
 
 Use only review behavior. Do not introduce a new roadmap topic.
 
@@ -59,7 +59,7 @@ For the 40%:
 
 The 60/40 ratio is a session-level target, not a requirement for every pair of tasks.
 
-### /interview startup
+### MODE: INTERVIEW startup
 
 Use interview behavior only:
 - mixed learned topics;
@@ -69,7 +69,7 @@ Use interview behavior only:
 
 ## Diagnostic mode
 
-Follow `docs/diagnostic.md`.
+Follow `docsMODE: DIAGNOSTIC.md`.
 
 The diagnostic establishes a baseline; it is not a pass/fail exam. At the end, update repository state and pick the first 2–3 priorities.
 
@@ -102,7 +102,7 @@ Skip or shorten the Teaching Phase when the topic is already familiar and the se
 
 #### Learning accelerators
 
-Reserve roughly 5–10% of teaching/review time for short, practical learning aids when useful.
+Reserve roughly 5–10% of teachingMODE: REVIEW time for short, practical learning aids when useful.
 
 Good examples:
 - a mnemonic or memorable mental hook;
@@ -212,7 +212,7 @@ At the end of the block:
 
 Within the block:
 - first session = introduce and teach the topic;
-- later sessions = practice/review, potentially review-heavy;
+- later sessions = practiceMODE: REVIEW, potentially review-heavy;
 - avoid repetitive trivial variants once the basic mechanic has been demonstrated.
 
 ### Maintenance phase
@@ -220,7 +220,7 @@ Within the block:
 When all major roadmap topics have been covered at least to a working level:
 - stop introducing new topics merely to satisfy the weekly cadence;
 - switch the default session style toward mixed and interview practice;
-- spend about 80–90% of practice time on mixed/interview-style problems across learned topics;
+- spend about 80–90% of practice time on mixedMODE: INTERVIEW-style problems across learned topics;
 - spend about 10–20% on targeted teaching for weak areas, advanced variants, or genuinely new material.
 
 A topic is considered covered when I understand its core mechanism, have solved representative tasks, and can reasonably recognize when it may apply. Full mastery is not required before moving on.
@@ -398,10 +398,10 @@ The goal is maximum useful coding practice with enough explanation to assess und
 The student chooses the training mode explicitly. Do not infer or auto-select it.
 
 Supported commands:
-- `/study` — study new/current learning-block material only.
-- `/review` — repetition only.
-- `/interview` — interview simulation.
-- `/diagnostic` — diagnostic reassessment when explicitly requested.
+- `MODE: STUDY` — study new/current learning-block material only.
+- `MODE: REVIEW` — repetition only.
+- `MODE: INTERVIEW` — interview simulation.
+- `MODE: DIAGNOSTIC` — diagnostic reassessment when explicitly requested.
 
 If no mode command is present, ask the student to choose a mode.
 
@@ -419,7 +419,7 @@ Always read:
 
 Then apply only the selected mode.
 
-### /study
+### MODE: STUDY
 
 Study mode means new/current learning-block material only.
 
@@ -432,7 +432,7 @@ Study mode means new/current learning-block material only.
 - Track the actual introduction date and adaptive block timing.
 - Ordinary topics are roughly one week by default, may finish earlier, and difficult topics may extend to a hard maximum of 14 days.
 
-### /review
+### MODE: REVIEW
 
 Review mode means repetition only. Do not introduce a new roadmap topic.
 
@@ -450,7 +450,7 @@ For the 40%:
 
 The 60/40 ratio is a session-level target, not a rigid per-problem alternation.
 
-### /interview
+### MODE: INTERVIEW
 
 Use interview behavior only:
 - mixed learned topics;
@@ -460,7 +460,7 @@ Use interview behavior only:
 
 ## Diagnostic mode
 
-Follow `docs/diagnostic.md`.
+Follow `docsMODE: DIAGNOSTIC.md`.
 
 The diagnostic establishes a baseline; it is not a pass/fail exam. At the end, update repository state and pick the first 2–3 priorities.
 
@@ -493,7 +493,7 @@ Skip or shorten the Teaching Phase when the topic is already familiar and the se
 
 #### Learning accelerators
 
-Reserve roughly 5–10% of teaching/review time for short, practical learning aids when useful.
+Reserve roughly 5–10% of teachingMODE: REVIEW time for short, practical learning aids when useful.
 
 Good examples:
 - a mnemonic or memorable mental hook;
@@ -603,7 +603,7 @@ At the end of the block:
 
 Within the block:
 - first session = introduce and teach the topic;
-- later sessions = practice/review, potentially review-heavy;
+- later sessions = practiceMODE: REVIEW, potentially review-heavy;
 - avoid repetitive trivial variants once the basic mechanic has been demonstrated.
 
 ### Maintenance phase
@@ -611,7 +611,7 @@ Within the block:
 When all major roadmap topics have been covered at least to a working level:
 - stop introducing new topics merely to satisfy the weekly cadence;
 - switch the default session style toward mixed and interview practice;
-- spend about 80–90% of practice time on mixed/interview-style problems across learned topics;
+- spend about 80–90% of practice time on mixedMODE: INTERVIEW-style problems across learned topics;
 - spend about 10–20% on targeted teaching for weak areas, advanced variants, or genuinely new material.
 
 A topic is considered covered when I understand its core mechanism, have solved representative tasks, and can reasonably recognize when it may apply. Full mastery is not required before moving on.
