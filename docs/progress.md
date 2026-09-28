@@ -55,12 +55,18 @@ Foundation consolidation: implementation precision, in-place array updates, bina
 
 ## Next recommended session
 
-Use a mixed session rather than review-only mode.
+Normal training session must begin with NEW MATERIAL, not review.
 
-For a 60–90 minute session:
-1. spend at most 15–20 minutes on the highest-value overdue review;
-2. introduce a genuinely new roadmap topic;
-3. use the Teaching Phase before the first problem on that topic;
-4. keep remaining overdue items in the spaced-repetition queue instead of trying to clear them all.
+Phase 1 — NEW MATERIAL:
+- introduce Prefix Sum immediately;
+- start with the Teaching Phase;
+- then solve one or more Prefix Sum problems;
+- use roughly 65% of productive practice time here.
 
-Recommended next new topic: Prefix Sum, since it is the next not-started core pattern in the suggested roadmap sequence.
+Phase 2 — REVIEW:
+- only after the Prefix Sum block is complete;
+- use roughly 35% of productive practice time;
+- select at most one or two highest-value older review targets;
+- do not try to clear the overdue queue.
+
+Do not use Two Pointers, Sliding Window, Binary Search, HashMap, or another old topic as a warm-up before Prefix Sum.
