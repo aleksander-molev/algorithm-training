@@ -89,31 +89,30 @@ Avoid repeating the same pattern too many times in a row and avoid jumping to ad
 
 When reviews are due, follow `docs/spaced-repetition.md`, but do not let the review queue block roadmap progression.
 
-Default session policy after the initial diagnostic:
+Default training policy after the initial diagnostic is WEEK-BLOCK BASED, not session-ratio based.
 
-A normal training session MUST be split into two explicit sequential phases:
+Each learning block has exactly one current topic.
 
-1. NEW MATERIAL
-2. REVIEW
+At the START of a new learning block:
+- introduce the new topic first;
+- begin with the Teaching Phase;
+- solve enough first problems to establish the basic mechanism and recognition clues.
 
-NEW MATERIAL always comes first while the roadmap is not fully covered.
+After the new topic has been introduced:
+- the remaining sessions in that 1–2 week block may be mostly or entirely practice/review;
+- practice should include the current topic frequently plus older weak topics;
+- do not require a NEW MATERIAL phase in every session.
 
-Rules:
-- do not start a normal session with an old-topic warm-up;
-- do not assign an overdue-review problem before the NEW MATERIAL phase;
-- do not interleave old review tasks into the NEW MATERIAL phase;
-- spend about 65% of productive practice time on NEW MATERIAL;
-- only after the NEW MATERIAL block is complete, spend about 35% on REVIEW;
-- overdue review items may remain overdue; never clear the backlog at the cost of the NEW MATERIAL block.
+Topic switching is CALENDAR DRIVEN, not mastery driven.
 
-At the start of the session, explicitly state the plan in these terms:
-- Phase 1 — NEW MATERIAL: <topic/subtopic>
-- Phase 2 — REVIEW: <one or two older targets>
+When the block ends:
+- move to the next roadmap topic even if performance on the current topic is weak;
+- never extend a topic merely because reviews are failing, partial, overdue, or confidence is low;
+- move weak material into spaced repetition and increase its review frequency instead.
 
-If this week's topic has not yet been introduced, NEW MATERIAL begins with the Teaching Phase and then a first problem on that topic.
-If this week's topic was already introduced, NEW MATERIAL means deeper work or a new subtopic/variant within the current week's topic, not review of an older topic.
+A full review-heavy session is therefore normal after the week's topic has already been introduced.
 
-A full review-only session is allowed only when I explicitly request review-only mode. Do not automatically choose review-only mode because reviews are overdue or because a weakness is active.
+The only session that must start with new material is the first meaningful session of a new learning block.
 
 ## Learning cadence
 
@@ -131,22 +130,17 @@ A new topic does not mean the previous topic is mastered. Keep prior topics in s
 
 When a topic is broad, progress through meaningful subtopics during the 1–2 week block instead of repeating the same narrow task family.
 
-## Session balance before roadmap completion
+## Practice balance within a learning block
 
-While there are still meaningful roadmap topics that have not been covered, use this as the default balance for a normal training session:
+Do not enforce a fixed 65/35 split in every session.
 
-- about 65% of productive practice time on the current/new topic, always first;
-- about 35% on older topics, due reviews, and active weak points, always second.
+Instead:
+- the first session of the block is teaching-heavy and current-topic-heavy;
+- later sessions may be mostly review/practice;
+- across the block, give the current topic substantial repetition while also revisiting older weak points;
+- use weak performance to increase review frequency, not to delay the next topic.
 
-This is a default, not a rigid quota. It may shift temporarily for a particularly easy or difficult topic, but forward progress must remain the majority of the session.
-
-Review outcomes may change what appears in the 35% review block, but must not determine whether the curriculum advances.
-
-During the REVIEW phase:
-- normally use at most one or two review problems;
-- prefer the highest-value weak points rather than mechanically consuming the overdue queue;
-- avoid repeating the same old pattern multiple times in one session unless there is a specific unresolved conceptual failure;
-- avoid exact repeats and near-identical easy variants when the concept has already been demonstrated; prefer transfer or a meaningfully different variant.
+Avoid exact repeats and near-identical easy variants when the concept has already been demonstrated. Prefer transfer, meaningful variants, and mixed recognition.
 
 ## Maintenance phase after roadmap coverage
 
