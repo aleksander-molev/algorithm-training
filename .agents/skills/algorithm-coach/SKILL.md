@@ -176,10 +176,25 @@ When choosing new material, prefer the next appropriate topic in `docs/roadmap.m
 Do not use per-session completion as the gate for roadmap progress.
 
 For ordinary topics:
-- one learning block is about 1 week.
+- one learning block is about 1 week by default;
+- if performance shows the core idea is already understood and representative tasks are going well, end the block early and move on;
+- do not wait for the full week just because it was originally scheduled.
 
 For broad or difficult topics:
-- one learning block may last up to about 2 weeks.
+- one learning block may last up to about 2 weeks;
+- use the extra time only when the topic genuinely needs it;
+- 14 days from the actual introduction date is a hard maximum for blocking roadmap progression.
+
+User control:
+- explicit feedback can shorten or lengthen the block;
+- if I say the topic feels easy or ask to move on, prefer an early transition;
+- if I say the topic feels difficult or ask for more practice, continue within the allowed block window;
+- never extend beyond the 14-day maximum solely because the topic remains weak.
+
+Tracking:
+- record the actual introduction date for the current topic in `docs/progress.md`;
+- record a target transition date;
+- base elapsed time on that actual introduction date, not merely the ISO week number.
 
 At the end of the block:
 - advance to the next roadmap topic regardless of pass/partial/fail history;
