@@ -8,7 +8,7 @@ The repository is designed to be used with Codex as an algorithm coach. Training
 
 The student chooses the mode explicitly. Codex must not choose a mode automatically.
 
-### `/study`
+### `MODE: STUDY`
 
 Learn new material.
 
@@ -25,7 +25,7 @@ Rules:
 - do not switch into review automatically;
 - ordinary topics are about one week by default, may finish earlier, and difficult topics may extend to at most 14 days.
 
-### `/review`
+### `MODE: REVIEW`
 
 Do repetition only. No new roadmap topic is introduced in this mode.
 
@@ -42,7 +42,7 @@ Selection for the 40% should primarily follow the spaced-repetition calendar:
 
 The purpose is broad retention, not endlessly drilling the weakest pattern.
 
-### `/interview`
+### `MODE: INTERVIEW`
 
 Simulate a coding interview:
 - pattern hidden;
@@ -53,7 +53,7 @@ Simulate a coding interview:
 
 ## Training loop
 
-1. Student chooses `/study`, `/review`, or `/interview`.
+1. Student chooses `MODE: STUDY`, `MODE: REVIEW`, or `MODE: INTERVIEW`.
 2. Codex reads repository state.
 3. Codex selects work consistent with the chosen mode.
 4. I solve independently.
@@ -79,21 +79,21 @@ Simulate a coding interview:
 Study:
 
 ```text
-/study
-I have about 60 minutes.
+MODE: STUDY
+60 minutes
 ```
 
 Review:
 
 ```text
-/review
-I have about 45 minutes.
+MODE: REVIEW
+45 minutes
 ```
 
 Interview:
 
 ```text
-/interview
+MODE: INTERVIEW
 Give me one medium problem.
 ```
 
