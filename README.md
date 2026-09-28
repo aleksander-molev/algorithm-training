@@ -32,6 +32,12 @@ In `MODE: STUDY`, teaching comes before task selection:
 
 The first action in STUDY mode should not be "pick a problem".
 
+Each topic lesson is saved as Markdown at:
+
+`lessons/<topic-slug>/lesson.md`
+
+The lesson should be a standalone study note, not a chat transcript.
+
 Rules:
 - do not begin with review;
 - do not assign old-topic warm-ups;
@@ -85,6 +91,7 @@ Simulate a coding interview:
 - `docs/problem-history.md` — compact history of attempted problems.
 - `docs/spaced-repetition.md` — review calendar and scheduling rules.
 - `sessions/` — chronological session notes.
+- `lessons/` — Markdown lesson materials organized by topic.
 - `templates/` — templates for session/problem records.
 
 ## Starting a session
