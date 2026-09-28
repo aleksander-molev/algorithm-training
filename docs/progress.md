@@ -55,14 +55,14 @@ Foundation consolidation: implementation precision, in-place array updates, bina
 
 ## NEXT STUDY TOPIC
 
-When the student starts `/study`, Prefix Sum MUST be the next training topic.
+When the student starts `MODE: STUDY`, Prefix Sum MUST be the next training topic.
 
 Until Prefix Sum has actually been introduced and its introduction date is recorded:
-- `/study` must begin with Prefix Sum;
-- do not use an old-topic warm-up inside `/study`;
+- `MODE: STUDY` must begin with Prefix Sum;
+- do not use an old-topic warm-up inside `MODE: STUDY`;
 - ignore pending old-topic workspaces as study-start candidates.
 
-This rule does not override `/review` or `/interview`. The student's explicit mode command is always authoritative.
+This rule does not override `MODE: REVIEW` or `MODE: INTERVIEW`. The student's explicit mode command is always authoritative.
 
 This study lock is cleared only after the first genuine Prefix Sum teaching/practice session is recorded.
 
