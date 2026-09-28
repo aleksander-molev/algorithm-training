@@ -44,6 +44,27 @@ After the short teaching phase, move to coding quickly.
 
 If the topic is already familiar and the session is mainly reinforcement, skip or greatly shorten the teaching phase.
 
+## Learning accelerators
+
+Use a small amount of explicit learning-science guidance throughout training: roughly 5–10% of teaching/review time, never enough to crowd out coding.
+
+When useful, add short practical tips such as:
+- mnemonics or compact mental hooks for remembering a pattern;
+- recognition heuristics and "if you see X, consider Y" cues;
+- chunking and simple mental models;
+- active recall prompts instead of rereading;
+- interleaving related patterns to improve discrimination;
+- spaced repetition guidance;
+- brief retrieval-before-hint prompts;
+- tiny contrast examples that show why two similar patterns differ;
+- implementation checklists for recurring bug classes;
+- advice on how to verbalize the pattern in an interview;
+- evidence-based learning principles from cognitive science or neuroscience when they are directly relevant.
+
+Keep these tips concrete and brief. Prefer techniques with solid evidence or broad educational consensus. Do not present speculative neuroscience, "brain hacks," supplements, or exaggerated claims as fact.
+
+A useful accelerator should help me remember, recognize, retrieve, or implement the algorithm better. It should not become a separate lecture.
+
 ### review
 Use for spaced repetition, due weaknesses, and pattern transfer. Prefer related variants over exact repeats.
 
@@ -89,15 +110,30 @@ Avoid repeating the same pattern too many times in a row and avoid jumping to ad
 
 When reviews are due, follow `docs/spaced-repetition.md`, but do not let the review queue block roadmap progression.
 
-Default session policy after the initial diagnostic:
-- treat due review as a short block inside the session, not as a reason to make the entire session review-only;
-- for a 60-minute session, normally spend at most 10–15 minutes on due review;
-- for a 90-minute session, normally spend at most 15–20 minutes on due review;
-- after the review block, continue with the next roadmap topic or the current learning topic;
-- if no genuinely new topic has been introduced in the previous two meaningful sessions, the current session must include new material unless I explicitly request review-only mode;
-- overdue items remain overdue if there is not enough time; do not try to clear the whole backlog in one session.
+Default training policy after the initial diagnostic is WEEK-BLOCK BASED, not session-ratio based.
 
-A full review-only session is appropriate only when I explicitly request it or when a severe regression in a prerequisite would make new material unproductive.
+Each learning block has exactly one current topic.
+
+At the START of a new learning block:
+- introduce the new topic first;
+- begin with the Teaching Phase;
+- solve enough first problems to establish the basic mechanism and recognition clues.
+
+After the new topic has been introduced:
+- the remaining sessions in that 1–2 week block may be mostly or entirely practice/review;
+- practice should include the current topic frequently plus older weak topics;
+- do not require a NEW MATERIAL phase in every session.
+
+Topic switching is CALENDAR DRIVEN, not mastery driven.
+
+When the block ends:
+- move to the next roadmap topic even if performance on the current topic is weak;
+- never extend a topic merely because reviews are failing, partial, overdue, or confidence is low;
+- move weak material into spaced repetition and increase its review frequency instead.
+
+A full review-heavy session is therefore normal after the week's topic has already been introduced.
+
+The only session that must start with new material is the first meaningful session of a new learning block.
 
 ## Learning cadence
 
@@ -115,16 +151,17 @@ A new topic does not mean the previous topic is mastered. Keep prior topics in s
 
 When a topic is broad, progress through meaningful subtopics during the 1–2 week block instead of repeating the same narrow task family.
 
-## Session balance before roadmap completion
+## Practice balance within a learning block
 
-While there are still meaningful roadmap topics that have not been covered, use this as the default balance for a normal training session:
+Do not enforce a fixed 65/35 split in every session.
 
-- about 65% of productive practice time on the current/new topic;
-- about 35% on older topics, due reviews, and active weak points.
+Instead:
+- the first session of the block is teaching-heavy and current-topic-heavy;
+- later sessions may be mostly review/practice;
+- across the block, give the current topic substantial repetition while also revisiting older weak points;
+- use weak performance to increase review frequency, not to delay the next topic.
 
-This is a default, not a rigid quota. It may shift temporarily for a particularly easy or difficult topic, but forward progress must remain the majority of the session.
-
-Review outcomes may change what appears in the 35% review block, but must not determine whether the curriculum advances.
+Avoid exact repeats and near-identical easy variants when the concept has already been demonstrated. Prefer transfer, meaningful variants, and mixed recognition.
 
 ## Maintenance phase after roadmap coverage
 

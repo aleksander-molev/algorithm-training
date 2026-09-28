@@ -56,12 +56,15 @@ Mixed session in progress: overdue variable-window review passed; one more overd
 
 ## Next recommended session
 
-Use a mixed session rather than review-only mode.
+A new learning block is due.
 
-For a 60–90 minute session:
-1. spend at most 15–20 minutes on the highest-value overdue review;
-2. introduce a genuinely new roadmap topic;
-3. use the Teaching Phase before the first problem on that topic;
-4. keep remaining overdue items in the spaced-repetition queue instead of trying to clear them all.
+Current block topic: Prefix Sum.
 
-Recommended next new topic: Prefix Sum, since it is the next not-started core pattern in the suggested roadmap sequence.
+The first meaningful session of this block must:
+1. introduce Prefix Sum first;
+2. run the Teaching Phase;
+3. solve initial Prefix Sum practice.
+
+After Prefix Sum has been introduced, later sessions in this block may be review/practice-heavy.
+
+Prefix Sum should normally occupy about one week. At the end of that block, move to the next roadmap topic regardless of how strong the Prefix Sum results are. Any remaining weakness should continue through spaced repetition instead of extending the block.

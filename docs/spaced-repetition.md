@@ -75,9 +75,11 @@ If the student already demonstrates strong independent mastery during diagnostic
 At session startup:
 
 1. identify all reviews with `next review <= today`;
-2. select the highest-value one or two review items that fit the review time budget;
-3. review them briefly;
-4. then continue with roadmap progression or the current new topic.
+2. keep them queued for the REVIEW phase;
+3. first complete the session's NEW MATERIAL phase;
+4. only then select the highest-value one or two review items that fit the remaining review budget.
+
+Do not use overdue reviews as a warm-up before new material.
 
 Do not interpret an overdue queue as a requirement to clear every overdue item before learning something new.
 
