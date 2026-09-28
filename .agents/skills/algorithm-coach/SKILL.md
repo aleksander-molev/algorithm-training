@@ -81,9 +81,31 @@ Explain:
 
 Hard problems do not need to be assigned or fully solved just to complete the Teaching Phase.
 
+### Save lesson material
+
+Before assigning the first coding problem for a new topic, save the reusable lesson in Markdown:
+
+`lessons/<topic-slug>/lesson.md`
+
+The lesson must stand on its own without the chat and include:
+- overview and goals;
+- core idea / mental model;
+- recognition clues;
+- easy example;
+- 2–3 medium archetypes;
+- hard overview when relevant;
+- common mistakes;
+- contrasts with similar patterns;
+- mnemonic or useful learning accelerator;
+- implementation checklist;
+- complexity notes where relevant;
+- references to representative repository problems when available.
+
+If the topic lesson already exists, update that Markdown file rather than creating another copy.
+
 ### Practice after teaching
 
-After the conceptual ladder:
+After the conceptual ladder and lesson save:
 - move to hands-on coding;
 - start with an appropriate easy or medium problem depending on the student's demonstrated understanding;
 - do not force an easy task if the concept is already obvious;
@@ -217,7 +239,8 @@ At the end of every meaningful session:
 2. update `docs/weak-points.md`;
 3. update `docs/problem-history.md`;
 4. create `sessions/YYYY-MM-DD-short-title.md`;
-5. update spaced-repetition scheduling where relevant.
+5. update the relevant `lessons/<topic-slug>/lesson.md` when reusable teaching material changed;
+6. update spaced-repetition scheduling where relevant.
 
 ## Coaching principle
 
