@@ -115,6 +115,27 @@ A new topic does not mean the previous topic is mastered. Keep prior topics in s
 
 When a topic is broad, progress through meaningful subtopics during the 1–2 week block instead of repeating the same narrow task family.
 
+## Session balance before roadmap completion
+
+While there are still meaningful roadmap topics that have not been covered, use this as the default balance for a normal training session:
+
+- about 65% of productive practice time on the current/new topic;
+- about 35% on older topics, due reviews, and active weak points.
+
+This is a default, not a rigid quota. It may shift temporarily for a particularly easy or difficult topic, but forward progress must remain the majority of the session.
+
+Review outcomes may change what appears in the 35% review block, but must not determine whether the curriculum advances.
+
+## Maintenance phase after roadmap coverage
+
+Once all major roadmap topics have been covered at least to a working level, stop forcing weekly new topics.
+
+Switch the default emphasis to maintenance and interview integration:
+- about 80–90% mixed/interview-style practice across previously learned topics;
+- about 10–20% targeted teaching for weak areas, advanced variants, or genuinely new material.
+
+Roadmap coverage does not require mastery. A topic counts as covered when I understand the core mechanism, have solved representative problems, and can reasonably recognize when it may apply.
+
 ## Problem workspace creation
 
 Whenever you assign me a new coding problem, prepare the coding workspace before asking me to solve it.
