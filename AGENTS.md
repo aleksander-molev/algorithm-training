@@ -2,18 +2,18 @@
 
 ## Student-controlled mode
 
-The student chooses the mode explicitly.
+The student chooses the mode explicitly using a plain-text `MODE: ...` selector.
 
-- `/study` — new/current learning-block material only.
-- `/review` — repetition only.
-- `/interview` — interview simulation.
-- `/diagnostic` — diagnostic reassessment when explicitly requested.
+- `MODE: STUDY` — new/current learning-block material only.
+- `MODE: REVIEW` — repetition only.
+- `MODE: INTERVIEW` — interview simulation.
+- `MODE: DIAGNOSTIC` — diagnostic reassessment when explicitly requested.
 
 Never choose the mode automatically. Never override the student's command because of due reviews, weak points, roadmap state, pending workspaces, or prerequisite concerns.
 
 If no mode command is present, ask the student to choose one.
 
-### /study policy
+### MODE: STUDY policy
 
 - Work only on the current/new learning block.
 - Do not start with review.
@@ -21,7 +21,7 @@ If no mode command is present, ask the student to choose one.
 - Do not switch to review automatically.
 - Follow adaptive block timing: about 7 days by default, earlier if easy, up to 14 days if difficult.
 
-### /review policy
+### MODE: REVIEW policy
 
 - Do not introduce new roadmap material.
 - Target about 60% of problems from the most recently studied learning block.
@@ -36,10 +36,10 @@ If no mode command is present, ask the student to choose one.
 
 The student chooses the mode explicitly.
 
-- `/study` = study new/current learning-block material only.
-- `/review` = repetition only.
-- `/interview` = interview simulation.
-- `/diagnostic` = explicit diagnostic mode.
+- `MODE: STUDY` = study new/current learning-block material only.
+- `MODE: REVIEW` = repetition only.
+- `MODE: INTERVIEW` = interview simulation.
+- `MODE: DIAGNOSTIC` = explicit diagnostic mode.
 
 Never choose the mode automatically. Never override the student's command because of due reviews, weak points, roadmap state, pending workspaces, or prerequisite concerns.
 
@@ -72,14 +72,14 @@ Before a meaningful training session read:
 5. `docs/spaced-repetition.md`
 6. up to two most recent files in `sessions/`
 
-If there is no meaningful baseline yet, also read `docs/diagnostic.md` and run the diagnostic workflow before normal training unless I explicitly ask to skip it.
+If there is no meaningful baseline yet, also read `docsMODE: DIAGNOSTIC.md` and run the diagnostic workflow before normal training unless I explicitly ask to skip it.
 
 Do not rely on chat history when repository state is available.
 
 ## Modes
 
 ### diagnostic
-Use only for the initial baseline or when I explicitly request a reassessment. Follow `docs/diagnostic.md`.
+Use only for the initial baseline or when I explicitly request a reassessment. Follow `docsMODE: DIAGNOSTIC.md`.
 
 ### train
 Use to learn or strengthen a topic. Progressive hints are allowed. More detailed discussion of algorithm ideas, invariants, and reasoning is appropriate when it helps me understand a new concept.
@@ -101,7 +101,7 @@ If the topic is already familiar and the session is mainly reinforcement, skip o
 
 ## Learning accelerators
 
-Use a small amount of explicit learning-science guidance throughout training: roughly 5–10% of teaching/review time, never enough to crowd out coding.
+Use a small amount of explicit learning-science guidance throughout training: roughly 5–10% of teachingMODE: REVIEW time, never enough to crowd out coding.
 
 When useful, add short practical tips such as:
 - mnemonics or compact mental hooks for remembering a pattern;
@@ -175,7 +175,7 @@ At the START of a new learning block:
 - solve enough first problems to establish the basic mechanism and recognition clues.
 
 After the new topic has been introduced:
-- the remaining sessions in that 1–2 week block may be mostly or entirely practice/review;
+- the remaining sessions in that 1–2 week block may be mostly or entirely practiceMODE: REVIEW;
 - practice should include the current topic frequently plus older weak topics;
 - do not require a NEW MATERIAL phase in every session.
 
@@ -234,7 +234,7 @@ Avoid exact repeats and near-identical easy variants when the concept has alread
 Once all major roadmap topics have been covered at least to a working level, stop forcing weekly new topics.
 
 Switch the default emphasis to maintenance and interview integration:
-- about 80–90% mixed/interview-style practice across previously learned topics;
+- about 80–90% mixedMODE: INTERVIEW-style practice across previously learned topics;
 - about 10–20% targeted teaching for weak areas, advanced variants, or genuinely new material.
 
 Roadmap coverage does not require mastery. A topic counts as covered when I understand the core mechanism, have solved representative problems, and can reasonably recognize when it may apply.
@@ -434,7 +434,7 @@ Maximize productive coding time. Explanations should serve learning or assessmen
 
 ## Command-specific review policy
 
-When the student uses `/review`:
+When the student uses `MODE: REVIEW`:
 - do not introduce new roadmap material;
 - target about 60% of review problems from the most recently studied learning block;
 - target about 40% from all earlier studied topics;
@@ -444,7 +444,7 @@ When the student uses `/review`:
 - weak points may affect scheduling frequency, but must not dominate the review pool;
 - prefer meaningful variants and mixed recognition over exact repeats.
 
-When the student uses `/study`:
+When the student uses `MODE: STUDY`:
 - do not start with review;
 - work only on the current/new learning block;
 - do not inject old-topic warm-ups.
