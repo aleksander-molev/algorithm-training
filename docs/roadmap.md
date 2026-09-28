@@ -5,6 +5,9 @@ This roadmap is intentionally stable. Codex may recommend changes, but should no
 ## Recommended learning cadence
 
 - Introduce a new topic or major subtopic roughly once per week.
+- Prefer Monday for introducing the week's new topic; Tuesday or Wednesday are also good fallback days.
+- Use the rest of the week mainly for practice, review, consolidation, and variants of that topic.
+- If the week's new topic was missed earlier, introduce it at the next meaningful session rather than waiting for the next Monday.
 - Broad or difficult topics may occupy up to about two weeks.
 - Dynamic Programming, Graphs, Trees, or similarly deep areas can reasonably use the longer cadence.
 - Do not wait for complete mastery before continuing; unresolved weaknesses stay in spaced repetition.
