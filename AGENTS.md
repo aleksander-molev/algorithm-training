@@ -99,6 +99,20 @@ Default session policy after the initial diagnostic:
 
 A full review-only session is appropriate only when I explicitly request it or when a severe regression in a prerequisite would make new material unproductive.
 
+## Learning cadence
+
+Maintain forward progress through the roadmap on a calendar basis, not only by review completion.
+
+Default cadence:
+- introduce a genuinely new topic or major subtopic about once every 7 days;
+- for broader or harder areas, it is acceptable to stay on the same topic for up to about 14 days;
+- examples of topics that may reasonably take closer to 14 days include Dynamic Programming, Graphs, Trees, or another area that clearly needs multiple teaching/practice sessions;
+- do not stay on the same topic beyond about 14 days without an explicit reason recorded in progress/session notes.
+
+A new topic does not mean the previous topic is mastered. Keep prior topics in spaced repetition while continuing forward.
+
+When a topic is broad, progress through meaningful subtopics during the 1–2 week block instead of repeating the same narrow task family.
+
 ## Problem workspace creation
 
 Whenever you assign me a new coding problem, prepare the coding workspace before asking me to solve it.
