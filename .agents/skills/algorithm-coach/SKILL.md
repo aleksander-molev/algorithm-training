@@ -1,48 +1,27 @@
 # Algorithm Coach Skill
 
-## CRITICAL STARTUP RULE
-
-Before choosing any task, read `docs/progress.md`.
-
-If it contains a pending learning block whose introduction date is not started/not set, that block OVERRIDES every review rule.
-
-In that case:
-1. start in TRAIN mode;
-2. teach the pending topic;
-3. create the first problem for that topic;
-4. do not choose any review task first;
-5. do not use a warm-up;
-6. do not reuse a pending workspace from an older topic;
-7. do not budget time for review before the new topic has actually been introduced.
-
-This rule has higher priority than due reviews, overdue reviews, weak points, spaced repetition, pending workspaces, prerequisite concerns, or "oldest overdue" ordering.
-
-Only after the pending topic has been introduced and its actual introduction date has been recorded may later sessions in that block begin with review.
-
 ## Purpose
 
 Run a repeatable algorithm training session using repository state.
 
-## Inputs
+## Mode selection — student command is authoritative
 
-Possible inputs:
-- available time;
-- mode: `diagnostic`, `train`, `review`, or `interview`;
-- desired topic;
-- desired difficulty;
-- a specific problem;
-- code already written.
+Do NOT choose the training mode automatically.
 
-If mode is not specified:
-- use `diagnostic` when no meaningful baseline exists;
-- otherwise check the CRITICAL STARTUP RULE first;
-- if a new block introduction is pending, start with `train` and introduce it first;
-- if the current block topic has already been introduced, review/practice-heavy sessions are allowed and expected;
-- never keep a topic active past its block deadline just because performance is weak.
+Recognize these explicit commands:
+
+- `/study` — learn new material / work inside the current learning block.
+- `/review` — repetition only.
+- `/interview` — interview simulation.
+- `/diagnostic` — diagnostic reassessment when explicitly requested.
+
+If none of these commands is present, ask the student to choose a mode instead of inferring one.
+
+Repository state may choose the topic or review items inside the selected mode, but it must never override the student's chosen mode.
 
 ## Session startup
 
-Read:
+Always read:
 1. `docs/progress.md`
 2. `docs/weak-points.md`
 3. `docs/problem-history.md`
@@ -50,31 +29,43 @@ Read:
 5. `docs/spaced-repetition.md`
 6. up to two latest session files
 
-If the baseline is empty, also read `docs/diagnostic.md` and follow it.
+Then apply only the selected mode.
 
-Then determine:
-- current focus;
-- reviews that are due or overdue;
-- recently practiced patterns;
-- patterns not to repeat immediately;
-- the next not-yet-started or under-covered roadmap topic;
-- whether the last two meaningful sessions introduced any genuinely new topic;
-- whether the next task should hide the pattern.
+### /study startup
 
-Session composition while the roadmap is incomplete depends on the current learning block.
+Use only study/train behavior.
 
-If a new block starts now:
-- introduce the new topic first;
-- run the Teaching Phase;
-- then assign first practice on that topic.
+- If a new learning block is due, introduce the next roadmap topic first.
+- If the current block is already active, continue that topic/subtopic.
+- Do not assign review problems first.
+- Do not use an old-topic warm-up.
+- Do not switch to review automatically.
+- Track the topic's actual introduction date and adaptive block timing.
 
-If the current block topic was already introduced:
-- the session may be review/practice-heavy;
-- include the current topic frequently;
-- mix in older weak points according to spaced repetition;
-- no artificial NEW MATERIAL phase is required.
+### /review startup
 
-Do not confuse "new topic every 1–2 weeks" with "new material every session."
+Use only review behavior. Do not introduce a new roadmap topic.
+
+Target problem distribution across the review session:
+- about 60% from the most recently studied learning block;
+- about 40% from all earlier studied topics.
+
+For the 40%:
+- primarily follow due/overdue dates from `docs/spaced-repetition.md`;
+- rotate broadly across learned topics;
+- do not simply pick the weakest topic every time;
+- weak points may influence future scheduling frequency, but they must not monopolize review;
+- prefer meaningful variants over exact repeats.
+
+The 60/40 ratio is a session-level target, not a requirement for every pair of tasks.
+
+### /interview startup
+
+Use interview behavior only:
+- mixed learned topics;
+- hidden pattern;
+- no hints unless requested;
+- no teaching phase unless the student explicitly exits interview mode.
 
 ## Diagnostic mode
 
@@ -186,12 +177,6 @@ After the initial diagnostic:
 - repeated practice of already-known patterns must not consume the learning-block transition;
 - one weak pattern does not need to be fully mastered before adjacent core topics are introduced;
 - continue reviewing weak patterns later through spaced repetition.
-
-Hard startup precedence:
-- `docs/progress.md` decides whether a new learning-block introduction is pending;
-- if the current block introduction date is not set or is marked "not started yet", the first task of the session must belong to that new topic;
-- overdue reviews, oldest-due ordering, warm-ups, pending old workspaces, and weak-point severity cannot override this;
-- do not start in review mode when a new block introduction is pending.
 
 When choosing new material, prefer the next appropriate topic in `docs/roadmap.md`, considering prerequisites and current progress.
 
