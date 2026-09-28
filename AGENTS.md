@@ -104,9 +104,42 @@ Before coding, give a compact recognition checklist such as:
 
 Include one short mnemonic, mental hook, or implementation checklist when useful.
 
-#### 6. Practice
+#### 6. Save lesson material
 
-Only after teaching should a coding workspace be created.
+Before creating the first coding workspace, save the reusable lesson as Markdown.
+
+Use:
+
+`lessons/<topic-slug>/lesson.md`
+
+Examples:
+- `lessons/prefix-sum/lesson.md`
+- `lessons/sliding-window/lesson.md`
+- `lessons/binary-search/lesson.md`
+- `lessons/dynamic-programming/lesson.md`
+
+The Markdown lesson must be readable independently from chat and contain:
+- topic overview;
+- learning goals;
+- core idea and mental model;
+- recognition clues;
+- easy foundation example;
+- 2–3 medium application archetypes;
+- hard/advanced overview when relevant;
+- common mistakes;
+- contrasts with similar patterns;
+- mnemonic or learning accelerator when useful;
+- short implementation checklist;
+- complexity notes where relevant;
+- references to representative practice problems already used in the repository, when available.
+
+Do not save a chat transcript. Write a clean reusable study note.
+
+If the topic lesson already exists, update and improve `lesson.md` instead of creating duplicate lesson files.
+
+#### 7. Practice
+
+Only after teaching and saving/updating the Markdown lesson should a coding workspace be created.
 
 Choose the first practice problem based on demonstrated understanding:
 - use easy only when the mechanism genuinely needs reinforcement;
@@ -252,7 +285,8 @@ At the end of every meaningful session:
 2. update `docs/weak-points.md`;
 3. update `docs/problem-history.md`;
 4. create `sessions/YYYY-MM-DD-short-title.md`;
-5. update spaced-repetition scheduling when relevant.
+5. update the relevant `lessons/<topic-slug>/lesson.md` when STUDY produced reusable teaching material;
+6. update spaced-repetition scheduling when relevant.
 
 ## Coaching principle
 
