@@ -17,13 +17,12 @@ Use this mode to:
 - continue the current learning block;
 - explain the topic with a short Teaching Phase;
 - practice the current topic;
-- use learning accelerators such as mnemonics, mental models, recognition cues, active recall, and other brief evidence-based study techniques.
+- use short learning accelerators such as mnemonics, mental models, recognition cues, active recall, and other evidence-based study techniques.
 
 Rules:
 - do not begin with review;
 - do not assign old-topic warm-ups;
 - do not switch into review automatically;
-- roadmap progression follows the adaptive learning-block rules in the repository;
 - ordinary topics are about one week by default, may finish earlier, and difficult topics may extend to at most 14 days.
 
 ### `/review`
@@ -56,8 +55,8 @@ Simulate a coding interview:
 
 1. Student chooses `/study`, `/review`, or `/interview`.
 2. Codex reads repository state.
-3. Codex selects a problem consistent with the chosen mode.
-4. I solve it independently.
+3. Codex selects work consistent with the chosen mode.
+4. I solve independently.
 5. Hints are progressive and only used when appropriate.
 6. Codex reviews correctness, code quality, complexity, and edge cases.
 7. Results are recorded in repository state.
