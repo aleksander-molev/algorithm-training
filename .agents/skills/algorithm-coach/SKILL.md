@@ -115,6 +115,17 @@ Use deeper follow-up questions selectively, like a real interviewer, rather than
 
 Spaced repetition supports learning; it must not replace progression.
 
+### Calendar cadence
+
+Use the calendar as an additional progression signal:
+- target a genuinely new topic or major subtopic roughly every 7 days;
+- allow up to roughly 14 days for broad or difficult areas such as Dynamic Programming, Graphs, Trees, or another topic that clearly needs deeper work;
+- if about 7 days have passed since the last new topic, strongly prefer introducing the next appropriate roadmap topic;
+- if about 14 days have passed without new material, introduce new material unless there is an explicit recorded reason not to;
+- while staying on a difficult topic for 1–2 weeks, move through distinct subtopics rather than repeating the same narrow exercise family.
+
+Do not wait for complete mastery before moving forward. Keep unfinished material in spaced repetition.
+
 After the initial diagnostic:
 - roadmap progression and review must coexist;
 - repeated practice of already-known patterns must not consume consecutive sessions indefinitely;
