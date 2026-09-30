@@ -133,6 +133,14 @@ The Markdown lesson must be readable independently from chat and contain:
 - complexity notes where relevant;
 - references to representative practice problems already used in the repository, when available.
 
+For every task/example described inside the lesson, immediately follow the task description with a Java code example in a fenced ```java block.
+
+This applies to easy, medium, and hard examples whenever a concrete task is described.
+
+The Java example should be complete enough to demonstrate the intended algorithmic idea. Keep it concise and readable.
+
+This rule applies to lesson material only. Do NOT place the solution for the student's active practice workspace into the lesson before the student attempts it.
+
 Do not save a chat transcript. Write a clean reusable study note.
 
 If the topic lesson already exists, update and improve `lesson.md` instead of creating duplicate lesson files.
