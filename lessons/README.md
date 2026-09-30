@@ -37,24 +37,41 @@ Recommended structure:
 Existing topic lessons should be updated and improved rather than duplicated.
 
 
-## Java examples
+## Worked example format
 
-Every concrete task/example described in a lesson must be followed immediately by a Java example.
+Examples in a lesson must not be vague descriptions of possible applications. Every example must be built around a concrete task.
 
-Format:
+Required format:
 
 ```markdown
-### Example: <problem>
+### Example: <problem name>
 
-<short problem description>
+**Problem**
+
+<self-contained task statement with concrete input/output or sample data>
+
+**Why this technique applies**
+
+<recognition clue + key idea>
+
+**Solution**
+
+<worked algorithm for this exact task>
 
 ```java
-// Java example demonstrating the intended approach
+// Complete Java implementation for this exact example
 ```
+
+**Complexity**
+
+- Time: ...
+- Space: ...
 ```
 
 Rules:
-- applies to easy, medium, and hard examples whenever a concrete task is described;
-- keep examples concise and readable;
-- code should demonstrate the intended algorithmic idea, not just pseudocode;
+- applies to every easy, medium, and hard worked example;
+- do not write only "this kind of problem can use X"; instantiate it as a real mini-problem;
+- if a hard direction is mentioned only as an overview, it does not need code, but it must not be presented as a worked example;
+- Java must implement the exact task described immediately above it;
+- keep examples concise but complete enough to study independently;
 - do not include the solution for the student's active practice problem before the student has attempted it.
