@@ -38,6 +38,8 @@ Each topic lesson is saved as Markdown at:
 
 The lesson should be a standalone study note, not a chat transcript.
 
+Whenever the lesson describes a concrete task or example, the task must be followed immediately by a Java code example in a fenced ```java block. This applies to easy, medium, and hard examples. The currently assigned practice problem remains unsolved until the student attempts it.
+
 Rules:
 - do not begin with review;
 - do not assign old-topic warm-ups;
