@@ -38,7 +38,13 @@ Each topic lesson is saved as Markdown at:
 
 The lesson should be a standalone study note, not a chat transcript.
 
-Whenever the lesson describes a concrete task or example, the task must be followed immediately by a Java code example in a fenced ```java block. This applies to easy, medium, and hard examples. The currently assigned practice problem remains unsolved until the student attempts it.
+Teaching examples must be concrete, not just general statements about how a technique could be used.
+
+Each example in a lesson should be structured as:
+
+`Problem → why the technique applies → worked solution → Java implementation → complexity`.
+
+This applies to easy, medium, and hard examples. If a hard direction is mentioned only conceptually, it should not be presented as a worked example. The currently assigned practice problem remains unsolved until the student attempts it.
 
 Rules:
 - do not begin with review;
