@@ -4,6 +4,8 @@ Compact history of completed or meaningfully attempted problems.
 
 Detailed discussion belongs in `sessions/`.
 
+2026-09-30: added Java reference solutions to the Prefix Sum lesson for range sums, exact-sum counting, longest balanced binary subarrays, rectangle sums, and shortest threshold-sum subarrays. This was a lesson-material update, not a student attempt; no solved-problem or review result is recorded.
+
 | Date | Problem | Pattern | Difficulty | Result | Hint | Confidence | Repeat | Next review |
 |---|---|---|---|---|---:|---:|---|---|
 | 2026-09-13 | Two Sum | HashMap complement lookup | Easy | Solved with hints | 1 | - | yes | 2026-09-14 |

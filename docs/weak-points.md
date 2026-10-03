@@ -6,6 +6,8 @@ Do not record every typo. Record issues likely to affect future problem solving 
 
 ## Active weak points
 
+2026-09-30 lesson update: complete Prefix Sum reference solutions were requested and added. No student implementation was assessed, so this provides no new weakness or recovery evidence.
+
 ### Implementation precision and task-contract tracking
 
 **Category:** implementation-bug

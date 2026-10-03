@@ -1,6 +1,6 @@
 # Current Progress
 
-Last updated: 2026-09-28
+Last updated: 2026-09-30
 
 ## Current status
 
@@ -8,9 +8,11 @@ Initial diagnostic completed on 2026-09-13.
 
 ## Current focus
 
-Mixed session in progress: overdue variable-window review passed; one more overdue review is prepared before new roadmap material. Continue checking implementation precision through spaced repetition.
+MODE: STUDY, 30-minute Prefix Sum session in progress. Foundation and application teaching introduced; initial understanding check and coding practice pending. Lesson: `lessons/prefix-sum/lesson.md`.
 
 ## Topic status
+
+Lesson update, 2026-09-30: added complete Java reference solutions for all five Prefix Sum examples at the student's request. Independent practice and understanding assessment remain pending; block dates and review scheduling are unchanged.
 
 | Topic | Status | Confidence | Avg hint level | Last practiced | Notes |
 |---|---|---:|---:|---|---|
@@ -19,7 +21,7 @@ Mixed session in progress: overdue variable-window review passed; one more overd
 | HashMap / HashSet | Developing | - | 0 | 2026-09-24 | Correct count-and-consume implementation; review space-complexity accounting. |
 | Two Pointers | Developing | 4 | 0 | 2026-09-15 | Independently passed a stable in-place filtering variant; stated the write-prefix invariant. |
 | Sliding Window | Developing | - | 0.3 | 2026-09-28 | Independently solved Max Consecutive Ones III; correct O(n) time / O(1) space; targeted boundary tests passed. |
-| Prefix Sum | Not started | - | - | - | |
+| Prefix Sum | Introduced; practice pending | - | - | - | Introduced 2026-09-28: boundary subtraction, frequency/earliest-position maps, and advanced recognition. |
 | Binary Search | Developing | - | 1 | 2026-09-24 | Repaired a non-progressing boundary update in a rotated-array variant. |
 | Stack | Not started | - | - | - | |
 | Linked List | Not started | - | - | - | |
@@ -54,37 +56,18 @@ Mixed session in progress: overdue variable-window review passed; one more overd
 - Pattern recognition: distinguish exact-match binary search from a boundary/lower-bound search; state a target-specific invariant before coding.
 - Complexity reporting: account for auxiliary maps by the number of distinct stored keys.
 
-## NEXT STUDY TOPIC
+## Current study block
 
-When the student starts `MODE: STUDY`, Prefix Sum MUST be the next training topic.
-
-Until Prefix Sum has actually been introduced and its introduction date is recorded:
-- `MODE: STUDY` must begin with Prefix Sum;
-- do not use an old-topic warm-up inside `MODE: STUDY`;
-- ignore pending old-topic workspaces as study-start candidates.
-
-This rule does not override `MODE: REVIEW` or `MODE: INTERVIEW`. The student's explicit mode command is always authoritative.
-
-This study lock is cleared only after the first genuine Prefix Sum teaching/practice session is recorded.
+Prefix Sum was introduced in MODE: STUDY on 2026-09-28. The introduction lock is fulfilled; independent understanding and coding performance are still unassessed. Continue this topic in STUDY. The student's explicit mode always controls session selection.
 
 ## Next recommended session
 
-A new learning block is due.
-
 Current block topic: Prefix Sum.
-Block introduction date: not started yet — set this when Prefix Sum is actually introduced.
-Target transition: normally about 7 days after introduction; may move earlier if it is learned quickly; hard maximum 14 days after introduction.
+Block introduction date: 2026-09-28.
+Target transition date: 2026-10-05.
+Hard latest transition date: 2026-10-12.
+Ended early: no. Extended window used: no.
 
-The first meaningful session of this block must:
-1. introduce Prefix Sum first;
-2. run the Teaching Phase;
-3. solve initial Prefix Sum practice.
+Continue the initial understanding check, then select one meaningful coding exercise. Prefer medium when the mechanism is understood; use a foundation exercise only if needed. No Prefix Sum review stage is assigned until a first meaningful successful attempt.
 
-After Prefix Sum has been introduced, later sessions in this block may be review/practice-heavy.
-
-Prefix Sum should normally occupy about one week, but this is adaptive:
-- if it becomes comfortable quickly, move to the next topic early;
-- if it is difficult, keep practicing it longer;
-- in all cases, move on no later than 14 days after the actual introduction date.
-
-Any remaining weakness should continue through spaced repetition instead of blocking the next topic.
+After this block, advance to the Binary Search roadmap block, building on existing boundary-search experience. Unresolved weaknesses remain in spaced repetition and do not delay the transition. REVIEW and INTERVIEW remain explicitly selected modes.
