@@ -35,3 +35,43 @@ Recommended structure:
 13. Representative practice problems
 
 Existing topic lessons should be updated and improved rather than duplicated.
+
+
+## Worked example format
+
+Examples in a lesson must not be vague descriptions of possible applications. Every example must be built around a concrete task.
+
+Required format:
+
+```markdown
+### Example: <problem name>
+
+**Problem**
+
+<self-contained task statement with concrete input/output or sample data>
+
+**Why this technique applies**
+
+<recognition clue + key idea>
+
+**Solution**
+
+<worked algorithm for this exact task>
+
+```java
+// Complete Java implementation for this exact example
+```
+
+**Complexity**
+
+- Time: ...
+- Space: ...
+```
+
+Rules:
+- applies to every easy, medium, and hard worked example;
+- do not write only "this kind of problem can use X"; instantiate it as a real mini-problem;
+- if a hard direction is mentioned only as an overview, it does not need code, but it must not be presented as a worked example;
+- Java must implement the exact task described immediately above it;
+- keep examples concise but complete enough to study independently;
+- do not include the solution for the student's active practice problem before the student has attempted it.

@@ -99,7 +99,19 @@ The lesson must stand on its own without the chat and include:
 - mnemonic or useful learning accelerator;
 - implementation checklist;
 - complexity notes where relevant;
-- references to representative repository problems when available.
+- references to representative repository problems when available;
+- a Java code example immediately after every concrete task/example described in the lesson.
+
+Teaching-example rule:
+- do not use vague application descriptions as examples;
+- every teaching example must be a concrete mini-problem with a clear task and sample input/output or concrete data;
+- immediately after the task, explain why the technique applies;
+- then show the worked solution;
+- then show a complete Java implementation in a fenced ```java block;
+- finish with time and space complexity;
+- this applies to easy, medium, and hard examples;
+- if a hard direction is only mentioned conceptually, do not label it as a worked example;
+- do not reveal the solution of the student's currently assigned practice problem before the first attempt.
 
 If the topic lesson already exists, update that Markdown file rather than creating another copy.
 

@@ -133,6 +133,23 @@ The Markdown lesson must be readable independently from chat and contain:
 - complexity notes where relevant;
 - references to representative practice problems already used in the repository, when available.
 
+Do not present application examples only as abstract descriptions such as "this can be solved with a HashMap" or "a harder version adds another invariant".
+
+Every example used to teach an application must be converted into a concrete mini-problem.
+
+For each teaching example, use this exact sequence:
+1. **Problem** — give a concrete self-contained task with input/output or a small example.
+2. **Why this technique applies** — explain the recognition clue and the key idea.
+3. **Solution** — show the concrete algorithm for that task.
+4. **Java** — immediately show a complete Java implementation in a fenced ```java block.
+5. **Complexity** — state time and space complexity.
+
+This applies to easy, medium, and hard teaching examples. If a hard example is included in the lesson, it must also be concrete and include a worked solution; otherwise mention the hard direction only as a non-example overview.
+
+The Java implementation should be concise, readable, and complete enough to run or adapt.
+
+This rule applies to lesson material only. Do NOT place the solution for the student's active practice workspace into the lesson before the student attempts it.
+
 Do not save a chat transcript. Write a clean reusable study note.
 
 If the topic lesson already exists, update and improve `lesson.md` instead of creating duplicate lesson files.
