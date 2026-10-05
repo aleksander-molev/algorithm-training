@@ -130,6 +130,8 @@ Resolved weak points do not need frequent dedicated reviews, but may still appea
 
 ## MODE: REVIEW session composition
 
+2026-10-05 scheduling update: Prefix Sum earliest-boundary-map practice first passed independently; start stage 0, next review 2026-10-06. Implementation precision passed on a second pattern after a one-week gap; resolved as a dedicated weakness, stage 3 routine mixed-review check due 2026-10-19. Other schedules unchanged.
+
 When the student explicitly starts `MODE: REVIEW` mode:
 
 - target about 60% of problems from the most recently studied learning block;
@@ -140,3 +142,7 @@ When the student explicitly starts `MODE: REVIEW` mode:
 - do not introduce a new roadmap topic in `MODE: REVIEW`.
 
 The 60/40 target applies across the session as a whole.
+
+2026-10-05 later update: sorted-array at-most-two compaction first attempt is partial (empty-input return contract); Two Pointers stays stage 1, next review 2026-10-08. Implementation precision reopened, stage 3 retained with an earlier check on 2026-10-08. Correction pending; do not advance either stage yet.
+
+Problem02 correction verified on 2026-10-05 after level-1 local feedback; retain partial and existing 2026-10-08 dates. Problem03 pending; no scheduling evidence yet.

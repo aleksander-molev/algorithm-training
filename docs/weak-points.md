@@ -6,15 +6,17 @@ Do not record every typo. Record issues likely to affect future problem solving 
 
 ## Active weak points
 
+2026-10-05: longest target-sum subarray solved independently with correct boundary handling, earliest-index preservation, input preservation, and complexity analysis. No new weakness observed.
+
 2026-09-30 lesson update: complete Prefix Sum reference solutions were requested and added. No student implementation was assessed, so this provides no new weakness or recovery evidence.
 
 ### Implementation precision and task-contract tracking
 
 **Category:** implementation-bug
 **First observed:** 2026-09-13
-**Last observed:** 2026-09-24
-**Occurrences:** 7
-**Status:** active
+**Last observed:** 2026-10-05
+**Occurrences:** 8
+**Status:** active again after Problem02 empty-input regression
 
 **Observed behavior**
 
@@ -28,13 +30,17 @@ Two Sum initially returned a collection instead of the requested `int[]`; Valid 
 
 2026-09-28: Max Consecutive Ones III was correct independently, including zero budget, consecutive zeros, a later longest run, and input preservation. Correct O(n) time and O(1) auxiliary-space analysis. This is one convincing demonstration since the latest regression; keep active until another independent demonstration on a different pattern, separated in time. Review stage advanced to 2 (pass).
 
+2026-10-05: Maximum Size Subarray Sum Equals k was correct independently on a different pattern, one week later. Six test methods passed, including 500 comparisons with brute force, zero targets, repeated sums, signed values, maximum-size input, and input preservation. Correct O(n) expected time and O(n) auxiliary space. Together these provide two separated independent demonstrations; recurring implementation weakness resolved, with ordinary mixed review retained.
+
+2026-10-05 later review: Problem02 handles tested non-empty arrays correctly, but returns 1 for empty input despite the explicit contract allowing length 0. Reopened contract tracking; student corrected the boundary branch after local feedback, and all five test methods passed. Complexity estimates remain correct.
+
 **Training action**
 
 Before coding, restate the method contract and target-specific invariant. Before submitting, run a short checklist: signature and types, return contract, representative edge cases, boundary updates, and complexity.
 
 **Next review**
 
-2026-10-05
+2026-10-08 (stage 3 retained; earlier check after regression)
 
 **Resolved when**
 

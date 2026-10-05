@@ -139,4 +139,4 @@ At the end of every meaningful session, Codex should:
 
 ## Language
 
-Primary language: **Java 21**.
+Primary language: **Java 27**.
