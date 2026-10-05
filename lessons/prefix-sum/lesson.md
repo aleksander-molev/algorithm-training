@@ -189,9 +189,24 @@ final class RectangleSum {
                 - prefix[r2][c1]
                 + prefix[r1][c1];
     }
+
+    /** исходный        prefixSum 2D
+     *                  0  0   0   0
+     *  1  2  3         0  1   3   6
+     *  4  5  6         0  5   12  21
+     *  7  8  9         0  12  32  50
+     *  
+     *  как считаем префикс сумм 2D: p[i][j] = p[i+1][j] + p[i][j - 1] - p[i - 1][j - 1]
+     *  в итоге в каждой ячейке сумма всего подмассива от 0,0 до i,j
+     *  
+     *  ответ такой: из нижнего правого вычитаем сумму левого квадрата от 0,0 до r2 c1 потом весь верхний от 0,0 до r1,с2
+     *  все верхняя область и правая пересекаются поэтому нужно ее прибавить так как это пересечение дважды вычлось
+     *  прибавляем r1 c1
+     */
 }
 ```
-
+![img.png](img.png)
+![img_1.png](img_1.png)
 Example: `new RectangleSum(new int[][]{{1, 2, 3}, {4, 5, 6}}).sumRectangle(0, 1, 2, 3)` returns `16`: it includes `2 + 3 + 5 + 6`.
 
 During construction, the upper and left prefixes overlap, so subtract their intersection once. During a query, both subtractions remove the intersection, so add it back once. Construction: O(rows * columns) time and space; each query: O(1) time and O(1) additional space.
