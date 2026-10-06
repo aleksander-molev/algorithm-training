@@ -146,3 +146,7 @@ The 60/40 target applies across the session as a whole.
 2026-10-05 later update: sorted-array at-most-two compaction first attempt is partial (empty-input return contract); Two Pointers stays stage 1, next review 2026-10-08. Implementation precision reopened, stage 3 retained with an earlier check on 2026-10-08. Correction pending; do not advance either stage yet.
 
 Problem02 correction verified on 2026-10-05 after level-1 local feedback; retain partial and existing 2026-10-08 dates. Problem03 pending; no scheduling evidence yet.
+
+2026-10-06: Problem03 assessed, partial. Balanced-subarray counting passes small-input validation but overflows at maximum input. Track counting variant at stage 0, next review 2026-10-07; correction and student complexity explanation pending. Do not advance the earliest-boundary-map review from this different output contract. Implementation precision remains active with its 2026-10-08 check.
+
+Problem03 correction verified on 2026-10-06: all five tests pass, complexity correctly reported. Retain partial and stage 0 counting review due 2026-10-07. Problem04 assigned for the overdue Binary Search review; no outcome or schedule advance yet.

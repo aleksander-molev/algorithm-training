@@ -29,4 +29,10 @@ Detailed discussion belongs in `sessions/`.
 
 | 2026-10-05 | Remove Duplicates from Sorted Array II | Two Pointers / stable compaction | Medium | Solved after empty-input correction; partial review | 1 | - | yes | 2026-10-08 |
 
-2026-10-05: Problem03 (count balanced binary subarrays) assigned; no attempt yet.
+2026-10-05: Problem03 (count balanced binary subarrays) assigned.
+
+2026-10-06 REVIEW: existing Problem03 attempt assessed. Basic examples and 500 small oracle comparisons pass; maximum alternating input fails due to int accumulator overflow. Correct expected O(n) time / O(n) auxiliary space; student complexity explanation pending. Local feedback level 1; partial, correction pending. Counting variant stage 0, next review 2026-10-07; earliest-boundary-map schedule unchanged.
+
+2026-10-06 correction: Problem03 now uses a long accumulator; all five tests pass. Student reports correct O(n) time / O(n) space (time expected for HashMap). Solved after level-1 feedback; retain partial, stage 0, due 2026-10-07.
+
+2026-10-06: Problem04 (search target in rotated sorted array, distinct values) assigned for overdue Binary Search review; no attempt yet.

@@ -6,6 +6,8 @@ Do not record every typo. Record issues likely to affect future problem solving 
 
 ## Active weak points
 
+2026-10-06: Problem03 initially overflowed its int answer accumulator. Student changed it to long after local feedback; all five tests pass, including maximum input and 500 small oracle comparisons. Complexity correctly reported. Contract tracking remains active; add a maximum-answer/type check before submission. Retain partial and existing schedules.
+
 2026-10-05: longest target-sum subarray solved independently with correct boundary handling, earliest-index preservation, input preservation, and complexity analysis. No new weakness observed.
 
 2026-09-30 lesson update: complete Prefix Sum reference solutions were requested and added. No student implementation was assessed, so this provides no new weakness or recovery evidence.
@@ -14,8 +16,8 @@ Do not record every typo. Record issues likely to affect future problem solving 
 
 **Category:** implementation-bug
 **First observed:** 2026-09-13
-**Last observed:** 2026-10-05
-**Occurrences:** 8
+**Last observed:** 2026-10-06
+**Occurrences:** 9
 **Status:** active again after Problem02 empty-input regression
 
 **Observed behavior**
