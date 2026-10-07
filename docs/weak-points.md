@@ -6,6 +6,8 @@ Do not record every typo. Record issues likely to affect future problem solving 
 
 ## Active weak points
 
+2026-10-06 (verified 2026-10-07): Problem04 solved independently with correct progressing boundaries and virtual-index mapping. No new correctness weakness. Contract tracking remains active after Problem03 overflow on the same practice date; this does not establish two separated recovery demonstrations. Instance fields are unnecessary per-call state; local variables would make the method easier to reuse.
+
 2026-10-06: Problem03 initially overflowed its int answer accumulator. Student changed it to long after local feedback; all five tests pass, including maximum input and 500 small oracle comparisons. Complexity correctly reported. Contract tracking remains active; add a maximum-answer/type check before submission. Retain partial and existing schedules.
 
 2026-10-05: longest target-sum subarray solved independently with correct boundary handling, earliest-index preservation, input preservation, and complexity analysis. No new weakness observed.

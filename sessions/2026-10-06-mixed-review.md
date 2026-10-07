@@ -2,7 +2,7 @@
 
 ## Mode and status
 
-Explicit MODE: REVIEW. In progress; resumed the existing Problem03 attempt from the latest learning block, Prefix Sum. Target mix remains about 60% latest block and 40% earlier topics by due dates with broad rotation. No new topic introduced.
+Explicit MODE: REVIEW. Completed for 2026-10-06, finalized on 2026-10-07 after the student reported yesterday's final solution. Resumed the existing Problem03 attempt from the latest learning block, Prefix Sum. Target mix remains about 60% latest block and 40% earlier topics by due dates with broad rotation. No new topic introduced.
 
 ## Problem03 assessment
 
@@ -27,3 +27,17 @@ Student changed count to long and correctly reported O(n) time / O(n) space. All
 Learning hook: check the maximum possible answer separately from maximum input length.
 
 Created Problem04 and three basic example tests before assignment. Task: target index in a rotated strictly increasing distinct-value array, or -1 if absent. This transfers earlier rotated-array boundary reasoning to a different output contract and addresses the overdue Binary Search review while rotating away from yesterday's Two Pointers task. Ask for a brief approach and implementation, aiming for O(log n) time. Await first attempt; no review result recorded.
+
+## Problem04 final assessment and session close
+
+Practice date: 2026-10-06, explicitly confirmed by the student. Report and verification date: 2026-10-07. No practice is attributed to October 7.
+
+Solved independently, hint level 0. First binary search locates the minimum; second searches virtual sorted indices and maps the match back to the original array. Both searches make progress and preserve input.
+
+All five JUnit methods pass: three basic examples, exhaustive rotations for lengths 1–40 with present and absent targets (also checks repeated calls and input preservation), and maximum-size/extreme-value checks. Student implementation unchanged.
+
+Implementation quality: correct and understandable two-phase approach. arrLength and rotationIdx are unnecessary mutable instance fields; passing local state to the helper would improve reusability. Scratch comments could be cleaned up. Neither issue requires a correction for this contract.
+
+Coach complexity assessment: O(log n) time (two logarithmic searches), O(1) auxiliary space. No separate student complexity statement was supplied; do not invent one or request more work after session close.
+
+Binary Search review passes: stage 1 -> 2, next review 2026-10-13, calculated from actual practice date. Existing implementation weakness remains active following the same-date Problem03 overflow. No new weakness, no additional task assigned. Across the continued October 5–6 sequence, two Prefix Sum and two earlier-topic problems were completed (50/50, approximate 60/40 target); October 6 alone contained one of each. Student ended the session and may return later.

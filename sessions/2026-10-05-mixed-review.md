@@ -2,7 +2,7 @@
 
 ## Mode and status
 
-Explicit MODE: REVIEW. In progress; first task passed independently, second assigned.
+Explicit MODE: REVIEW. Continued on 2026-10-06 and completed there; finalized on 2026-10-07. See sessions/2026-10-06-mixed-review.md for final Problem03 and Problem04 outcomes.
 
 ## Selection
 

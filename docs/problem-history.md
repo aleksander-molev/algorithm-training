@@ -35,4 +35,4 @@ Detailed discussion belongs in `sessions/`.
 
 2026-10-06 correction: Problem03 now uses a long accumulator; all five tests pass. Student reports correct O(n) time / O(n) space (time expected for HashMap). Solved after level-1 feedback; retain partial, stage 0, due 2026-10-07.
 
-2026-10-06: Problem04 (search target in rotated sorted array, distinct values) assigned for overdue Binary Search review; no attempt yet.
+2026-10-06: Problem04 (Search in Rotated Sorted Array, distinct values), Medium, solved independently; hint level 0. Five test methods pass, including exhaustive small rotations and targets, input preservation, repeated calls, maximum-size input, and extreme values. Coach assessment: O(log n) time / O(1) auxiliary space; student did not separately report complexity. Binary Search review pass, stage 2, next review 2026-10-13. Completed on 2026-10-06 per student; reported and verified on 2026-10-07. Session completed; no further task assigned.
