@@ -4,6 +4,18 @@ Compact history of completed or meaningfully attempted problems.
 
 Detailed discussion belongs in `sessions/`.
 
+2026-10-07 Problem07 correction verified: student seeded the empty boundary after local feedback. All five tests pass, including all 500 direct-enumeration comparisons, signed parity, empty input, and input preservation. Solved after level-1 feedback; retain partial, stage 0, next review 2026-10-08. No pending workspace; session closed.
+
+2026-10-07 final assessment: Problem07 (longest equal-even/odd subarray), Medium, partial review. Three basic tests pass; two added test methods fail, including [2, 1] expected 2, actual 0. Empty boundary absent; earliest-index preservation and signed parity normalization correct. Coach complexity: expected O(n) time / O(n) auxiliary space; student analysis not supplied at session close. Level-1 local feedback; stage 0 retained, next review 2026-10-08. Student code unchanged, correction deferred. Session closed; no new task.
+
+2026-10-07 final update: Problem06 independently correct; time analysis correct, fixed-alphabet space corrected and acknowledged. Partial review for complexity confusion, stage 1 retained, next review 2026-10-10. Problem07 (longest subarray with equal even/odd counts, Medium) assigned as the student's requested final task; pending, no result or scheduling advancement.
+
+2026-10-07 REVIEW: Problem06, longest substring with at most k distinct characters (Sliding Window / frequency map, Medium), independently correct, hint 0. All five test methods pass including 500 oracle comparisons and maximum-size inputs. Coach complexity: expected O(n) time, O(1) auxiliary space for fixed lowercase alphabet. Student complexity explanation pending; scheduling unchanged.
+
+Problem05 final assessment, 2026-10-07: student complexity correct; counting review pass, stage 1, next review 2026-10-10. Problem06 (longest substring with at most k distinct characters) assigned; awaiting attempt.
+
+2026-10-07 REVIEW: Problem05, count subarrays with equal positive/negative counts and neutral zeros (Prefix Sum counting transfer, Medium), solved independently after example-semantics clarification. Five test methods pass, including maximum answer and 500 oracle comparisons. Coach assessment: expected O(n) time / O(n) auxiliary space. Student complexity explanation pending; scheduling unchanged.
+
 2026-10-05 REVIEW: retain at most two copies of each sorted-array value attempted in `week_41_october_2026/Problem02.java`; corrected and verified after empty-input feedback.
 
 2026-09-30: added Java reference solutions to the Prefix Sum lesson for range sums, exact-sum counting, longest balanced binary subarrays, rectangle sums, and shortest threshold-sum subarrays. This was a lesson-material update, not a student attempt; no solved-problem or review result is recorded.

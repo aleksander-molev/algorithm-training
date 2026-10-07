@@ -130,6 +130,14 @@ Resolved weak points do not need frequent dedicated reviews, but may still appea
 
 ## MODE: REVIEW session composition
 
+2026-10-07 final correction: Problem07 empty-boundary initialization corrected by student and verified; all five tests pass. Retain partial from first attempt, earliest-boundary stage 0 due October 8, and active contract-tracking check October 8. No pending correction or task.
+
+2026-10-07 session finalized: Problem07 earliest-boundary-map review partial due to missing empty prefix boundary. Three basic tests pass, two added test methods fail. Stage 0 retained, next review 2026-10-08. Correction deferred at student's request to end today. Contract tracking stage 3 remains active, partial, October 8 check retained. Counting review due October 10; Sliding Window due October 10; other dates unchanged.
+
+2026-10-07: Problem06 Sliding Window review partial: implementation independent and correct, but auxiliary-space estimate required correction for the fixed alphabet. Stage 1 retained, next review 2026-10-10. Student acknowledged correction. Final requested Problem07 targets overdue Prefix Sum earliest-boundary-map transfer; pending, keep its existing schedule until assessed.
+
+2026-10-07: Problem05 counting transfer solved independently; all five tests pass, including neutral zeros, maximum answer and oracle comparisons. Student correctly reports O(n) time / O(n) space (expected time with HashMap). Counting review pass, stage 0 -> 1, next review 2026-10-10. Earliest-boundary-map schedule unchanged because this task assesses counting. Problem06 assigned for overdue Sliding Window review; no result yet.
+
 2026-10-05 scheduling update: Prefix Sum earliest-boundary-map practice first passed independently; start stage 0, next review 2026-10-06. Implementation precision passed on a second pattern after a one-week gap; resolved as a dedicated weakness, stage 3 routine mixed-review check due 2026-10-19. Other schedules unchanged.
 
 When the student explicitly starts `MODE: REVIEW` mode:

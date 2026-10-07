@@ -6,6 +6,16 @@ Do not record every typo. Record issues likely to affect future problem solving 
 
 ## Active weak points
 
+2026-10-07 close: student recognized and corrected Problem07 initialization with firstIdx.put(0, 0). All five tests pass, including 500 oracle comparisons and preservation. Retain partial and active contract tracking after first-attempt bug; no correction remains pending.
+
+2026-10-07 final assessment: Problem07 misses the empty prefix boundary, so valid subarrays starting at index 0 can be missed. [2, 1] returns 0 instead of 2. Correct sign/parity normalization and earliest-index preservation; implementation precision remains active. Correction deferred at student's session close; next check October 8.
+
+2026-10-07: Problem06 time correctly reported O(n); student initially reports worst-case O(n) space despite the fixed 26-letter alphabet, then acknowledges O(1) correction. Reinforce accounting for the maximum number of distinct stored keys; no implementation bug. Sliding Window review partial, stage 1 retained, next review October 10.
+
+2026-10-07: Problem06 independently correct, including zero budget and repeated shrinking. No new weakness; both October 7 recovery demonstrations occurred on the same date, so retain contract tracking pending separated-time evidence. Student complexity analysis pending.
+
+2026-10-07: Problem05 independently correct, including empty input, neutral zeros, input preservation, and a maximum answer above int range. One recovery demonstration after the October 6 overflow; retain active status until a separated independent demonstration on a different pattern. Student complexity analysis pending. No new weakness.
+
 2026-10-06 (verified 2026-10-07): Problem04 solved independently with correct progressing boundaries and virtual-index mapping. No new correctness weakness. Contract tracking remains active after Problem03 overflow on the same practice date; this does not establish two separated recovery demonstrations. Instance fields are unnecessary per-call state; local variables would make the method easier to reuse.
 
 2026-10-06: Problem03 initially overflowed its int answer accumulator. Student changed it to long after local feedback; all five tests pass, including maximum input and 500 small oracle comparisons. Complexity correctly reported. Contract tracking remains active; add a maximum-answer/type check before submission. Retain partial and existing schedules.
@@ -18,8 +28,8 @@ Do not record every typo. Record issues likely to affect future problem solving 
 
 **Category:** implementation-bug
 **First observed:** 2026-09-13
-**Last observed:** 2026-10-06
-**Occurrences:** 9
+**Last observed:** 2026-10-07
+**Occurrences:** 10
 **Status:** active again after Problem02 empty-input regression
 
 **Observed behavior**

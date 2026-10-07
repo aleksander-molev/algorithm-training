@@ -1,6 +1,6 @@
 # Current Progress
 
-Last updated: 2026-10-07 (records finalized for practice on 2026-10-06)
+Last updated: 2026-10-07
 
 ## Current status
 
@@ -8,7 +8,7 @@ Initial diagnostic completed on 2026-09-13.
 
 ## Current focus
 
-MODE: REVIEW session completed for 2026-10-06; final task reported and verified on 2026-10-07. Problem03 corrected and verified; Problem04 solved independently and all five test methods pass. No pending workspace and no new task assigned at the student's request. No new roadmap topic introduced. The continued 2026-10-05–06 review sequence covered two Prefix Sum and two earlier-topic tasks (50/50, approximate target 60/40).
+MODE: REVIEW session completed for 2026-10-07 at the student's request. Three tasks assessed: two Prefix Sum variants and one earlier-topic Sliding Window task (67/33, approximately 60/40). Problem05 independently correct, counting review pass. Problem06 independently correct, partial review after fixed-alphabet space-complexity correction. Problem07 corrected by the student after local initialization feedback: empty boundary seeded with firstIdx.put(0, 0). All five tests pass, including 500 oracle comparisons and input preservation. Retain partial review from the first-attempt initialization bug; correction verified and no pending workspace. No further task assigned and no new roadmap topic introduced.
 
 ## Topic status
 
@@ -20,8 +20,8 @@ Lesson update, 2026-09-30: added complete Java reference solutions for all five 
 | Arrays / Strings | Developing | - | 1 | 2026-09-13 | Palindrome scan solved after local implementation guidance. |
 | HashMap / HashSet | Developing | - | 0 | 2026-09-24 | Correct count-and-consume implementation; review space-complexity accounting. |
 | Two Pointers | Developing | 4 | 0 | 2026-10-05 | At-most-two compaction correct after empty-input correction; O(n) time / O(1) space. |
-| Sliding Window | Developing | - | 0.3 | 2026-09-28 | Independently solved Max Consecutive Ones III; correct O(n) time / O(1) space; targeted boundary tests passed. |
-| Prefix Sum | Developing | - | - | 2026-10-06 | Balanced-subarray counting correct after accumulator-type feedback; expected O(n) time / O(n) space. Earlier maximum-length variant solved independently. |
+| Sliding Window | Developing | - | 0.3 | 2026-10-07 | At-most-k-distinct implementation independently correct; fixed-alphabet auxiliary space corrected to O(1), partial review. |
+| Prefix Sum | Developing | - | - | 2026-10-07 | Counting transfer independent and correct; longest even/odd variant corrected after empty-boundary feedback and verified. Expected O(n) time / O(n) space. |
 | Binary Search | Developing | - | - | 2026-10-06 | Independently solved rotated target search via rotation boundary and virtual sorted indices; O(log n) time / O(1) space, assessed by coach. |
 | Stack | Not started | - | - | - | |
 | Linked List | Not started | - | - | - | |
@@ -35,13 +35,13 @@ Lesson update, 2026-09-30: added complete Java reference solutions for all five 
 
 ## Due reviews
 
-- Prefix Sum / balanced-subarray counting (stage 0; last result: partial; last reviewed: 2026-10-06; next review: 2026-10-07; evidence: accumulator correction verified; five tests pass, including maximum input and 500 oracle comparisons; first-attempt overflow retains partial)
+- Prefix Sum / balanced-subarray counting (stage 1; last result: pass; last reviewed: 2026-10-07; next review: 2026-10-10; evidence: independent positive/negative/neutral-zero transfer; five tests pass, including maximum answer and 500 oracle comparisons; correct complexity)
 - Two pointers / in-place stable compaction (stage 1; last result: partial; last reviewed: 2026-10-05; next review: 2026-10-08; evidence: at-most-two sorted compaction correct for tested non-empty inputs, empty-input correction verified; review remains partial after first-attempt bug)
 - Binary Search / boundary search (stage 2; last result: pass; last reviewed: 2026-10-06; next review: 2026-10-13; evidence: independent rotated target search; five test methods pass; verified 2026-10-07)
-- Implementation precision / contract tracking (active again; stage 3; last result: partial; last reviewed: 2026-10-05; next review: 2026-10-08; evidence: empty-input contract missed in sorted compaction; earlier separated successes retained)
-- Prefix Sum / earliest boundary map (stage 0; last result: pass; last practiced: 2026-10-05; next review: 2026-10-06; evidence: first independent Maximum Size Subarray Sum Equals k attempt)
+- Implementation precision / contract tracking (active; stage 3; last result: partial; last reviewed: 2026-10-07; next review: 2026-10-08; evidence: Problem07 misses subarrays starting at index zero; earlier successes retained)
+- Prefix Sum / earliest boundary map (stage 0; last result: partial; last reviewed: 2026-10-07; next review: 2026-10-08; evidence: Problem07 empty-boundary correction verified; partial retained from first attempt)
 - HashMap / frequency accounting (stage 2; last result: partial; last reviewed: 2026-09-24; next review: 2026-10-01; evidence: Ransom Note review)
-- Sliding window / variable window (stage 1; last result: pass; last reviewed: 2026-09-28; next review: 2026-10-01; evidence: Max Consecutive Ones III review)
+- Sliding window / variable window (stage 1; last result: partial; last reviewed: 2026-10-07; next review: 2026-10-10; evidence: at-most-k-distinct implementation independently correct; fixed-alphabet space analysis corrected)
 
 ## Recent strengths
 
@@ -70,6 +70,6 @@ Target transition date: 2026-10-05.
 Hard latest transition date: 2026-10-12.
 Ended early: no. Extended window used: no.
 
-First Prefix Sum practice passed; earliest-boundary-map stage 0 review due 2026-10-06. Counting variant corrected, next review 2026-10-07. REVIEW session completed; no pending task. Choose the next session mode explicitly. On the next STUDY session, advance to Binary Search; record its actual introduction date when taught.
+October 7 REVIEW session completed. Problem07 correction verified; no pending task. Earliest-boundary-map review due October 8; counting and Sliding Window due October 10. Choose the next session mode explicitly. On the next STUDY session, advance to Binary Search; record its actual introduction date when taught.
 
 After this block, advance to the Binary Search roadmap block, building on existing boundary-search experience. Unresolved weaknesses remain in spaced repetition and do not delay the transition. REVIEW and INTERVIEW remain explicitly selected modes.
