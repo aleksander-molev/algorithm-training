@@ -130,6 +130,14 @@ Resolved weak points do not need frequent dedicated reviews, but may still appea
 
 ## MODE: REVIEW session composition
 
+2026-10-09 correction verified: Problem08 final solution correct, nine tests pass. Retain partial after level-2 feedback; earliest-boundary stage 0, last reviewed October 9, next review October 10. Contract tracking active, stage 3 retained, partial, next check October 10. No independent recovery evidence from assisted correction; other schedules unchanged.
+
+2026-10-08 second revision: Problem08 six of seven tests pass; symmetric trimming still misses off-center interior segments. Level-2 conceptual feedback. Correction pending; retain partial, earliest-boundary stage 0 due October 9 and contract-tracking stage 3 check October 9. No scheduling changes.
+
+2026-10-08 revision check: Problem08 overflow corrected, but interior segments touching neither end remain unsupported. Five of six tests pass. Retain partial, earliest-boundary stage 0 due October 9 and active contract-tracking stage 3 check October 9. No schedule advancement or new task.
+
+2026-10-08: Problem08 partial review. Three basic tests pass; two targeted tests fail because interior segments are missed and int sums overflow. Earliest-boundary stage 0 retained, last reviewed October 8, next review October 9. Contract tracking active, stage 3 retained, partial, earlier check October 9. Correction pending; all other schedules unchanged. Exactly one task requested, no additional workspace.
+
 2026-10-07 final correction: Problem07 empty-boundary initialization corrected by student and verified; all five tests pass. Retain partial from first attempt, earliest-boundary stage 0 due October 8, and active contract-tracking check October 8. No pending correction or task.
 
 2026-10-07 session finalized: Problem07 earliest-boundary-map review partial due to missing empty prefix boundary. Three basic tests pass, two added test methods fail. Stage 0 retained, next review 2026-10-08. Correction deferred at student's request to end today. Contract tracking stage 3 remains active, partial, October 8 check retained. Counting review due October 10; Sliding Window due October 10; other dates unchanged.

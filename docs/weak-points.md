@@ -6,6 +6,16 @@ Do not record every typo. Record issues likely to affect future problem solving 
 
 ## Active weak points
 
+2026-10-09: Problem08 correction verified. All nine tests pass, including 500 oracle comparisons and preservation. Correct empty-boundary initialization, earliest occurrence retention and long arithmetic. Retain active contract tracking: this is an assisted correction, not independent recovery. Next check October 10; no pending correction.
+
+2026-10-08 second revision: symmetric trimming handles the centered example but omits off-center segments. [5, 1, 2, 5, 5] versus [9, 2, 1, 9, 9] expected 2, actual 0. Six of seven tests pass. Conceptual obstacle: arbitrary boundary pairs, rather than enumerating special segment categories. Level-2 cumulative-difference observation provided. Same unresolved attempt; occurrences and October 9 date unchanged.
+
+2026-10-08 Problem08 revision: long fixes overflow; added suffix scan fixes previous suffix example. Still misses segments touching neither end: [5, 1, 2, 5] versus [9, 2, 1, 9] returns 0 instead of 2. Five of six tests pass. Same unresolved attempt, no additional occurrence; status and October 9 check unchanged.
+
+2026-10-08 Problem08 assessment: only segments starting at index 0 are considered; [5, 1, 2] versus [9, 2, 1] returns 0 instead of 2. int prefix sums also wrap, creating false equality when a sums to 4294967296 and b sums to zero. Recurrence of numeric-range/contract tracking; level-1 feedback, correction pending. Next check October 9; no recovery evidence.
+
+2026-10-08: single-task REVIEW workspace Problem08 assigned; awaiting independent attempt. No new weakness or recovery evidence; existing status and review dates unchanged.
+
 2026-10-07 close: student recognized and corrected Problem07 initialization with firstIdx.put(0, 0). All five tests pass, including 500 oracle comparisons and preservation. Retain partial and active contract tracking after first-attempt bug; no correction remains pending.
 
 2026-10-07 final assessment: Problem07 misses the empty prefix boundary, so valid subarrays starting at index 0 can be missed. [2, 1] returns 0 instead of 2. Correct sign/parity normalization and earliest-index preservation; implementation precision remains active. Correction deferred at student's session close; next check October 8.
@@ -28,8 +38,8 @@ Do not record every typo. Record issues likely to affect future problem solving 
 
 **Category:** implementation-bug
 **First observed:** 2026-09-13
-**Last observed:** 2026-10-07
-**Occurrences:** 10
+**Last observed:** 2026-10-08
+**Occurrences:** 11
 **Status:** active again after Problem02 empty-input regression
 
 **Observed behavior**
@@ -54,7 +64,7 @@ Before coding, restate the method contract and target-specific invariant. Before
 
 **Next review**
 
-2026-10-08 (stage 3 retained; earlier check after regression)
+2026-10-10 (stage 3 retained; correction verified, independent recovery still needed)
 
 **Resolved when**
 

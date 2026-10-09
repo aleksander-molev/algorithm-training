@@ -4,6 +4,16 @@ Compact history of completed or meaningfully attempted problems.
 
 Detailed discussion belongs in `sessions/`.
 
+2026-10-09 Problem08 correction verified: all nine tests pass, including 500 direct-enumeration comparisons, input preservation, empty/single inputs and maximum-size large differences. Correct final solution after level-2 feedback; expected O(n) time / O(n) auxiliary space. Coach assessed complexity; student analysis not supplied. Retain partial, stage 0, next review October 10. No pending task.
+
+2026-10-08 Problem08 second revision: added symmetric trimming, six of seven tests pass, off-center segment still missed (expected 2, actual 0). Current O(n) time / O(1) auxiliary space; numeric range sufficient, input preserved. Level-2 cumulative-difference feedback; correction pending, partial stage 0 due October 9 retained. No new task.
+
+2026-10-08 Problem08 revision checked: five of six tests pass. long sums fix overflow; two scans cover prefixes and suffixes, but omit segments touching neither end. New counterexample expected 2, actual 0. Current O(n) time / O(1) space; level-1 feedback, correction pending. Partial and October 9 review unchanged; student solution unmodified.
+
+2026-10-08 Problem08 assessed: three basic tests pass, two targeted tests fail (interior matching segment and overflow false equality). Implementation checks only equal prefixes from index zero. Coach complexity: O(n) time / O(1) auxiliary space; student analysis not supplied. Level-1 feedback, partial review, earliest-boundary stage 0 retained, next review October 9. Student implementation unchanged; correction pending, no further task.
+
+2026-10-08 REVIEW: Problem08 (longest aligned equal-sum segment in two arrays, Medium) assigned with three basic tests. Exactly one task requested. First attempt pending; no assessment or review advancement.
+
 2026-10-07 Problem07 correction verified: student seeded the empty boundary after local feedback. All five tests pass, including all 500 direct-enumeration comparisons, signed parity, empty input, and input preservation. Solved after level-1 feedback; retain partial, stage 0, next review 2026-10-08. No pending workspace; session closed.
 
 2026-10-07 final assessment: Problem07 (longest equal-even/odd subarray), Medium, partial review. Three basic tests pass; two added test methods fail, including [2, 1] expected 2, actual 0. Empty boundary absent; earliest-index preservation and signed parity normalization correct. Coach complexity: expected O(n) time / O(n) auxiliary space; student analysis not supplied at session close. Level-1 local feedback; stage 0 retained, next review 2026-10-08. Student code unchanged, correction deferred. Session closed; no new task.
