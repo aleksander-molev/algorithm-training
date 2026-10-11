@@ -1,12 +1,18 @@
 # Current Progress
 
-Last updated: 2026-10-09
+Last updated: 2026-10-11
 
 ## Current status
 
 Initial diagnostic completed on 2026-09-13.
 
 ## Current focus
+
+2026-10-11 final: Problem09 review passed. Student correctly identifies linear time and space (constant factors simplified from 2n). Frequency accounting stage 2 -> 3, next review October 25. Single-task session complete; no pending task. Contract tracking remains active with one independent recovery demonstration; next mixed check October 12.
+
+2026-10-11: Problem09 independently correct after task-semantics clarification (no algorithm hint). All five test methods pass, including 500 occurrence-pairing comparisons and maximum-length cases. Clear exact-exclusion and count-consumption logic. Coach assessment: expected O(n) time, O(n) auxiliary space because nonguessed stores up to n characters; map has at most ten keys. Student complexity statement pending; frequency-review schedule unchanged until final assessment. No additional task.
+
+2026-10-09: new single-task MODE: REVIEW. Problem09 assigned: exact and misplaced digit matches with duplicate occurrences. Earlier-topic frequency-accounting review overdue October 1; rotate after recent Prefix Sum tasks. Awaiting first attempt; no assessment or schedule advancement. Exactly one task authorized.
 
 2026-10-09: Problem08 correction verified, continuing the single-task October 8 REVIEW. Final solution correct; all nine tests pass, including 500 direct-enumeration comparisons, input preservation, empty input and maximum-size large cumulative differences. Earliest occurrence map, empty boundary and long arithmetic handled correctly. Expected O(n) time / O(n) auxiliary space. Retain partial after earlier bugs and level-2 feedback; earliest-boundary stage 0 due October 10. No pending correction or additional task.
 
@@ -20,7 +26,7 @@ Lesson update, 2026-09-30: added complete Java reference solutions for all five 
 |---|---|---:|---:|---|---|
 | Complexity | Comfortable | - | 0 | 2026-09-13 | Correct warm-up analysis; distinguish sorting implementation space costs. |
 | Arrays / Strings | Developing | - | 1 | 2026-09-13 | Palindrome scan solved after local implementation guidance. |
-| HashMap / HashSet | Developing | - | 0 | 2026-09-24 | Correct count-and-consume implementation; review space-complexity accounting. |
+| HashMap / HashSet | Developing | - | 0 | 2026-10-11 | Problem09 independently correct; linear time and space correctly identified. Review pass. |
 | Two Pointers | Developing | 4 | 0 | 2026-10-05 | At-most-two compaction correct after empty-input correction; O(n) time / O(1) space. |
 | Sliding Window | Developing | - | 0.3 | 2026-10-07 | At-most-k-distinct implementation independently correct; fixed-alphabet auxiliary space corrected to O(1), partial review. |
 | Prefix Sum | Developing | - | - | 2026-10-09 | Aligned equal-sum segment correction verified after level-2 feedback. Expected O(n) time / O(n) space. |
@@ -40,9 +46,9 @@ Lesson update, 2026-09-30: added complete Java reference solutions for all five 
 - Prefix Sum / balanced-subarray counting (stage 1; last result: pass; last reviewed: 2026-10-07; next review: 2026-10-10; evidence: independent positive/negative/neutral-zero transfer; five tests pass, including maximum answer and 500 oracle comparisons; correct complexity)
 - Two pointers / in-place stable compaction (stage 1; last result: partial; last reviewed: 2026-10-05; next review: 2026-10-08; evidence: at-most-two sorted compaction correct for tested non-empty inputs, empty-input correction verified; review remains partial after first-attempt bug)
 - Binary Search / boundary search (stage 2; last result: pass; last reviewed: 2026-10-06; next review: 2026-10-13; evidence: independent rotated target search; five test methods pass; verified 2026-10-07)
-- Implementation precision / contract tracking (active; stage 3; last result: partial; last reviewed: 2026-10-09; next review: 2026-10-10; evidence: Problem08 correction verified; assisted correction does not establish independent recovery)
+- Implementation precision / contract tracking (active; stage 3 retained; last result: pass; last reviewed: 2026-10-11; next review: 2026-10-12; evidence: Problem09 first independent recovery since October 8 regression; another separated demonstration needed)
 - Prefix Sum / earliest boundary map (stage 0; last result: partial; last reviewed: 2026-10-09; next review: 2026-10-10; evidence: Problem08 correction verified with nine passing tests after level-2 feedback)
-- HashMap / frequency accounting (stage 2; last result: partial; last reviewed: 2026-09-24; next review: 2026-10-01; evidence: Ransom Note review)
+- HashMap / frequency accounting (stage 3; last result: pass; last reviewed: 2026-10-11; next review: 2026-10-25; evidence: Problem09 independently correct with correct linear time/space analysis)
 - Sliding window / variable window (stage 1; last result: partial; last reviewed: 2026-10-07; next review: 2026-10-10; evidence: at-most-k-distinct implementation independently correct; fixed-alphabet space analysis corrected)
 
 ## Recent strengths
@@ -72,6 +78,6 @@ Target transition date: 2026-10-05.
 Hard latest transition date: 2026-10-12.
 Ended early: no. Extended window used: no.
 
-Single-task October 8 REVIEW completed with correction verified October 9. No pending task. Earliest-boundary, counting and Sliding Window reviews due October 10. Choose the next session mode explicitly. On the next STUDY session, advance to Binary Search; record its actual introduction date when taught.
+Problem09 review complete October 11; no pending task or analysis. No further task authorized. Earliest-boundary, counting and Sliding Window reviews overdue October 10. On the next STUDY session, advance to Binary Search; record its actual introduction date when taught.
 
 After this block, advance to the Binary Search roadmap block, building on existing boundary-search experience. Unresolved weaknesses remain in spaced repetition and do not delay the transition. REVIEW and INTERVIEW remain explicitly selected modes.

@@ -130,6 +130,10 @@ Resolved weak points do not need frequent dedicated reviews, but may still appea
 
 ## MODE: REVIEW session composition
 
+2026-10-11 final: Problem09 complexity correctly identified by student as linear time and space; clarified O(2n) = O(n). Frequency accounting review pass, stage 2 -> 3, last reviewed October 11, next review October 25. Contract tracking independent implementation check pass, stage 3 retained while active recovery awaits second separated demonstration; next mixed check October 12. All other schedules unchanged. Single-task session complete.
+
+2026-10-11: Problem09 frequency-accounting implementation independently correct; five test methods pass. Student complexity statement pending, so stage 2 and October 1 due date remain unchanged until final assessment. No new task. Contract tracking has one independent recovery demonstration since latest regression; active status retained.
+
 2026-10-09 correction verified: Problem08 final solution correct, nine tests pass. Retain partial after level-2 feedback; earliest-boundary stage 0, last reviewed October 9, next review October 10. Contract tracking active, stage 3 retained, partial, next check October 10. No independent recovery evidence from assisted correction; other schedules unchanged.
 
 2026-10-08 second revision: Problem08 six of seven tests pass; symmetric trimming still misses off-center interior segments. Level-2 conceptual feedback. Correction pending; retain partial, earliest-boundary stage 0 due October 9 and contract-tracking stage 3 check October 9. No scheduling changes.

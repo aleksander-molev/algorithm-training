@@ -4,6 +4,12 @@ Compact history of completed or meaningfully attempted problems.
 
 Detailed discussion belongs in `sessions/`.
 
+2026-10-11 final: Problem09 review pass, hint 0. Student correctly identifies O(n) time and O(n) auxiliary space; constant factors simplified. Frequency accounting stage 2 -> 3, next review October 25. Single-task session complete; no pending task.
+
+2026-10-11: Problem09 independently correct, algorithm hint level 0 (task semantics clarified). Five test methods pass, including 500 occurrence-pairing comparisons and maximum-length cases. Clear count-and-consume implementation. Coach complexity: expected O(n) time / O(n) auxiliary space due to unmatched-guess list. Student complexity statement pending; no review advancement yet. No further task.
+
+2026-10-09 REVIEW: Problem09 (exact and misplaced digit matches with duplicates, Medium) assigned with three basic tests. Earlier-topic frequency accounting, overdue October 1. Exactly one task requested; attempt pending, no assessment or scheduling change.
+
 2026-10-09 Problem08 correction verified: all nine tests pass, including 500 direct-enumeration comparisons, input preservation, empty/single inputs and maximum-size large differences. Correct final solution after level-2 feedback; expected O(n) time / O(n) auxiliary space. Coach assessed complexity; student analysis not supplied. Retain partial, stage 0, next review October 10. No pending task.
 
 2026-10-08 Problem08 second revision: added symmetric trimming, six of seven tests pass, off-center segment still missed (expected 2, actual 0). Current O(n) time / O(1) auxiliary space; numeric range sufficient, input preserved. Level-2 cumulative-difference feedback; correction pending, partial stage 0 due October 9 retained. No new task.

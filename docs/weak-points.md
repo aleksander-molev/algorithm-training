@@ -6,6 +6,12 @@ Do not record every typo. Record issues likely to affect future problem solving 
 
 ## Active weak points
 
+2026-10-11 final: student correctly identifies O(n) time and O(n) space for Problem09; constant factors clarified. Frequency review passed. No new weakness; contract tracking remains active after one recovery demonstration since October 8. Stage 3 retained, next mixed check October 12 for separated evidence on a different pattern.
+
+2026-10-11: Problem09 independently correct after semantics clarification, five test methods pass including 500 occurrence-pairing comparisons and maximum input. No new weakness. One independent recovery demonstration since October 8 regression; retain active contract tracking until another demonstration on a different pattern separated in time. Student complexity statement pending; review dates unchanged.
+
+2026-10-09 single-task assignment: Problem09 pending independent attempt. No new weakness or recovery evidence; existing statuses and dates unchanged.
+
 2026-10-09: Problem08 correction verified. All nine tests pass, including 500 oracle comparisons and preservation. Correct empty-boundary initialization, earliest occurrence retention and long arithmetic. Retain active contract tracking: this is an assisted correction, not independent recovery. Next check October 10; no pending correction.
 
 2026-10-08 second revision: symmetric trimming handles the centered example but omits off-center segments. [5, 1, 2, 5, 5] versus [9, 2, 1, 9, 9] expected 2, actual 0. Six of seven tests pass. Conceptual obstacle: arbitrary boundary pairs, rather than enumerating special segment categories. Level-2 cumulative-difference observation provided. Same unresolved attempt; occurrences and October 9 date unchanged.
@@ -64,7 +70,7 @@ Before coding, restate the method contract and target-specific invariant. Before
 
 **Next review**
 
-2026-10-10 (stage 3 retained; correction verified, independent recovery still needed)
+2026-10-12 (stage 3 retained; one independent recovery verified October 11, another on a different pattern needed)
 
 **Resolved when**
 
