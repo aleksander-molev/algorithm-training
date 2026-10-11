@@ -4,6 +4,12 @@ Compact history of completed or meaningfully attempted problems.
 
 Detailed discussion belongs in `sessions/`.
 
+2026-10-11 close: Problem10 (minimum eating speed, Medium) solved independently, hint 0. All five JUnit methods pass, including 500 direct-speed comparisons, maximum-size/hour cases, singleton inputs and input preservation. Correct progressing binary-search bounds and overflow-safe remaining-hour budget; readable local state and helpers. Coach complexity: O(n log M) time, O(1) auxiliary space, M = maximum pile size. Student complexity explanation not requested because the student ended today. First successful search-on-answer practice: stage 0, next review October 12. Earlier boundary-search schedule remains October 13. Stack remains current; no further task today.
+
+2026-10-11 STUDY transition: Problem10 skipped without an attempt at the student's request to move beyond already practiced Binary Search; no correctness result, solved count, or scheduling advancement. Stack worked teaching examples (bracket matching, postfix evaluation, daily temperatures) saved in lessons/stack/lesson.md; these are not student attempts. Understanding check pending; no new coding task assigned yet.
+
+2026-10-11 STUDY: Problem10, minimum eating speed (Binary Search / search on answer, Medium), assigned in week_41_october_2026 with three basic example tests after teaching and saving the lesson. Attempt pending; correctness, implementation quality and complexity unassessed; no solved count or review advancement.
+
 2026-10-11 final: Problem09 review pass, hint 0. Student correctly identifies O(n) time and O(n) auxiliary space; constant factors simplified. Frequency accounting stage 2 -> 3, next review October 25. Single-task session complete; no pending task.
 
 2026-10-11: Problem09 independently correct, algorithm hint level 0 (task semantics clarified). Five test methods pass, including 500 occurrence-pairing comparisons and maximum-length cases. Clear count-and-consume implementation. Coach complexity: expected O(n) time / O(n) auxiliary space due to unmatched-guess list. Student complexity statement pending; no review advancement yet. No further task.

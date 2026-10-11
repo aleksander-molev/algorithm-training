@@ -6,6 +6,12 @@ Do not record every typo. Record issues likely to affect future problem solving 
 
 ## Active weak points
 
+2026-10-11 close: Problem10 independently correct, five test methods pass including maximum inputs and 500 oracle comparisons. Remaining-hour subtraction rejects immediately when negative, avoiding cumulative overflow without long. No new weakness. Additional correct implementation on the same day as Problem09; retain active contract tracking and October 12 check because separated-time recovery is still required.
+
+2026-10-11 Stack introduction: no student implementation assessed and no new weakness or recovery evidence. Existing contract-tracking status retained. Lesson highlights empty-stack checks, operand order, strict comparisons, repeated popping, and total-operation complexity. Binary Search practice skipped by request; skipping is not a failure.
+
+2026-10-11 STUDY: Binary Search introduced; no implementation assessed and no new weakness or recovery evidence. Existing contract-tracking status and review dates retained. Practice checklist emphasizes return contract, progressing bounds, and aggregate numeric range.
+
 2026-10-11 final: student correctly identifies O(n) time and O(n) space for Problem09; constant factors clarified. Frequency review passed. No new weakness; contract tracking remains active after one recovery demonstration since October 8. Stage 3 retained, next mixed check October 12 for separated evidence on a different pattern.
 
 2026-10-11: Problem09 independently correct after semantics clarification, five test methods pass including 500 occurrence-pairing comparisons and maximum input. No new weakness. One independent recovery demonstration since October 8 regression; retain active contract tracking until another demonstration on a different pattern separated in time. Student complexity statement pending; review dates unchanged.

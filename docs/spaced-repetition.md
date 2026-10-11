@@ -130,6 +130,12 @@ Resolved weak points do not need frequent dedicated reviews, but may still appea
 
 ## MODE: REVIEW session composition
 
+2026-10-11 close: Problem10 subsequently completed independently and verified with five passing test methods. First successful search-on-answer practice: stage 0, practiced October 11, next review October 12; complexity assessed by coach (student ended session). Existing boundary-search stage 2 due October 13 retained; contract tracking October 12 retained, because today's two demonstrations are not separated in time. Stack remains current without a practice schedule. No new task.
+
+2026-10-11 Stack transition: student explicitly ended Binary Search early and skipped Problem10 without an attempt. Stack is now the most recently introduced learning block. Existing review stages and due dates remain unchanged, including Binary Search boundary-search review October 13. Teaching examples are not successful attempts; no Stack or search-on-answer stage is created yet. Begin Stack scheduling after its first meaningful successful practice attempt.
+
+2026-10-11 STUDY: Binary Search is now the most recently introduced learning block. Existing boundary-search stage 2 review due October 13 remains unchanged; all older-topic dates retained. Search-on-answer practice Problem10 is pending. Create its stage-0 schedule only after the first meaningful successful attempt; teaching alone does not advance reviews.
+
 2026-10-11 final: Problem09 complexity correctly identified by student as linear time and space; clarified O(2n) = O(n). Frequency accounting review pass, stage 2 -> 3, last reviewed October 11, next review October 25. Contract tracking independent implementation check pass, stage 3 retained while active recovery awaits second separated demonstration; next mixed check October 12. All other schedules unchanged. Single-task session complete.
 
 2026-10-11: Problem09 frequency-accounting implementation independently correct; five test methods pass. Student complexity statement pending, so stage 2 and October 1 due date remain unchanged until final assessment. No new task. Contract tracking has one independent recovery demonstration since latest regression; active status retained.
