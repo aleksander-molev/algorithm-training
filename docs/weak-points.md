@@ -6,6 +6,24 @@ Do not record every typo. Record issues likely to affect future problem solving 
 
 ## Active weak points
 
+2026-10-12 session closed after final Problem03 correction. Correct monotonic-stack solution; all six JUnit methods pass, including 500 oracle comparisons, input preservation, empty/singleton/extreme prices and 100000-element increasing/equal sequences. Each original price is pushed once and popped at most once: O(n) time, O(n) auxiliary stack space and O(n) output. Clear single-stack local implementation, original prices retained for comparison and equality handled correctly. Solved with conceptual assistance (level 2); initial repeated restoration made time quadratic, retain partial rather than independent pass. Monotonic-stack review stage 0, next review October 13. No pending correction. Problem03 is completed task 1/4 of the explicitly requested Stack-only sequence: next THREE assignments must be Stack only, unless student changes preference. Problem02 remains deferred unchanged. No new task today; no automatic mode selection.
+
+2026-10-12 Problem03 revision checked: all five tests still pass, but O(n^2) remains. New restoration condition left.peek() > prices[i] is always true: only entries greater than prices[i] are transferred to left in this iteration, and left starts empty. Therefore every removed candidate is restored exactly as before. Clarify this local condition at hint level 1; optimization remains pending. Student code unchanged; no scheduling advancement or new task.
+
+2026-10-12 Problem03 first attempt: correct outputs, all five JUnit methods pass (three examples, 500 direct first-eligible-price comparisons with preservation, empty/singleton/extreme prices). Implementation scans right to left, temporarily removes all larger suffix prices and restores them; this does not maintain a monotonic stack. Worst-case O(n^2) time on increasing prices because each suffix is removed/restored repeatedly; O(n) auxiliary space plus O(n) output. Student complexity statement pending. Level-0 guiding trace requested; optimization pending, review partial, no monotonic-stack stage advancement. Student implementation unchanged. This is task 1/4 of requested Stack-only sequence; three further Stack tasks remain, none to be assigned today. Problem02 deferred.
+
+2026-10-12 explicit student override: next four coding tasks must be Stack only, starting with week_42_october_2026/Problem03 (first later less-or-equal price discount). Problem03 is task 1/4, assigned with three basic tests; attempt pending. Three further Stack tasks remain to be assigned in future turns/sessions, based on demonstrated needs. This preference overrides the normal 60/40 REVIEW mix until those four tasks are completed or student changes it. Problem02 shipping-capacity workspace preserved unchanged and deferred without attempt for later. Problem03 remains the final task for today; no further assignment this session.
+
+2026-10-12 student requests exactly one final task. Unattempted discount Problem02 replaced before implementation with shipping capacity within a day budget (Medium, due Binary Search/search-on-answer transfer). Three basic tests, neutral stub, explicit order/whole-package/day semantics. Attempt and complexity pending; no scheduling advancement. After assessing this task, close session without assigning another. Earlier discount assignment superseded, not an attempt. ArrayDeque versus Stack API rationale explained using official Java documentation.
+
+2026-10-12 Problem01 finalized: student correctly explains linear total work through removal on collisions; clarified that noncollision iterations transfer one left entry to right. Correctness, implementation quality and O(n) time/O(n) space assessed. Semantics clarification is not an algorithm hint; hint 0. Stack first-practice stage 0 due October 13 retained. Problem02 (first later less-or-equal price discount) assigned as a short transfer of the taught next-element idea, with three basic tests and no implementation. Attempt pending. Remaining-time question asked to adapt earlier-topic practice; session ongoing.
+
+2026-10-12 Problem01 correction verified: all nine JUnit methods pass, including 1000 direct adjacent-collision simulations, empty/singleton inputs, extreme sizes, 100000-element chains, repeated calls and input preservation. Correct two-stack right-to-left implementation; student independently revised after task-semantics clarification, no algorithm solution supplied. Coach complexity O(n) time / O(n) auxiliary space; student explanation pending. First successful Stack practice: stage 0, next review October 13. Initial failures were affected by inadequate task wording; earlier recurrence attribution is superseded and does not establish a new durable weakness. No pending correction.
+
+2026-10-12 Problem01 first attempt: partial, correction pending, level-1 counterexample feedback. Seven tests run, five pass. Moving-apart pair [-2, 1] incorrectly returns [-2]; [5, 10, -5, -20] incorrectly remains unchanged instead of [-20]. Solution unmodified. Coach complexity: O(n) time (each iteration removes at least one left-stack item), O(n) auxiliary space. Student complexity statement pending. No successful Stack practice stage yet.
+
+2026-10-12: Stack review Problem01 assigned; attempt pending. No new weakness or recovery evidence. Contract tracking remains active; existing dates retained until assessment.
+
 2026-10-11 close: Problem10 independently correct, five test methods pass including maximum inputs and 500 oracle comparisons. Remaining-hour subtraction rejects immediately when negative, avoiding cumulative overflow without long. No new weakness. Additional correct implementation on the same day as Problem09; retain active contract tracking and October 12 check because separated-time recovery is still required.
 
 2026-10-11 Stack introduction: no student implementation assessed and no new weakness or recovery evidence. Existing contract-tracking status retained. Lesson highlights empty-stack checks, operand order, strict comparisons, repeated popping, and total-operation complexity. Binary Search practice skipped by request; skipping is not a failure.
@@ -46,6 +64,22 @@ Do not record every typo. Record issues likely to affect future problem solving 
 
 2026-09-30 lesson update: complete Prefix Sum reference solutions were requested and added. No student implementation was assessed, so this provides no new weakness or recovery evidence.
 
+### Monotonic-stack candidate pruning
+
+**Category:** invariant / complexity
+**First observed:** 2026-10-12
+**Last observed:** 2026-10-12
+**Occurrences:** 1
+**Status:** active
+
+Problem03 initially restored all larger candidates after each query, giving
+correct answers but quadratic work. After conceptual feedback, the student
+permanently discards dominated values; optimal correction verified.
+Training: distinguish temporary storage from permanent removal of candidates
+made unnecessary by a closer, no-larger value; count lifetime pushes and pops.
+Next review: 2026-10-13, stage 0, partial assisted first practice.
+Resolve after separated independent applications with correct lifetime analysis.
+
 ### Implementation precision and task-contract tracking
 
 **Category:** implementation-bug
@@ -76,7 +110,7 @@ Before coding, restate the method contract and target-specific invariant. Before
 
 **Next review**
 
-2026-10-12 (stage 3 retained; one independent recovery verified October 11, another on a different pattern needed)
+2026-10-13 (stage 3 retained; no new October 12 recurrence attributed after semantics clarification; independent recovery assessment pending)
 
 **Resolved when**
 
