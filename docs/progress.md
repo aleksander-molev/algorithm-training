@@ -1,12 +1,20 @@
 # Current Progress
 
-Last updated: 2026-10-12
+Last updated: 2026-10-13
 
 ## Current status
 
 Initial diagnostic completed on 2026-09-13.
 
 ## Current focus
+
+
+2026-10-13 Problem02 final correction verified: correct shipping-capacity binary search, upper bound weights.length*10000 is sufficient and <=1000000000 under the contract (no int overflow). All nine JUnit methods pass, including 500 direct capacity-enumeration comparisons, input preservation, repeated calls and maximum-length tests with days=1 and days=n. Local state, progressing bounds and capped feasibility helper are sound. O(n log(10000*n)) time / O(1) auxiliary space. Solved after level-1 local feedback; retain partial and search-on-answer stage 0 due October 14. No pending correction, no new task; three Stack-only assignments remain. Optional quality improvements: tighter max/sum bounds and boolean helper name because howManyDays returns a classification, not the actual day count. Student implementation unchanged.
+
+
+2026-10-13 Problem02 revision: prior six tests now pass; added maximum-weight two-package case fails ([10000,10000], days=1: expected 20000, actual 10000). Seven tests total, six pass. Binary-search updates and final return are corrected; unreachable helper branch removed. Remaining upper bound 10000 constrains capacity to the maximum individual package weight, excluding valid multi-package loads. Correction pending, local feedback level 1; same attempt, no new weakness occurrence or schedule advancement. O(n log(R+1)) time / O(1) auxiliary space, currently fixed R=9999. Student implementation unchanged; no new task.
+
+2026-10-13 MODE: REVIEW, assessment only of deferred week_42_october_2026/Problem02 (shipping capacity). First attempt partial: original three tests pass; six tests total, four pass and two fail. [19], days=1: expected 19, actual 0; [1,2,3], days=3: expected 3, actual 0. Hard-coded search range [1,18] excludes valid capacities; ans only records spend==days and feasible spend<days discards mid. Helper returns a capped feasibility classification rather than exact days; wI>weights.length branch is unreachable. Local counterexample feedback level 1; no solution supplied, student implementation unchanged, correction pending. Local state and input preservation are good; worst-case O(n) time for the literal constant range, O(1) auxiliary space; with a variable capacity interval width R, O(n log(R+1)) time because days<=n. Search-on-answer stage 0 retained, partial, reviewed October 13, next review October 14; boundary-search schedule unchanged. No new task assigned; three Stack-only assignments remain, this existing-task check does not consume that sequence.
 
 2026-10-12 session closed after final Problem03 correction. Correct monotonic-stack solution; all six JUnit methods pass, including 500 oracle comparisons, input preservation, empty/singleton/extreme prices and 100000-element increasing/equal sequences. Each original price is pushed once and popped at most once: O(n) time, O(n) auxiliary stack space and O(n) output. Clear single-stack local implementation, original prices retained for comparison and equality handled correctly. Solved with conceptual assistance (level 2); initial repeated restoration made time quadratic, retain partial rather than independent pass. Monotonic-stack review stage 0, next review October 13. No pending correction. Problem03 is completed task 1/4 of the explicitly requested Stack-only sequence: next THREE assignments must be Stack only, unless student changes preference. Problem02 remains deferred unchanged. No new task today; no automatic mode selection.
 
@@ -54,7 +62,7 @@ Lesson update, 2026-09-30: added complete Java reference solutions for all five 
 | Two Pointers | Developing | 4 | 0 | 2026-10-05 | At-most-two compaction correct after empty-input correction; O(n) time / O(1) space. |
 | Sliding Window | Developing | - | 0.3 | 2026-10-07 | At-most-k-distinct implementation independently correct; fixed-alphabet auxiliary space corrected to O(1), partial review. |
 | Prefix Sum | Developing | - | - | 2026-10-09 | Aligned equal-sum segment correction verified after level-2 feedback. Expected O(n) time / O(n) space. |
-| Binary Search | Developing | - | 0 | 2026-10-11 | Problem10 search on answer independently correct; five test methods pass. Coach: O(n log M) time / O(1) space. Earlier rotated-search pass retained. |
+| Binary Search | Developing | - | - | 2026-10-13 | Problem02 shipping capacity correct after level-1 feedback; nine tests pass. O(n log(10000*n)) time / O(1) space; partial review. Earlier independent Problem10 and rotated-search passes retained. |
 | Stack | Developing | - | - | 2026-10-12 | Problem01 collisions correct, nine tests pass; Problem03 monotonic-stack correction verified after conceptual help, six tests pass; O(n) time/O(n) space. |
 | Linked List | Not started | - | - | - | |
 | Heap | Not started | - | - | - | |
@@ -71,7 +79,7 @@ Lesson update, 2026-09-30: added complete Java reference solutions for all five 
 
 - Stack / collision simulation (stage 0; first successful practice: 2026-10-12; next review: 2026-10-13; Problem01 corrected after semantics clarification, nine tests pass)
 
-- Binary Search / search on answer (stage 0; first practice successful; last practiced: 2026-10-11; next review: 2026-10-12; evidence: independent Problem10, five test methods pass; complexity assessed by coach)
+- Binary Search / search on answer (stage 0; last result: partial; last practiced: 2026-10-13; next review: 2026-10-14; evidence: Problem02 correction verified, nine tests pass; partial after level-1 feedback)
 - Prefix Sum / balanced-subarray counting (stage 1; last result: pass; last reviewed: 2026-10-07; next review: 2026-10-10; evidence: independent positive/negative/neutral-zero transfer; five tests pass, including maximum answer and 500 oracle comparisons; correct complexity)
 - Two pointers / in-place stable compaction (stage 1; last result: partial; last reviewed: 2026-10-05; next review: 2026-10-08; evidence: at-most-two sorted compaction correct for tested non-empty inputs, empty-input correction verified; review remains partial after first-attempt bug)
 - Binary Search / boundary search (stage 2; last result: pass; last reviewed: 2026-10-06; next review: 2026-10-13; evidence: independent rotated target search; five test methods pass; verified 2026-10-07)
@@ -107,4 +115,4 @@ Binary Search block closed early on 2026-10-11 at the student's explicit request
 
 ## Next recommended session
 
-October 12 session complete; no pending correction. Student explicitly requests the next three assignments be Stack only (Problem03 completed the first of four requested tasks). Preserve this preference across sessions; override the default REVIEW mix until fulfilled or changed. Choose a meaningful variant of candidate pruning or another taught Stack application, with workspace prepared first. Problem02 Binary Search shipping task remains deferred until the Stack-only sequence is completed or the student explicitly requests it. Existing block dates and roadmap unchanged. Student selects mode explicitly.
+October 13 assessment-only session complete; Problem02 shipping-capacity correction verified, no pending correction. Student explicitly requests the next three assignments be Stack only (Problem03 completed the first of four requested tasks). Preserve this preference across sessions; override the default REVIEW mix until fulfilled or changed. Choose a meaningful variant of candidate pruning or another taught Stack application, with workspace prepared first. Student explicitly requested checking the existing Problem02 shipping task on October 13; correction verified with nine passing tests. No further assignment in this assessment-only session. Existing block dates and roadmap unchanged. Student selects mode explicitly.

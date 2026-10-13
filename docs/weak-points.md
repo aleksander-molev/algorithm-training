@@ -6,6 +6,14 @@ Do not record every typo. Record issues likely to affect future problem solving 
 
 ## Active weak points
 
+
+2026-10-13 Problem02 final correction verified: correct shipping-capacity binary search, upper bound weights.length*10000 is sufficient and <=1000000000 under the contract (no int overflow). All nine JUnit methods pass, including 500 direct capacity-enumeration comparisons, input preservation, repeated calls and maximum-length tests with days=1 and days=n. Local state, progressing bounds and capped feasibility helper are sound. O(n log(10000*n)) time / O(1) auxiliary space. Solved after level-1 local feedback; retain partial and search-on-answer stage 0 due October 14. No pending correction, no new task; three Stack-only assignments remain. Optional quality improvements: tighter max/sum bounds and boolean helper name because howManyDays returns a classification, not the actual day count. Student implementation unchanged.
+
+
+2026-10-13 Problem02 revision: prior six tests now pass; added maximum-weight two-package case fails ([10000,10000], days=1: expected 20000, actual 10000). Seven tests total, six pass. Binary-search updates and final return are corrected; unreachable helper branch removed. Remaining upper bound 10000 constrains capacity to the maximum individual package weight, excluding valid multi-package loads. Correction pending, local feedback level 1; same attempt, no new weakness occurrence or schedule advancement. O(n log(R+1)) time / O(1) auxiliary space, currently fixed R=9999. Student implementation unchanged; no new task.
+
+2026-10-13 Problem02 shipping-capacity assessment: recurrence of search-boundary/return-contract errors; hard-coded upper bound excludes allowed answers and ans remains zero when only earlier-finishing candidates are encountered. Four of six tests pass, correction pending, level-1 local feedback. Keep implementation precision active; no independent recovery evidence. Search-on-answer review stage 0 partial, next October 14.
+
 2026-10-12 session closed after final Problem03 correction. Correct monotonic-stack solution; all six JUnit methods pass, including 500 oracle comparisons, input preservation, empty/singleton/extreme prices and 100000-element increasing/equal sequences. Each original price is pushed once and popped at most once: O(n) time, O(n) auxiliary stack space and O(n) output. Clear single-stack local implementation, original prices retained for comparison and equality handled correctly. Solved with conceptual assistance (level 2); initial repeated restoration made time quadratic, retain partial rather than independent pass. Monotonic-stack review stage 0, next review October 13. No pending correction. Problem03 is completed task 1/4 of the explicitly requested Stack-only sequence: next THREE assignments must be Stack only, unless student changes preference. Problem02 remains deferred unchanged. No new task today; no automatic mode selection.
 
 2026-10-12 Problem03 revision checked: all five tests still pass, but O(n^2) remains. New restoration condition left.peek() > prices[i] is always true: only entries greater than prices[i] are transferred to left in this iteration, and left starts empty. Therefore every removed candidate is restored exactly as before. Clarify this local condition at hint level 1; optimization remains pending. Student code unchanged; no scheduling advancement or new task.
@@ -84,8 +92,8 @@ Resolve after separated independent applications with correct lifetime analysis.
 
 **Category:** implementation-bug
 **First observed:** 2026-09-13
-**Last observed:** 2026-10-08
-**Occurrences:** 11
+**Last observed:** 2026-10-13
+**Occurrences:** 12
 **Status:** active again after Problem02 empty-input regression
 
 **Observed behavior**

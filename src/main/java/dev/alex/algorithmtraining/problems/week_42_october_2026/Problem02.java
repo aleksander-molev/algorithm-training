@@ -25,25 +25,19 @@ public class Problem02 {
      */
     public int shipWithinDays(int[] weights, int days) {
 
-        // days 1 -
         int left = 1;
-        int right = 18;
-
-        int ans = 0;
+        int right = weights.length * 10000;
 
         while (left < right) {
             int mid = left + (right - left) / 2;
             int spend = howManyDays(weights, days, mid);
             if (spend > days) {
                 left = mid + 1;
-            } else if (spend < days) {
-                right = mid - 1;
             } else {
-                ans = mid;
                 right = mid;
             }
         }
-        return ans;
+        return right;
     }
 
     private int howManyDays(int[] weights, int days, int capacity) {
@@ -57,10 +51,6 @@ public class Problem02 {
 
             while (wI < weights.length && cap - weights[wI] >= 0 ) {
                 cap -= weights[wI++];
-            }
-
-            if (wI > weights.length) {
-                return days - 1;
             }
 
             cap = capacity;
