@@ -193,3 +193,8 @@ Problem02 correction verified on 2026-10-05 after level-1 local feedback; retain
 Problem03 correction verified on 2026-10-06: all five tests pass, complexity correctly reported. Retain partial and stage 0 counting review due 2026-10-07. Problem04 assigned for the overdue Binary Search review; no outcome or schedule advance yet.
 
 2026-10-06 session finalized on 2026-10-07: Problem04 independently correct, Binary Search boundary-search review pass. Advance stage 1 to stage 2; next review 2026-10-13 (seven days from actual practice date). Complexity assessed by coach: O(log n) time / O(1) space; student analysis not elicited because the student ended the session. Other schedules unchanged.
+
+
+2026-10-14: Problem04 circular next-greater review partial; four of seven tests pass, correction pending after level-1 local counterexamples. Monotonic-stack stage 0 retained, last reviewed October 14, next review October 15. Other pattern schedules unchanged; no advancement or recovery evidence.
+
+2026-10-14 final Problem04: correction verified with 11 passing test methods; partial review retained after meaningful first-attempt defects, stage 0 due October 15. Problem05 parsing transfer assigned, no review scheduling evidence yet.

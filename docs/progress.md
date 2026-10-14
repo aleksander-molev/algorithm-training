@@ -1,6 +1,14 @@
 # Current Progress
 
-Last updated: 2026-10-13
+2026-10-14 Problem04 final correction verified: correct two-pass circular scan, entries pushed only in first pass, unresolved values receive -1. All 11 JUnit methods pass including 1000 direct-search comparisons, input preservation/repeated calls, extreme values, singleton and maximum-length increasing/decreasing/equal sequences. O(n) time / O(n) auxiliary space plus O(n) output. Each index pushed once and popped at most once; modulo is never evaluated for empty input. Readable local state; redundant inequality check, value/index objects and legacy Stack are optional quality improvements. Solved after level-1 counterexamples and meaningful corrections: retain partial monotonic-stack stage 0, next review October 15. No independent recovery claim. Problem04 completes task 2/4 of Stack sequence and task 1/3 today. Problem05 nested string decoding (Medium) assigned with neutral stub and three basic tests; task 3/4 in sequence and 2/3 today, attempt pending. Two Stack tasks remain to complete including Problem05; one remains unassigned.
+
+2026-10-14 Problem04 revision: previous seven tests pass; added [3,5,1] fails (expected [5,-1,3], actual [5,-1,5]). Eight tests total, seven pass. Empty-input and equal-maximum handling corrected. Remaining suffix entries are all assigned the global maximum, losing the first qualifying value encountered after wraparound. Level-1 local counterexample; same unresolved attempt, implementation unchanged. O(n) time / O(n) auxiliary space plus output; second stack adds bookkeeping and the inner inequality check remains redundant. Correction pending; retain partial stage 0 and October 15 review, no new weakness occurrence or schedule advancement. Two further tasks remain unassigned today.
+
+2026-10-14 Problem04 first attempt assessed: four original/example tests pass; seven tests total, three fail. [2,2]: expected [-1,-1], actual [-1,2]; [5,3,4,2]: expected [-1,4,5,5], actual [-1,4,5,4]; empty input throws EmptyStackException. Linear first pass correctly resolves strictly smaller pending values, but final stack unwinding treats adjacent unresolved entries as valid circular answers without checking traversal order or strictness. Local counterexample feedback level 1; implementation unchanged, correction pending. O(n) time (each entry pushed once/popped once), O(n) auxiliary space plus O(n) output. Redundant element.val != nums[i] inside a strictly-smaller loop; temporary trace comments remain. Student complexity explanation pending. Monotonic-stack review partial, stage 0 retained, next review October 15. Three Stack tasks remain to complete including Problem04; two tasks remain unassigned today.
+
+2026-10-14 MODE: REVIEW opened for exactly three Stack tasks, honoring the remaining Stack-only sequence. Problem04 (circular next-greater values, Medium) assigned with a neutral stub and three basic tests: task 2/4 in the sequence, task 1/3 today. Attempt and complexity pending; three tasks remain to complete including Problem04, two remain unassigned. No assessment, review advancement or new weakness/recovery evidence. Existing schedules and learning-block dates retained; session ongoing.
+
+Last updated: 2026-10-14
 
 ## Current status
 
@@ -75,7 +83,7 @@ Lesson update, 2026-09-30: added complete Java reference solutions for all five 
 
 ## Due reviews
 
-- Stack / monotonic candidate pruning (stage 0; partial assisted first practice; last practiced: 2026-10-12; next review: 2026-10-13; Problem03 optimal correction verified with six passing tests)
+- Stack / monotonic candidate pruning (stage 0; partial assisted first practice; last practiced: 2026-10-14; next review: 2026-10-15; Problem04 circular transfer corrected, 11 tests pass; partial review)
 
 - Stack / collision simulation (stage 0; first successful practice: 2026-10-12; next review: 2026-10-13; Problem01 corrected after semantics clarification, nine tests pass)
 
@@ -115,4 +123,4 @@ Binary Search block closed early on 2026-10-11 at the student's explicit request
 
 ## Next recommended session
 
-October 13 assessment-only session complete; Problem02 shipping-capacity correction verified, no pending correction. Student explicitly requests the next three assignments be Stack only (Problem03 completed the first of four requested tasks). Preserve this preference across sessions; override the default REVIEW mix until fulfilled or changed. Choose a meaningful variant of candidate pruning or another taught Stack application, with workspace prepared first. Student explicitly requested checking the existing Problem02 shipping task on October 13; correction verified with nine passing tests. No further assignment in this assessment-only session. Existing block dates and roadmap unchanged. Student selects mode explicitly.
+October 14 REVIEW ongoing: Problem04 corrected and assessed; Problem05 nested string decoding assigned, attempt pending. One further Stack task remains to assign after assessment. Exactly three tasks requested today. Block dates unchanged.
