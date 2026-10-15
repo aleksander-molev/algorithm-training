@@ -198,3 +198,5 @@ Problem03 correction verified on 2026-10-06: all five tests pass, complexity cor
 2026-10-14: Problem04 circular next-greater review partial; four of seven tests pass, correction pending after level-1 local counterexamples. Monotonic-stack stage 0 retained, last reviewed October 14, next review October 15. Other pattern schedules unchanged; no advancement or recovery evidence.
 
 2026-10-14 final Problem04: correction verified with 11 passing test methods; partial review retained after meaningful first-attempt defects, stage 0 due October 15. Problem05 parsing transfer assigned, no review scheduling evidence yet.
+
+2026-10-14 Problem05 nested parsing: first successful practice after assisted efficiency improvement, partial stage 0, last practiced October 14, next review October 15. Six tests pass. Problem06 pending, no further scheduling evidence.
