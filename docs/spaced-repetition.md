@@ -200,3 +200,5 @@ Problem03 correction verified on 2026-10-06: all five tests pass, complexity cor
 2026-10-14 final Problem04: correction verified with 11 passing test methods; partial review retained after meaningful first-attempt defects, stage 0 due October 15. Problem05 parsing transfer assigned, no review scheduling evidence yet.
 
 2026-10-14 Problem05 nested parsing: first successful practice after assisted efficiency improvement, partial stage 0, last practiced October 14, next review October 15. Six tests pass. Problem06 pending, no further scheduling evidence.
+
+2026-10-15 Problem06 matching/minimum removal: first successful practice after local corrections, partial stage 0, next review October 16. Seven test methods pass. Other schedules retained; four-task Stack-only override fulfilled, normal REVIEW mix resumes in future sessions.
