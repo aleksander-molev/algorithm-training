@@ -1,5 +1,7 @@
 # Current Progress
 
+2026-10-17 STUDY: student agreed to move to Linked Lists. Lesson saved at lessons/linked-list/lesson.md: references versus links, reversal, stable partition, cycle-entry traversal, advanced overview. Understanding check pending before selecting practice; no workspace or mastery claim. Linked List block October 17–24, hard maximum October 31; Stack ended one day early by agreement.
+
 2026-10-15 Problem08 post-session refinement verified: idx now starts at 0 and is incremented in the initial slow==fast branch, naturally returning 0 for empty input without a special guard. All six existing test methods pass, including 1000 oracle comparisons and maximum-length cases. O(n) time / O(1) auxiliary space unchanged. Initialization is more uniform; unused enhanced-for variable, multi-counter flow and old stack alternative remain cleanup opportunities. Student implementation unchanged by coach. Same assisted attempt, no additional solved task, recovery evidence or scheduling advancement; session remains closed.
 
 2026-10-15 two-task REVIEW closed: Problem08 correction verified; all six JUnit methods pass, including 1000 original-frequency oracle comparisons, repeated calls, empty/singleton/extreme values and 100000-element distinct/paired/equal inputs. Active retainUnique is correct, O(n) time / O(1) auxiliary space. fast is monotone; each input position is skipped at most once, plus n outer iterations. It tentatively writes each group then retracts the output count for duplicates; writes stay at/before the current source group. Implementation quality: unused enhanced-for n and redundant outer traversal obscure control; old public retainUniqueStack/import/Count remain as cleanup, student code unchanged. Result solved with hints/corrections, maximum hint 3 (coach explicitly confirmed Two Pointers and read/write roles at student request); scheduling fail per hint policy, Two Pointers stage 1 -> 0, next review October 16. Contract tracking remains active, next check October 16; no independent recovery from assisted correction. Problem07 independently correct (five test methods pass), O(n) time/O(n) auxiliary space assessed by coach, student complexity statement not provided; monotonic stage 0 retained, next review October 16 without full independent review-pass claim. Both requested tasks complete; no pending algorithm correction or further task. Stack block dates unchanged.
@@ -94,7 +96,7 @@ Lesson update, 2026-09-30: added complete Java reference solutions for all five 
 | Prefix Sum | Developing | - | - | 2026-10-09 | Aligned equal-sum segment correction verified after level-2 feedback. Expected O(n) time / O(n) space. |
 | Binary Search | Developing | - | - | 2026-10-13 | Problem02 shipping capacity correct after level-1 feedback; nine tests pass. O(n log(10000*n)) time / O(1) space; partial review. Earlier independent Problem10 and rotated-search passes retained. |
 | Stack | Developing | - | - | 2026-10-12 | Problem01 collisions correct, nine tests pass; Problem03 monotonic-stack correction verified after conceptual help, six tests pass; O(n) time/O(n) space. |
-| Linked List | Not started | - | - | - | |
+| Linked List | Introduced | - | - | - | October 17 lesson; understanding check and first practice pending. |
 | Heap | Not started | - | - | - | |
 | Intervals | Not started | - | - | - | |
 | Trees | Not started | - | - | - | |
@@ -139,14 +141,16 @@ Lesson update, 2026-09-30: added complete Java reference solutions for all five 
 
 ## Current study block
 
-Current block topic: Stack.
-Actual introduction date: 2026-10-11.
-Target transition date: 2026-10-18.
-Hard latest transition date: 2026-10-25.
+Current block topic: Linked List.
+Actual introduction date: 2026-10-17.
+Target transition date: 2026-10-24.
+Hard latest transition date: 2026-10-31.
 Ended early: no. Extended window used: no.
 
-Binary Search block closed early on 2026-10-11 at the student's explicit request, informed by earlier completed boundary and rotated-search practice. Binary Search introduction and closure: October 11; ended early: yes; extended window: no. Problem10 subsequently completed and verified at session close. Existing boundary-search review remains due October 13; search-on-answer starts stage 0 due October 12. Prefix Sum block closed on October 11 within its hard maximum, using its extended window. Unresolved earlier-topic weaknesses remain in spaced repetition. Stack's current block has not ended or used an extended window.
+Stack closed early on October 17 with student agreement to move to Linked Lists; introduced October 11, ended early: yes, extended window: no. Existing weaknesses and review dates remain in spaced repetition.
+
+Binary Search block closed early on 2026-10-11 at the student's explicit request, informed by earlier completed boundary and rotated-search practice. Binary Search introduction and closure: October 11; ended early: yes; extended window: no. Problem10 subsequently completed and verified at session close. Existing boundary-search review remains due October 13; search-on-answer starts stage 0 due October 12. Prefix Sum block closed on October 11 within its hard maximum, using its extended window. Unresolved earlier-topic weaknesses remain in spaced repetition. Stack subsequently closed early on October 17.
 
 ## Next recommended session
 
-Session begun October 14 completed October 15: Problems04–06 all verified. Four-task Stack-only commitment fulfilled. No pending correction or coding workspace. Student selects next mode explicitly. In REVIEW, resume the normal approximately 60% Stack / 40% earlier due topics, rotating broadly. Stack target transition remains October 18, hard maximum October 25.
+Session begun October 14 completed October 15: Problems04–06 all verified. Four-task Stack-only commitment fulfilled. No pending correction or coding workspace. Student selects next mode explicitly. In REVIEW, resume the normal approximately 60% Stack / 40% earlier due topics, rotating broadly. Superseded October 17: Linked List introduced; understanding check pending before first practice.

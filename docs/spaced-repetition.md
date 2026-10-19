@@ -1,5 +1,7 @@
 # Spaced Repetition Rules
 
+2026-10-17 STUDY: Linked List becomes the most recently introduced learning block; Stack ended early with student agreement. Existing review dates/stages unchanged. Do not create a Linked List review stage until meaningful successful practice; teaching alone gives no scheduling advancement.
+
 This file defines deterministic review scheduling for algorithm patterns and weak points.
 
 ## Default review stages
