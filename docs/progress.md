@@ -1,5 +1,7 @@
 # Current Progress
 
+2026-10-25 MODE: STUDY: introduced Heap / Priority Queue at the student's request to move to a new subject. Reusable lesson saved in lessons/heap-priority-queue/lesson.md: heap invariant and Java operations, repeated minimum extraction, bounded top-k with streaming interpretation, k-way merge, advanced directions, contrasts and recognition checklist. Teaching only; understanding check and independent practice pending. No workspace assigned or solved credit. Current block October 25–November 1, hard maximum November 8. Linked List closed October 25 after its October 24 target, using one day of the extended window; unresolved weaknesses and existing reviews retained.
+
 2026-10-25 Problem11 independently correct, algorithm hint 0 (task semantics clarified only). All six JUnit methods pass: three original examples, empty/singleton/equal/extreme prices and repeated calls, all 9841 ternary price arrays of lengths 0–8 against a direct backward-scan oracle, and four 100000-day cases (increasing, decreasing, equal, decreasing followed by a maximum). Input preservation and separate output verified. Correct decreasing stack of price/span groups; each popped group is included in the current span, and equality correctly merges. Deferred result writes are correct because each stored span is already final when pushed. Coach assessment O(n) amortized total time / O(n) auxiliary space excluding output: each entry is pushed and popped once, worst stack size n. Quality: storing idx and writing results on pop/final drain are unnecessary; result[i] can be written once days is computed, allowing idx and final drain removal. Student implementation preserved. Student complexity statement absent; monotonic candidate-pruning stage 0 retained, last practiced October 25, next review October 26, no full pass advancement or durable recovery claim. Existing weaknesses retained; no new correctness weakness. Original three-task set complete: Problem09 and Problem10 corrected after local feedback, Problem11 independently correct. No pending correction or new task. Linked List target transition October 24 has passed; next STUDY should introduce Heap/Priority Queue, without automatically switching this REVIEW session or extending the old block (introduced October 17, hard maximum October 31).
 
 2026-10-23 Problem10 correction verified: all eight JUnit methods pass, including original examples, both regression cases, empty/short source, repeated pattern letters, overlapping matches, repeated calls, all 2000 deterministic reference comparisons and four 100000-character cases (dense output, full-length pattern, repeated resets, repeated surplus). Correct fix: when a surplus current character replaces the same character at the left boundary, remaining demand for that character stays unchanged. Other removed characters restore their demand and pSize. Monotone left gives O(n+m) expected time under fixed lowercase alphabet; resets cost at most 26 entries. O(m) auxiliary space excluding O(r) output because p.toCharArray() allocates m characters; maps have at most 26 keys. Quality: correct but multiple repair/reset branches and ambiguous target/pSize names increase bookkeeping; clearer names and removing scratch comments would help. Student implementation preserved. Solved after level-1 local feedback and meaningful corrections; partial Sliding Window review, stage 1 retained, last practiced October 23, next review October 26 (three-day interval). Supersedes October 24 correction check, now complete. Student complexity statement absent; no independent recovery claim. Problem11 is the final pending task of the original three; no additional assignment. Linked List block dates unchanged.
@@ -137,7 +139,7 @@ Lesson update, 2026-09-30: added complete Java reference solutions for all five 
 | Binary Search | Developing | - | - | 2026-10-13 | Problem02 shipping capacity correct after level-1 feedback; nine tests pass. O(n log(10000*n)) time / O(1) space; partial review. Earlier independent Problem10 and rotated-search passes retained. |
 | Stack | Developing | - | - | 2026-10-12 | Problem01 collisions correct, nine tests pass; Problem03 monotonic-stack correction verified after conceptual help, six tests pass; O(n) time/O(n) space. |
 | Linked List | Developing | - | - | 2026-10-19 | Three tasks complete: removal corrected after level-1 feedback; pair swapping and position grouping independently correct. All O(L) time/O(1) auxiliary space assessed by coach; stage 0 due October 20. |
-| Heap | Not started | - | - | - | |
+| Heap | Introduced; practice pending | - | - | - | Lesson October 25: top-k, streaming threshold, k-way merge. |
 | Intervals | Not started | - | - | - | |
 | Trees | Not started | - | - | - | |
 | Graphs | Not started | - | - | - | |
@@ -181,11 +183,13 @@ Lesson update, 2026-09-30: added complete Java reference solutions for all five 
 
 ## Current study block
 
-Current block topic: Linked List.
-Actual introduction date: 2026-10-17.
-Target transition date: 2026-10-24.
-Hard latest transition date: 2026-10-31.
-Ended early: no. Extended window used: no.
+Current block topic: Heap / Priority Queue.
+Actual introduction date: 2026-10-25.
+Target transition date: 2026-11-01.
+Hard latest transition date: 2026-11-08.
+Ended early: no (active). Extended window used: no.
+
+Linked List closed on 2026-10-25; introduced October 17, target October 24, hard maximum October 31. Ended early: no. Extended window used: yes, one day beyond target. Student explicitly requested the next subject. Unresolved weaknesses remain in spaced repetition.
 
 Stack closed early on October 17 with student agreement to move to Linked Lists; introduced October 11, ended early: yes, extended window: no. Existing weaknesses and review dates remain in spaced repetition.
 
@@ -193,4 +197,4 @@ Binary Search block closed early on 2026-10-11 at the student's explicit request
 
 ## Next recommended session
 
-Session begun October 14 completed October 15: Problems04–06 all verified. Four-task Stack-only commitment fulfilled. No pending correction or coding workspace. Student selects next mode explicitly. In REVIEW, resume the normal approximately 60% Stack / 40% earlier due topics, rotating broadly. Superseded October 17: Linked List introduced; understanding check pending before first practice.
+Heap lesson prepared October 25. In continued STUDY, check root-role and membership understanding, then choose a distinct representative medium task and create its workspace before assigning it. No coding workspace assigned during this lesson-preparation request. For a new session, the student selects the mode explicitly. Existing overdue reviews remain available in REVIEW and do not block the Heap block.
