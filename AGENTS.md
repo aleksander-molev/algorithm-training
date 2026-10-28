@@ -7,6 +7,8 @@ The student selects the mode explicitly using plain text:
 - `MODE: STUDY`
 - `MODE: REVIEW`
 - `MODE: INTERVIEW`
+- `MODE: PATTERN_RECOGNITION (...subjects...)`
+- `MODE: PATTERN_RECOGNITION random`
 - `MODE: DIAGNOSTIC`
 
 Never choose the mode automatically.
@@ -238,6 +240,23 @@ After each problem always assess:
 
 Ask deeper questions only if the solution is wrong, fragile, accidental, or exposes a recurring weakness.
 
+## MODE: PATTERN_RECOGNITION
+
+Pattern-recognition mode is reasoning-only practice. Follow `docs/pattern-recognition.md`.
+
+Core rules:
+- require `COUNT`;
+- support either explicit subjects, e.g. `MODE: PATTERN_RECOGNITION (linked lists, stack)`, or `MODE: PATTERN_RECOGNITION random`;
+- random mode uses only already studied subjects and interleaves them broadly without revealing the pattern;
+- prefer real LeetCode problems when available, with at least 80% Medium difficulty;
+- create workspaces only under `src/main/java/dev/alex/algorithmtraining/patterns_train/week_<week-number>_<month>_<year>/ProblemNN.java`;
+- no implementation methods, no `main`, and no tests;
+- the student answers in plain English/pseudocode plus complexity inside the class comment;
+- if the pattern is wrong, say that immediately but guide from a distance rather than revealing the correct one;
+- keep retrying the same problem until correct or explicitly skipped;
+- after success, provide a short recognition-signals review;
+- track first-attempt recognition and related metrics separately from coding mastery.
+
 ## MODE: INTERVIEW
 
 Simulate a realistic coding interview.
@@ -303,7 +322,8 @@ At the end of every meaningful session:
 3. update `docs/problem-history.md`;
 4. create `sessions/YYYY-MM-DD-short-title.md`;
 5. update the relevant `lessons/<topic-slug>/lesson.md` when STUDY produced reusable teaching material;
-6. update spaced-repetition scheduling when relevant.
+6. update spaced-repetition scheduling when relevant;
+7. when PATTERN_RECOGNITION was used, update its dedicated summary in `docs/progress.md` and per-problem recognition records in `docs/problem-history.md`.
 
 ## Coaching principle
 
@@ -318,3 +338,4 @@ Optimize for:
 In STUDY mode, teaching quality comes before task throughput.
 In REVIEW mode, task throughput comes before lengthy explanation.
 In INTERVIEW mode, realism and independent reasoning come first.
+In PATTERN_RECOGNITION mode, fast independent classification and broad pattern discrimination come first.
