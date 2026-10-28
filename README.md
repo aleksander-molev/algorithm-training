@@ -78,9 +78,46 @@ Simulate a coding interview:
 - concise realistic communication;
 - always assess time and space complexity.
 
+### `MODE: PATTERN_RECOGNITION`
+
+Train fast recognition of the correct algorithmic approach without writing the Java solution.
+
+Two forms are supported.
+
+Specific subjects:
+
+```text
+MODE: PATTERN_RECOGNITION (linked lists, stack)
+COUNT: 10
+```
+
+Random from all already studied subjects:
+
+```text
+MODE: PATTERN_RECOGNITION random
+COUNT: 10
+```
+
+Rules:
+- prefer real LeetCode problems when available;
+- at least 80% of selected problems should be Medium;
+- random mode uses only already studied subjects;
+- random mode broadly interleaves topics and does not reveal the expected pattern;
+- the student writes the suspected pattern, solution idea in plain English or pseudocode, and time/space complexity;
+- no Java implementation and no JUnit tests are generated;
+- if the pattern is wrong, Codex says so immediately but guides from a distance instead of revealing the answer;
+- the same task remains active until the reasoning is correct or the student explicitly skips it;
+- after solving, Codex records recognition signals and updates separate pattern-recognition progress metrics.
+
+Pattern-recognition workspaces are created under:
+
+`src/main/java/dev/alex/algorithmtraining/patterns_train/week_<week-number>_<month>_<year>/ProblemNN.java`
+
+Detailed rules: `docs/pattern-recognition.md`.
+
 ## Training loop
 
-1. Student chooses `MODE: STUDY`, `MODE: REVIEW`, or `MODE: INTERVIEW`.
+1. Student chooses `MODE: STUDY`, `MODE: REVIEW`, `MODE: INTERVIEW`, or `MODE: PATTERN_RECOGNITION`.
 2. Codex reads repository state.
 3. Codex selects work consistent with the chosen mode.
 4. I solve independently.
@@ -98,8 +135,10 @@ Simulate a coding interview:
 - `docs/weak-points.md` — recurring weaknesses.
 - `docs/problem-history.md` — compact history of attempted problems.
 - `docs/spaced-repetition.md` — review calendar and scheduling rules.
+- `docs/pattern-recognition.md` — rules for reasoning-only pattern recognition training.
 - `sessions/` — chronological session notes.
 - `lessons/` — Markdown lesson materials organized by topic.
+- `src/main/java/dev/alex/algorithmtraining/patterns_train/` — reasoning-only workspaces for pattern recognition.
 - `templates/` — templates for session/problem records.
 
 ## Starting a session
@@ -123,6 +162,20 @@ Interview:
 ```text
 MODE: INTERVIEW
 Give me one medium problem.
+```
+
+Pattern recognition, selected subjects:
+
+```text
+MODE: PATTERN_RECOGNITION (linked lists, stack)
+COUNT: 10
+```
+
+Pattern recognition, random studied subjects:
+
+```text
+MODE: PATTERN_RECOGNITION random
+COUNT: 10
 ```
 
 Do not ask Codex to choose the training mode automatically. The student command is the source of truth.
