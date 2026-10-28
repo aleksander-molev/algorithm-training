@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Tree & Graph Trainer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{color-scheme:light dark;--b:#8884;--a:#3b82f6}
+body{font:16px/1.5 system-ui,sans-serif;max-width:820px;margin:0 auto;padding:20px}
+button{font:inherit;padding:8px 14px;border:1px solid var(--b);border-radius:8px;background:transparent;color:inherit;cursor:pointer}
+button.p{background:var(--a);color:#fff;border-color:var(--a)}
+pre{background:#8881;border:1px solid var(--b);border-radius:8px;padding:12px;overflow-x:auto}
+.d{white-space:pre-wrap}.m{opacity:.7;font-size:14px}.row{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.tag{display:inline-block;border:1px solid var(--b);border-radius:12px;padding:0 10px;margin-right:6px;font-size:13px}
+.hint{border-left:3px solid var(--a);padding-left:10px;margin:6px 0}
+</style></head><body>
+<h1>Tree & Graph Trainer</h1>
+<div class="row"><button class="p" id="next">New random task</button>
+<details><summary class="m">Filters (off by default)</summary>
+<select id="ft"><option value="">all types</option><option>tree</option><option>graph</option></select>
+<label><input type="checkbox" id="fu"> unsolved only</label></details></div>
+<div class="m" id="stats"></div><div id="task" hidden>
+<h2 id="title"></h2><div class="m" id="meta"></div>
+<p class="d" id="desc"></p><h3>Test data</h3><pre id="tests"></pre>
+<div class="row"><button id="hint"></button><button id="show">Show answer</button></div>
+<div id="hints"></div><div id="ans" hidden>
+<div id="pat"></div><pre><code id="java"></code></pre><p class="d" id="expl"></p><p class="m" id="cx"></p>
+<div class="row"><button class="p" id="ok">Solved</button><button id="no">Not solved</button></div></div></div>
+<div class="row"><button id="exp">Export progress</button><button id="imp">Import progress</button>
+<input type="file" id="file" accept=".json" hidden></div>
+<script src="tasks.js"></script>
+<script>
+const $=id=>document.getElementById(id),KEY="algoTrainerProgress";
+let prog={},cur=null,shown=0;
+try{prog=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(prog))}catch(e){}stats()};
+const today=()=>new Date().toISOString().slice(0,10);
+function stats(){const s=TASKS.filter(t=>prog[t.id]?.solved).length;$("stats").textContent=`Solved ${s} of ${TASKS.length}`}
+function pick(){
+  let pool=TASKS.filter(t=>(!$("ft").value||t.type===$("ft").value)&&(!$("fu").checked||!prog[t.id]?.solved));
+  if(!pool.length){alert("No tasks match the filters");return}
+  const d=Math.random()<0.1?"hard":"medium";
+  let sub=pool.filter(t=>t.difficulty===d);if(!sub.length)sub=pool;
+  const un=sub.filter(t=>!prog[t.id]?.solved);if(un.length)sub=un;
+  if(sub.length>1)sub=sub.filter(t=>t!==cur);
+  show(sub[Math.floor(Math.random()*sub.length)]);
+}
+function show(t){
+  cur=t;shown=0;$("task").hidden=false;$("ans").hidden=true;$("hints").innerHTML="";
+  $("title").textContent=t.title;
+  const p=prog[t.id];
+  $("meta").textContent=[t.leetcode?"LeetCode #"+t.leetcode:"",t.difficulty,t.type,p?.attempted?"last attempted "+p.attempted:"",p?.solved?"solved":""].filter(Boolean).join(" · ");
+  $("desc").textContent=t.description;
+  $("tests").textContent=t.tests.map(x=>x.input+"  ->  "+x.expected).join("\n");
+  hintBtn();
+}
+const names=["easy","medium","hard"];
+function hintBtn(){const b=$("hint");b.hidden=shown>=3;b.textContent=`Hint (${names[shown]||""})`}
+$("hint").onclick=()=>{const d=document.createElement("div");d.className="hint";
+  d.textContent=names[shown]+": "+cur.hints[names[shown]];$("hints").append(d);shown++;hintBtn()};
+$("show").onclick=()=>{
+  $("ans").hidden=false;$("pat").innerHTML="";
+  cur.patterns.forEach(x=>{const s=document.createElement("span");s.className="tag";s.textContent=x;$("pat").append(s)});
+  $("java").textContent=cur.answer.java;$("expl").textContent=cur.answer.explanation;$("cx").textContent=cur.answer.complexity;
+  prog[cur.id]={...prog[cur.id],attempted:today()};save();$("ans").scrollIntoView({behavior:"smooth"})};
+const mark=v=>{prog[cur.id]={...prog[cur.id],solved:v,attempted:today()};save();pick()};
+$("ok").onclick=()=>mark(true);$("no").onclick=()=>mark(false);$("next").onclick=pick;
+$("exp").onclick=()=>{const a=document.createElement("a");
+  a.href=URL.createObjectURL(new Blob([JSON.stringify(prog,null,2)],{type:"application/json"}));
+  a.download="trainer-progress.json";a.click()};
+$("imp").onclick=()=>$("file").click();
+$("file").onchange=e=>{const r=new FileReader();r.onload=()=>{try{prog=JSON.parse(r.result);save()}catch(x){alert("Invalid file")}};
+  r.readAsText(e.target.files[0])};
+stats();
+</script></body></html>
