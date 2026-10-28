@@ -10,6 +10,8 @@ Supported selectors:
 - `MODE: STUDY`
 - `MODE: REVIEW`
 - `MODE: INTERVIEW`
+- `MODE: PATTERN_RECOGNITION (...subjects...)`
+- `MODE: PATTERN_RECOGNITION random`
 - `MODE: DIAGNOSTIC`
 
 If no mode selector is present, ask the student to choose one.
@@ -179,6 +181,25 @@ After each problem always assess:
 
 Ask deeper reasoning questions only when the solution is wrong, fragile, accidental, or exposes a recurring weak point.
 
+## MODE: PATTERN_RECOGNITION
+
+Follow `docs/pattern-recognition.md`.
+
+This mode isolates recognition from implementation:
+- require `COUNT`;
+- explicit-subject form limits tasks to those subjects;
+- `random` uses only studied subjects and maximizes interleaving/breadth;
+- prefer real LeetCode problems when available;
+- at least 80% of selected tasks should be Medium;
+- create neutral `ProblemNN.java` reasoning containers under `src/main/java/dev/alex/algorithmtraining/patterns_train/week_<week-number>_<month>_<year>/`;
+- do not generate tests or Java solution methods;
+- student writes the suspected pattern, English/pseudocode algorithm, and complexity;
+- wrong pattern: say so clearly, explain the failure from a distance, and do not reveal the right pattern immediately;
+- incomplete correct direction: give a counterexample or invariant-oriented nudge;
+- keep the same task active until solved or explicitly skipped;
+- after solving, summarize recognition signals and common traps;
+- track first-attempt recognition rate, attempts, hints, and per-subject recognition separately from coding progress.
+
 ## MODE: INTERVIEW
 
 Simulate a real coding interview:
@@ -252,7 +273,8 @@ At the end of every meaningful session:
 3. update `docs/problem-history.md`;
 4. create `sessions/YYYY-MM-DD-short-title.md`;
 5. update the relevant `lessons/<topic-slug>/lesson.md` when reusable teaching material changed;
-6. update spaced-repetition scheduling where relevant.
+6. update spaced-repetition scheduling where relevant;
+7. when PATTERN_RECOGNITION was used, update its summary in `docs/progress.md` and recognition entries in `docs/problem-history.md`.
 
 ## Coaching principle
 
