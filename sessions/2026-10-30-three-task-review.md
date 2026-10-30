@@ -1,0 +1,5 @@
+# Three-task review — October 30, 2026
+
+2026-10-30 MODE: REVIEW: exactly three Medium-style tasks assigned in week_44_october_2026: Problem11 (rank frequent words with lexicographic ties; Heap/frequency transfer), Problem12 (k smallest cross-array value pairs with deterministic index ties; Heap/k-way merge transfer), Problem13 (normalize an absolute Unix path; overdue Stack/parsing transfer). Two latest-block tasks plus one earlier-topic task approximate the default 60/40 mix. Three basic example tests per workspace; unimplemented public instance methods, no solution hints. All attempts and correctness/quality/time/space assessments pending. No solved credit, new weakness/recovery evidence, review-stage/date advancement, or block-date changes. Earlier Problem09 cleanup/complexity and Problem10 performance discussion remain open; this requested set does not erase them.
+
+Validation: `./gradlew testClasses` passed; example tests were not run because solution methods are intentionally unimplemented. Scheduling remains unchanged until assessed practice.
