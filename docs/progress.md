@@ -1,5 +1,9 @@
 # Current Progress
 
+2026-11-02 assessment of deferred REVIEW week_44_october_2026/Problem13: independent output-correct implementation, algorithm hint 0 before assessment. All six JUnit methods pass: three original examples, root/above-root and literal dot-name cases, 2000 deterministic generated paths against a component-list oracle with idempotence/repeated calls, and 100000-character separator-only, single-name and many-component inputs. Explicit separator/root stack invariant works; slash reference comparison happens to be safe because every stored separator is the same literal, but is fragile style rather than a demonstrated correctness bug. Coach complexity O(N^2) worst-case time due to immutable token += copying and repeated result.insert(0, ...) shifts; O(N) peak auxiliary space plus O(N) output (cumulative allocation can be quadratic). No linear-time requirement in the statement, so record correct output, not a contract failure. Quality: ArrayDeque appropriate; duplicate token parsing, stored separators, unused Stack import and string identity comparison deserve cleanup. Student code preserved. Level-1 local performance observation; efficiency improvement and student complexity explanation pending. Requested October 30 set now 3/3 implementations output-verified, with Problem12 assisted; no independent full-set mastery claim. Stack/parsing stage 0 retained, last practiced November 2, next review November 3; no full-pass stage advancement, durable weakness recovery or new standalone weakness. Other schedules and current Intervals block dates unchanged. Earlier Problem09 cleanup and Problem10 performance discussion remain open.
+
+2026-11-01 MODE: STUDY: introduced Intervals, next roadmap subject, at the planned Heap transition. Saved lessons/intervals/lesson.md with closed/half-open semantics, overlap foundation, merging coverage, compatible-meeting selection, complete Java examples, advanced conceptual directions, contrasts and checklist. All three Java snippets compile; example, nested/touching, empty and merge-input-preservation checks pass in a temporary external harness. Teaching only; understanding check pending, no coding workspace or solved credit. Existing attempts, weaknesses and review stages/dates retained. Heap closed November 1 on target (introduced October 25; ended early: no; extended window: no). Intervals introduction November 1, target November 8, hard maximum November 15.
+
 2026-10-30 Problem12 bounded-max-heap correction verified: all 8 existing JUnit methods pass, including original examples, dedicated original/larger-value tie regressions and small sorted-pair oracle. Heap retains at most k+1 candidates transiently; removes worst pair and fills output backward, satisfying storage restriction. Correct prefix truncation: outside first k positions of either sorted array, at least k index-prior pairs are no larger; equal-valued index ties are observationally indistinguishable in value output. Inputs untouched by inspection. Coach complexity O((P+k) log(k+1)) time, O(k) auxiliary space plus O(k) output, P=min(k,a.length)*min(k,b.length); worst bound O(k^2 log(k+1)). Sorted-frontier optimization optional, not required by statement; no maximum quadratic traversal run. Quality: comparator and reverse extraction correct; optional primitive int fields, static Pair, and poll once into local. Student proposed bounded max heap; coach explicitly described eviction/reverse-output procedure (highest hint 4), student implemented. Solved with assistance, not independent k-way-merge mastery; updated student complexity confirmation absent. Heap partial stage 0 retained, last practiced October 30, next review October 31; no same-session advancement or durable recovery claim. Set 2/3 implementation verified; Problem13 only remaining task. Source unchanged by coach; block dates and earlier-topic schedules retained.
 
 2026-10-30 Problem12 numeric equality correction verified: all 8 current JUnit methods pass, including dedicated original/larger-value tie regressions and small sorted-pair oracle. compareTo now handles boxed numeric equality correctly; output correct on checked cases. Value-based tie ordering is observationally compatible with index ordering for sorted inputs here: distinct equal-valued indices yield indistinguishable returned pairs; no separate index-storage correctness defect asserted. Full contract still unmet: nested loops materialize P=min(k,a.length)*min(k,b.length) candidates, including all index pairs for lengths<=k, up to 100 million objects for valid lengths=k=10000. No such large allocation run. Time bound O((P+k) log(P+1)); O(P) auxiliary space plus O(k) output, unchanged. Quality: comparator fixed; boxed fields, duplicate peek/remove and non-static Pair remain optional cleanup. Source preserved. Ask student how many candidates need to coexist to select the next pair; no algorithm/pseudocode supplied. Correction remains pending for materialization contract, no full solved credit or stage advancement. Heap partial stage 0, October 31 due date; set remains 1/3 complete, Problem13 pending. No new weakness/recovery claim or block-date change.
@@ -187,10 +191,10 @@ Lesson update, 2026-09-30: added complete Java reference solutions for all five 
 | Sliding Window | Developing | - | 0.3 | 2026-10-07 | At-most-k-distinct implementation independently correct; fixed-alphabet auxiliary space corrected to O(1), partial review. |
 | Prefix Sum | Developing | - | - | 2026-10-09 | Aligned equal-sum segment correction verified after level-2 feedback. Expected O(n) time / O(n) space. |
 | Binary Search | Developing | - | - | 2026-10-13 | Problem02 shipping capacity correct after level-1 feedback; nine tests pass. O(n log(10000*n)) time / O(1) space; partial review. Earlier independent Problem10 and rotated-search passes retained. |
-| Stack | Developing | - | - | 2026-10-12 | Problem01 collisions correct, nine tests pass; Problem03 monotonic-stack correction verified after conceptual help, six tests pass; O(n) time/O(n) space. |
+| Stack | Developing | - | - | 2026-11-02 | Problem13 path parsing independently output-correct, six tests pass; O(N^2) time/O(N) auxiliary space; efficiency follow-up pending. Earlier collision and monotonic-stack results retained. |
 | Linked List | Developing | - | - | 2026-10-19 | Three tasks complete: removal corrected after level-1 feedback; pair swapping and position grouping independently correct. All O(L) time/O(1) auxiliary space assessed by coach; stage 0 due October 20. |
 | Heap | Introduced; practice pending | - | - | - | Lesson October 25: top-k, streaming threshold, k-way merge. |
-| Intervals | Not started | - | - | - | |
+| Intervals | Introduced; understanding check pending | - | - | - | November 1 lesson: endpoint semantics, merging, compatible selection. No independent practice yet. |
 | Trees | Not started | - | - | - | |
 | Graphs | Not started | - | - | - | |
 | Backtracking | Not started | - | - | - | |
@@ -201,7 +205,7 @@ Lesson update, 2026-09-30: added complete Java reference solutions for all five 
 
 - Stack / matching and minimum removal (stage 0; partial after local correction; last practiced: 2026-10-15; next review: 2026-10-16; Problem06 seven tests pass)
 
-- Stack / nested parsing (stage 0; partial assisted efficiency correction; last practiced: 2026-10-14; next review: 2026-10-15; Problem05 six test methods pass)
+- Stack / parsing (stage 0 retained; last practiced: 2026-11-02; next review: 2026-11-03; Problem13 independently output-correct, six test methods pass; quadratic string construction and student complexity follow-up pending; earlier nested-parsing evidence retained)
 
 - Stack / monotonic candidate pruning (stage 0; partial assisted first practice; last practiced: 2026-10-14; next review: 2026-10-16; Problem07 independently correct, five tests pass; student complexity statement absent, stage retained)
 
@@ -233,11 +237,13 @@ Lesson update, 2026-09-30: added complete Java reference solutions for all five 
 
 ## Current study block
 
-Current block topic: Heap / Priority Queue.
-Actual introduction date: 2026-10-25.
-Target transition date: 2026-11-01.
-Hard latest transition date: 2026-11-08.
+Current block topic: Intervals.
+Actual introduction date: 2026-11-01.
+Target transition date: 2026-11-08.
+Hard latest transition date: 2026-11-15.
 Ended early: no (active). Extended window used: no.
+
+Heap / Priority Queue closed on 2026-11-01 at its target date; introduced October 25. Ended early: no. Extended window used: no. Remaining weaknesses and pending tasks remain in review.
 
 Linked List closed on 2026-10-25; introduced October 17, target October 24, hard maximum October 31. Ended early: no. Extended window used: yes, one day beyond target. Student explicitly requested the next subject. Unresolved weaknesses remain in spaced repetition.
 
@@ -247,7 +253,7 @@ Binary Search block closed early on 2026-10-11 at the student's explicit request
 
 ## Next recommended session
 
-Heap lesson prepared October 25. In continued STUDY, check root-role and membership understanding, then choose a distinct representative medium task and create its workspace before assigning it. No coding workspace assigned during this lesson-preparation request. For a new session, the student selects the mode explicitly. Existing overdue reviews remain available in REVIEW and do not block the Heap block.
+Intervals lesson prepared November 1. In continued STUDY, check active merged boundary and endpoint semantics, then choose a distinct representative Medium transfer task and create its workspace before assigning it. No coding workspace assigned at introduction. For a new session, the student selects the mode explicitly. Existing overdue reviews and unfinished earlier tasks remain available in REVIEW and do not block progression.
 
 2026-10-28 complexity follow-up: student stated O(1) space, overlooking PriorityQueue storage. Coach clarified that reusing output nodes avoids new output-node storage, but the queue can hold one node reference per nonempty list: O(m+1) auxiliary space, commonly O(k). Complexity understanding needs reinforcement; no schedule advancement.
 

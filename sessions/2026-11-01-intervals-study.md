@@ -1,0 +1,5 @@
+# Intervals introduction — November 1, 2026
+
+2026-11-01 MODE: STUDY: introduced Intervals, next roadmap subject, at the planned Heap transition. Saved lessons/intervals/lesson.md with closed/half-open semantics, overlap foundation, merging coverage, compatible-meeting selection, complete Java examples, advanced conceptual directions, contrasts and checklist. All three Java snippets compile; example, nested/touching, empty and merge-input-preservation checks pass in a temporary external harness. Teaching only; understanding check pending, no coding workspace or solved credit. Existing attempts, weaknesses and review stages/dates retained. Heap closed November 1 on target (introduced October 25; ended early: no; extended window: no). Intervals introduction November 1, target November 8, hard maximum November 15.
+
+Next interaction: student explains the merged output for closed ranges [[1,10],[2,3],[10,12],[14,16]], the maintained boundary, and whether half-open [1,3) and [3,5) conflict. Choose independent practice after this understanding check. No active practice solution appears in the lesson.
